@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Books.Activity.BookHomeActivity">
+
+    <include
+        android:id="@+id/toolbarAddressList"
+        layout="@layout/toolbar_book_module" />
+
+    <!-- layout="@layout/layout_common_toolbar"-->
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollV"
+        android:layout_below="@+id/toolbarAddressList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="@dimen/dp10"
+                android:scaleType="fitXY"
+                android:src="@mipmap/book_banner" />
+
+
+            <!-- viewpager to show images -->
+
+            <RelativeLayout
+                android:id="@+id/viewPagerRL"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPagerMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/viewPagerMain"
+                    android:layout_alignParentBottom="true"
+                    app:tabBackground="@drawable/tab_selector"
+                    app:tabGravity="center"
+                    app:tabIndicatorHeight="0dp" />
+            </RelativeLayout>
+
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/cartBuuton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="cart"
+                android:textColor="@color/black"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sp10"
+                android:layout_marginTop="@dimen/sp10"
+                android:layout_marginEnd="@dimen/sp10"
+                android:layout_marginBottom="@dimen/sp10"
+                tools:listitem="@layout/record_courses_list_item_trending" />
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+    <FrameLayout
+        android:id="@+id/layoutNoContentFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarAddressList"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="No Data Found"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp18" />
+        </androidx.cardview.widget.CardView>
+
+
+    </FrameLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

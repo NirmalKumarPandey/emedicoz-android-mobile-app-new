@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Order ID : "
+            android:textColor="@color/dark_quiz_grey"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Plan Type : "
+            android:textColor="@color/dark_quiz_grey"
+            android:textSize="@dimen/sp12" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tv_order_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="5806306893532"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/tv_plantype"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="end"
+            android:text="Installment"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp15"
+        android:background="@color/color_circle" />
+
+    <LinearLayout
+        android:id="@+id/ll_product_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/ll_product_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Product Code : "
+                    android:textColor="@color/dark_quiz_grey"
+                    android:textSize="@dimen/sp12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="T $ D"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp15" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_product_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Product Status : "
+                    android:textColor="@color/dark_quiz_grey"
+                    android:textSize="@dimen/sp12" />
+
+                <TextView
+                    android:id="@+id/tv_upcoming_installment_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp15" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_penalty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginBottom="@dimen/dp15"
+                android:background="@color/color_circle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Due Payment :"
+                        android:textColor="@color/dark_quiz_grey"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:id="@+id/tv_due_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5500/-"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_late_fee"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="end"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Late fee Penalty : "
+                        android:textColor="@color/dark_quiz_grey"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="500/- / Per"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp15" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_payment_due"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginBottom="@dimen/dp15"
+                android:background="@color/color_circle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Weiver if any : "
+                    android:textColor="@color/dark_quiz_grey"
+                    android:textSize="@dimen/sp12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Total Payment Due : "
+                    android:textColor="@color/dark_quiz_grey"
+                    android:textSize="@dimen/sp12" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="500/-"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp15" />
+
+                <TextView
+                    android:id="@+id/tv_total_due_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="end"
+                    android:text="3750/-"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp15" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp15"
+            android:background="@drawable/bg_round_corner_border_dash"
+            android:padding="@dimen/dp10">
+
+            <TextView
+                android:id="@+id/upcoming_installment_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="1sp"
+                android:text="Upcoming Installment Amount :  "
+                android:textColor="@color/dark_quiz_grey"
+                android:textSize="@dimen/sp14"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_upcoming_installment_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/upcoming_installment_amount"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/upcoming_installment_amount"
+                android:text="2750/-"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/sp20"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_installment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/upcoming_installment_amount"
+                android:text="(2nd of 3 Installments)"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/sp12"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp15"
+            android:lineSpacingExtra="4sp"
+            android:text="@string/please_pay_your_dues_befour_the_due_date_to_ensure_your_course_continues_smoothly_and_to_avoid_payment_penalties"
+            android:textColor="@color/overlay"
+            android:textSize="@dimen/sp11"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_show_transaction_statement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10"
+            android:text="@string/show_transaction_statement"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sp10"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/btn_switch_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp30"
+            android:background="@drawable/bg_round_corner_fill_blue"
+            android:drawableEnd="@drawable/ic_arrow_right_12"
+            android:drawablePadding="@dimen/dp5"
+            android:paddingStart="@dimen/dp10"
+            android:paddingEnd="@dimen/dp10"
+            android:text="SWITCH PLAN"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp12" />
+
+        <Button
+            android:id="@+id/btn_"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/sp20"
+            android:layout_marginBottom="@dimen/dp20"
+            android:background="@drawable/bg_round_corner_fill_off_red"
+            android:text="PAY NOW"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+</LinearLayout>

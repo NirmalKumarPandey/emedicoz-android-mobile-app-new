@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/headerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="52sp"
+    android:background="@color/colorPrimary"
+    android:elevation="@dimen/dp5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageButton
+        android:id="@+id/ibBack"
+        android:layout_width="52sp"
+        android:layout_height="52sp"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_back" />
+
+    <TextView
+        android:id="@+id/tvHeaderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dimen_6sp"
+        android:layout_toEndOf="@+id/ibBack"
+        android:fontFamily="@font/helvetica_bold"
+        android:letterSpacing=".04"
+        android:textColor="@color/toolbar_bg_color"
+        android:textSize="@dimen/sp14"
+        tools:text="@string/live_quiz_challenge" />
+
+    <TextView
+        android:id="@+id/tvHeaderNameOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/dimen_6sp"
+        android:fontFamily="@font/helvetica_neue_med"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        tools:text="@string/live_quiz_challenge" />
+
+    <ImageButton
+        android:id="@+id/ibClose"
+        android:layout_width="52sp"
+        android:layout_height="52sp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_back" />
+
+</RelativeLayout>

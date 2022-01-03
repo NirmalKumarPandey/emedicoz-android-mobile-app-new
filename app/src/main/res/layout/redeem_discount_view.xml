@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp16"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lytRedeemDiscount">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        tools:ignore="MissingConstraints">
+        <RelativeLayout
+            android:paddingTop="@dimen/dp8"
+            android:paddingEnd="@dimen/dp8"
+            android:paddingBottom="@dimen/dp8"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_center_blue_border">
+
+                <RelativeLayout
+                    android:id="@+id/lytBookLeft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_bg_discount">
+
+                    <ImageView
+                        android:id="@+id/imgBookLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/dp17"
+                        android:layout_marginBottom="@dimen/dp16"
+                        app:srcCompat="@drawable/ic_book_icon">
+
+                    </ImageView>
+                </RelativeLayout>
+                <View
+                    android:background="@color/toolbar_bg_color"
+                    android:id="@+id/ViewBookDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/lytBookLeft">
+                </View>
+                <TextView
+                    android:id="@+id/txtGetDiscountLeft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ViewBookDown"
+                    android:layout_marginStart="@dimen/dp8"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:fontFamily="@font/helvetica_neue_medium"
+                    android:padding="@dimen/dp2"
+                    android:text="Get 10% Discount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp12" />
+                <TextView
+                    android:id="@+id/txtCouponOnBooksLeft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtGetDiscountLeft"
+                    android:layout_marginStart="@dimen/dp8"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:fontFamily="@font/helvetica_neue_medium"
+                    android:padding="@dimen/dp2"
+                    android:text="Coupon on Books"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp10" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtCouponOnBooksLeft"
+                    android:layout_marginStart="@dimen/dp35"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:layout_marginEnd="@dimen/dp35"
+                    android:layout_marginBottom="@dimen/dp16"
+                    app:cardBackgroundColor="@color/toolbar_bg_color"
+                    app:cardCornerRadius="4px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp12"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginEnd="@dimen/dp11"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:text="Redeem Now"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dp10">
+
+                    </TextView>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingTop="@dimen/dp8"
+            android:paddingBottom="@dimen/dp8"
+            android:paddingStart="@dimen/dp8"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_white_center_blue_border">
+                <RelativeLayout
+                    android:id="@+id/lytBookRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_bg_discount">
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:id="@+id/imgBookRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp17"
+                        android:layout_marginBottom="@dimen/dp16"
+                        app:srcCompat="@drawable/ic_book_icon">
+
+                    </ImageView>
+                </RelativeLayout>
+                <View
+                    android:background="@color/toolbar_bg_color"
+                    android:id="@+id/ViewBookDownRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/lytBookRight">
+                </View>
+
+                <TextView
+                    android:id="@+id/txtGetDiscountRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ViewBookDownRight"
+                    android:layout_marginStart="@dimen/dp8"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:fontFamily="@font/helvetica_neue_medium"
+                    android:padding="@dimen/dp2"
+                    android:text="Get 10% Discount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp12" />
+                <TextView
+                    android:id="@+id/txtCouponOnBooksRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtGetDiscountRight"
+                    android:layout_marginStart="@dimen/dp8"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:fontFamily="@font/helvetica_neue_medium"
+                    android:padding="@dimen/dp2"
+                    android:text="Coupon on Books"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp10" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtCouponOnBooksRight"
+                    android:layout_marginStart="@dimen/dp35"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:layout_marginBottom="@dimen/dp16"
+                    android:layout_marginEnd="@dimen/dp35"
+                    app:cardBackgroundColor="@color/toolbar_bg_color"
+                    app:cardCornerRadius="4px">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp12"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginEnd="@dimen/dp11"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:text="Redeem Now"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dp10">
+                    </TextView>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

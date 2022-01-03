@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/feeds_app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="@dimen/dp300"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/nav_headerRL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp200"
+                android:background="@color/left_panel_background_color">
+
+                <ImageView
+                    android:id="@+id/imageQR"
+                    android:layout_width="@dimen/dp30"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:background="@color/black"
+                    android:src="@drawable/photo" />
+
+                <LinearLayout
+                    android:id="@+id/nav_headerLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageQR"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                    <FrameLayout
+                        android:id="@+id/imageFL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
+
+                        <com.emedicoz.app.customviews.CircleImageView
+                            android:id="@+id/profileImage"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp60"
+                            android:src="@mipmap/default_pic" />
+
+                        <ImageView
+                            android:id="@+id/profileImageText"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp60"
+                            android:src="@mipmap/default_pic"
+                            android:visibility="gone" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dp10">
+
+                        <TextView
+                            android:id="@+id/profileName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15"
+                            android:textStyle="bold"
+                            tools:text="Nikhil Gupta" />
+
+                        <TextView
+                            android:id="@+id/specialityTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/extrasmall_text_size_11"
+                            tools:text="nik@gmail.com" />
+
+                        <TextView
+                            android:id="@+id/damsidTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/extrasmall_text_size_11"
+                            tools:text="DAMS ID: 123456" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nav_buttonLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nav_headerLL"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:background="@drawable/bg_nav_white"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp2"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/navStreamLL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp3"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dp30"
+                        android:paddingRight="@dimen/dp30">
+
+                        <TextView
+                            android:id="@+id/streamTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:text="-----" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            app:srcCompat="@drawable/ic_baseline_arrow_drop_down_24" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/medicalbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp30"
+                        android:background="@color/transparent_black"
+                        android:text="Medical"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp15"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/dentalbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:background="@color/transparent"
+                        android:text="Dental"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp15"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/nav_headerRL"
+                android:background="@color/left_panel_background_color">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/left_panel_background_color"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp1"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp3"
+                            android:background="@color/colorGray2" />
+
+                        <TextView
+                            android:id="@+id/dailyQuizNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_icon_awesome_clipboard_list"
+                            android:drawablePadding="@dimen/dp18"
+                            android:padding="@dimen/dp15"
+                            android:text="Daily Challenge"
+                            android:textColor="@color/black"
+                             />
+                        <TextView
+                            android:id="@+id/newsAndarticleNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_icon_awesome_clipboard_list"
+                            android:drawablePadding="16dp"
+                            android:padding="@dimen/dp15"
+                            android:text="@string/newsand_articls"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15" />
+
+                        <TextView
+                            android:id="@+id/liveCourseNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_icon_material_play_circle_filled"
+                            android:drawablePadding="16dp"
+                            android:padding="@dimen/dp15"
+                            android:text="@string/live_courses"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15" />
+
+
+                        <TextView
+                            android:id="@+id/courseNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/selected_left_panel_background"
+                            android:drawableStart="@drawable/ic_icon_metro_file_play"
+                            android:drawablePadding="16dp"
+                            android:padding="@dimen/dp15"
+                            android:text="@string/recorded_courses"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15" />
+
+
+                        <TextView
+                            android:id="@+id/videosNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_video_camera_black"
+                            android:drawablePadding="22dp"
+                            android:padding="@dimen/dp15"
+                            android:text="Videos"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15" />
+
+
+                        <TextView
+                            android:id="@+id/myStudyNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_group_1133"
+                            android:drawablePadding="22dp"
+                            android:padding="@dimen/dp15"
+                            android:text="Study"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15"
+                            android:visibility="visible" />
+
+
+                        <TextView
+                            android:id="@+id/myQbankNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@mipmap/q_bank"
+                            android:drawablePadding="@dimen/dp15"
+                            android:padding="@dimen/dp15"
+                            android:text="My QBank"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/feedsNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_icon_material_home"
+                            android:drawablePadding="@dimen/dp20"
+                            android:padding="@dimen/dp15"
+                            android:text="@string/interact"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp1"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp3"
+                            android:background="@color/colorGray2" />
+
+                        <TextView
+                            android:id="@+id/podcastNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_podcast"
+                            android:drawablePadding="@dimen/dp20"
+                            android:padding="@dimen/dp15"
+                            android:text="@string/podcast"
+                            android:textColor="@color/black"
+                            />
+
+                        <TextView
+                            android:id="@+id/podcastNavNew"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_podcast"
+                            android:drawablePadding="@dimen/dp20"
+                            android:padding="@dimen/dp15"
+                            android:text="@string/podcast"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15" />
+
+                        <TextView
+                            android:id="@+id/qBankNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:drawableStart="@mipmap/q_bank"
+                            android:drawablePadding="16dp"
+                            android:padding="@dimen/dp15"
+                            android:text="QBank"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/testNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@mipmap/side_pannel_my_test_series"
+                            android:drawablePadding="@dimen/dp18"
+                            android:padding="@dimen/dp15"
+                            android:text="Test"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15"
+                            android:visibility="gone" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp1"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp3"
+                            android:background="@color/colorGray2"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/myCoursesNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp3"
+                            android:drawableStart="@mipmap/side_pannel_my_courses"
+                            android:drawablePadding="@dimen/dp15"
+                            android:drawableTint="@color/black"
+                            android:padding="@dimen/dp15"
+                            android:text="My Courses"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15" />
+
+
+                        <TextView
+                            android:id="@+id/myTestNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@mipmap/side_pannel_my_test_series"
+                            android:drawablePadding="@dimen/dp18"
+                            android:drawableTint="@color/black"
+                            android:padding="@dimen/dp15"
+                            android:text="My Test"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/myTestSeriesNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@mipmap/side_pannel_my_test_series"
+                            android:drawablePadding="@dimen/dp10"
+                            android:padding="@dimen/dp15"
+                            android:text="My Test Series"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp18"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/myScorecardNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@mipmap/side_pannel_my_scorecard"
+                            android:drawablePadding="@dimen/dp18"
+                            android:drawableTint="@color/black"
+                            android:padding="@dimen/dp15"
+                            android:text="My Scorecard"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15" />
+
+
+                        <TextView
+                            android:id="@+id/myBookmarksNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_icon_material_bookmark"
+                            android:drawablePadding="@dimen/dp17"
+                            android:padding="@dimen/dp15"
+                            android:text="My Bookmarks"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp1"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp3"
+                            android:background="@color/colorGray2"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/myDownloadsNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@mipmap/side_pannel_my_downloads"
+                            android:drawablePadding="@dimen/dp15"
+                            android:padding="@dimen/dp15"
+                            android:text="My Downloads"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15"
+                            android:visibility="gone" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp1"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:background="@color/colorGray"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/registration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp3"
+                            android:drawablePadding="@dimen/dp18"
+                            android:padding="@dimen/dp15"
+                            android:text="@string/registration"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/start_whatsapp_chat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@mipmap/side_pannel_my_courses"
+                            android:drawablePadding="16dp"
+                            android:drawableTint="@color/black"
+                            android:padding="@dimen/dp15"
+                            android:text="@string/help_support"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15" />
+
+                        <TextView
+                            android:id="@+id/feedbackNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp3"
+                            android:drawableStart="@drawable/ic_icon_material_feedback"
+                            android:drawablePadding="@dimen/dp15"
+                            android:padding="@dimen/dp15"
+                            android:text="Feedback"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15" />
+
+                        <Switch
+                            android:id="@+id/switchDayNight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@mipmap/night_mode"
+                            android:drawablePadding="@dimen/dp18"
+                            android:drawableTint="@color/black"
+                            android:padding="@dimen/dp15"
+                            android:shadowColor="@color/blue"
+                            android:text="@string/day_night_mode"
+                            android:textColor="@color/dullBlack"
+                            android:textSize="@dimen/sp15" />
+
+
+                        <TextView
+                            android:id="@+id/appSettingNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp3"
+                            android:drawableStart="@mipmap/side_pannel_settings"
+                            android:drawablePadding="@dimen/dp15"
+                            android:drawableTint="@color/black"
+                            android:padding="@dimen/dp15"
+                            android:text="App Settings"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp1"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp3"
+                            android:background="@color/colorGray2" />
+
+                        <TextView
+                            android:id="@+id/inviteNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@mipmap/side_pannel_invite_and_earn"
+                            android:drawablePadding="@dimen/dp15"
+                            android:drawableTint="@color/black"
+                            android:padding="@dimen/dp15"
+                            android:text="Invite and Earn"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15" />
+
+
+                        <Switch
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dp10"
+                            android:shadowColor="@color/blue"
+                            android:text="Night Mode"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp18"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/joinForReward"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp3"
+                            android:drawableStart="@mipmap/side_pannel_invite_and_earn"
+                            android:drawablePadding="@dimen/dp18"
+                            android:drawableTint="@color/black"
+                            android:padding="@dimen/dp15"
+                            android:text="@string/join_affiliate_program"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/rateusNav"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp3"
+                            android:drawableStart="@mipmap/rate_us"
+                            android:drawablePadding="@dimen/dp15"
+                            android:padding="@dimen/dp15"
+                            android:text="Rate Us"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp15" />
+
+
+                        <TextView
+                            android:id="@+id/vNameTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/dp15"
+                            android:paddingTop="@dimen/dp3"
+                            android:paddingBottom="@dimen/dp3"
+                            android:textAlignment="textStart"
+                            android:textSize="@dimen/extrasmall_text_size_11"
+                            tools:ignore="RtlCompat" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp1"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp3"
+                            android:background="@color/colorGray2"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorGray2"
+                            android:gravity="left"
+                            android:paddingStart="@dimen/dp15"
+                            android:paddingTop="@dimen/dp3"
+                            android:paddingBottom="@dimen/dp3"
+                            android:text="@string/warning_msg"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/extrasmall_text_size_11" />
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <ListView
+                    android:id="@+id/navLV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@android:color/darker_gray"
+                    android:dividerHeight="0.3dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

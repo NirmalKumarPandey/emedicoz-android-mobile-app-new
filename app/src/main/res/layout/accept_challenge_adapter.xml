@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp16"
+    android:background="@color/color_light_blue">
+
+    <TextView
+        android:id="@+id/tvChallengeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp16"
+        android:background="@drawable/ic_rectangle_border_radius_2px"
+        android:fontFamily="@font/helvetica_neue_med"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp4"
+        android:paddingBottom="@dimen/dp4"
+        android:text="Your Friend has challenged you for this Quiz"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAlreadyStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp16"
+        android:background="@drawable/ic_rectangle_border_radius_2px"
+        android:drawablePadding="@dimen/dp4"
+        android:fontFamily="@font/helvetica_neue_med"
+        android:paddingStart="@dimen/sp8"
+        android:paddingTop="@dimen/dp4"
+        android:paddingEnd="@dimen/sp8"
+        android:paddingBottom="@dimen/dp4"
+        android:text="Already Started"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp10"
+        app:drawableLeftCompat="@drawable/ic_path_6055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChallengeText" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp16"
+        android:background="@drawable/ic_rectangle_border_radius_fill_2px"
+        android:fontFamily="@font/helvetica_neue_med"
+        android:paddingStart="@dimen/sp8"
+        android:paddingTop="@dimen/dp4"
+        android:paddingEnd="@dimen/sp8"
+        android:paddingBottom="@dimen/dp4"
+        android:text="10:11"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChallengeText" />
+
+    <RelativeLayout
+        android:id="@+id/rvLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp40"
+        android:layout_marginTop="@dimen/sp20"
+        android:layout_marginEnd="@dimen/dp40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlreadyStart">
+
+        <LinearLayout
+            android:layout_width="@dimen/dp80"
+            android:layout_height="@dimen/dp80"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/ic_rectangle_quiz_blank"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_question" />
+
+            <TextView
+                android:id="@+id/tvQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sp10"
+                android:fontFamily="@font/helvetica_neue_med"
+                android:text="30"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp2"
+                android:layout_marginTop="@dimen/sp10"
+                android:layout_marginEnd="@dimen/dp2"
+                android:fontFamily="@font/helvetica_neue_med"
+                android:gravity="center"
+                android:text="Total Question"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp80"
+            android:layout_height="@dimen/dp80"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_rectangle_quiz_blank"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_mint" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sp10"
+                android:fontFamily="@font/helvetica_neue_med"
+                android:text="30 min"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp2"
+                android:layout_marginTop="@dimen/sp10"
+                android:layout_marginEnd="@dimen/dp2"
+                android:fontFamily="@font/helvetica_neue_med"
+                android:gravity="center"
+                android:text="Duration"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp10" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp80"
+            android:layout_height="@dimen/dp80"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_rectangle_quiz_blank"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_credit_earned" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sp8"
+                android:fontFamily="@font/helvetica_neue_med"
+                android:text="10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp2"
+                android:layout_marginTop="@dimen/sp10"
+                android:layout_marginEnd="@dimen/dp2"
+                android:fontFamily="@font/helvetica_neue_med"
+                android:gravity="center"
+                android:text="Credit Earned"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp10" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnLay"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sp24"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginBottom="@dimen/dp16"
+        android:background="@drawable/ic_rectangle_btn"
+        android:fontFamily="@font/helvetica_neue_med"
+        android:paddingStart="@dimen/sp26"
+        android:paddingTop="@dimen/dp4"
+        android:paddingEnd="@dimen/sp26"
+        android:paddingBottom="@dimen/dp4"
+        android:text="Play"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

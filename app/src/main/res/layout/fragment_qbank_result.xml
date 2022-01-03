@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp60">
+
+        <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".courses.fragment.QbankResult">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/qbankAnalysisTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_weight="1.5"
+                    android:text="QBank Analysis"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="@dimen/dp100"
+                android:layout_height="@dimen/dp100"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp20"
+                android:src="@mipmap/succesful" />
+
+
+            <TextView
+                android:id="@+id/complete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="QBANK COMPLETED"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp10"
+                android:background="@drawable/bg_edit_text"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp60"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imgAccuracy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/accuracy_start_now" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_toEndOf="@id/imgAccuracy"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Accuracy" />
+
+                        <TextView
+                            android:id="@+id/accuracyTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="65%"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/sp18" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp200"
+                android:layout_margin="@dimen/dp10"
+                android:background="@drawable/bg_edit_text"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:text="Question Distribution"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp2"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <ProgressBar
+                            android:id="@+id/vprogressbar1"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/dp45"
+                            android:layout_height="@dimen/dp100"
+                            android:layout_gravity="center"
+                            android:progressDrawable="@drawable/vertical_progress_green" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp60"
+                            android:layout_gravity="center"
+                            android:background="#f5f5f5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/correctTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/dp5"
+                                android:text="04"
+                                android:textAlignment="center"
+                                android:textColor="#3fa066"
+                                android:textSize="@dimen/sp15"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/dp5"
+                                android:text="Correct"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/sp13" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_gravity="bottom"
+                        android:background="@color/colorGray2" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ProgressBar
+                            android:id="@+id/vprogressbar2"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/dp45"
+                            android:layout_height="@dimen/dp100"
+                            android:layout_gravity="center"
+                            android:progressDrawable="@drawable/vertical_progress_red" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp60"
+                            android:layout_gravity="center"
+                            android:background="#f5f5f5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/incorrectTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/dp5"
+                                android:text="04"
+                                android:textAlignment="center"
+                                android:textColor="#ef5b66"
+                                android:textSize="@dimen/sp15"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/dp5"
+                                android:text="Incorrect"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/sp13" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_gravity="bottom"
+                        android:background="@color/colorGray2" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp2"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ProgressBar
+                            android:id="@+id/vprogressbar3"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/dp45"
+                            android:layout_height="@dimen/dp100"
+                            android:layout_gravity="center"
+                            android:progressDrawable="@drawable/vertical_progress_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp60"
+                            android:layout_gravity="center"
+                            android:background="#f5f5f5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/skippedTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/dp5"
+                                android:text="04"
+                                android:textAlignment="center"
+                                android:textColor="#c6c6c6"
+                                android:textSize="@dimen/sp15"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/dp5"
+                                android:text="Skipped"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/sp13" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@mipmap/score_result_screen"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp11"
+                                android:text="Score"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp11"
+                                android:text="Score"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@mipmap/score_result_screen"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp11"
+                                android:text="Score"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp11"
+                                android:text="Score"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/rateLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:text="Please rate the QBank Module"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/sp20" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar1"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:scaleX=".8"
+                    android:scaleY=".8"
+                    android:stepSize="1.0" />
+
+            </LinearLayout>
+
+            <!--    <EditText
+                    android:id="@+id/feedbackET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp100"
+                    android:layout_margin="@dimen/dp10"
+                    android:background="@drawable/bg_edit_text"
+                    android:drawablePadding="@dimen/dp10"
+                    android:gravity="start"
+                    android:hint="Type your feedback..."
+                    android:paddingStart="@dimen/dp20"
+                    android:paddingTop="@dimen/dp10" />-->
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp5">
+
+        <Button
+            android:id="@+id/reviewAnswer"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_weight="1"
+            android:background="@drawable/btn_review_answer"
+            android:text="Review Answer"
+            android:textAllCaps="true"
+            android:textSize="@dimen/sp15" />
+
+
+        <Button
+            android:id="@+id/closeBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_weight="1"
+            android:background="@drawable/bg_signup_btn"
+            android:text="Close"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1f1f1f</color>
+    <color name="colorPrimaryDark">#121212</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black">#FFFFFF</color>
+
+    <color name="blue_2">#FFFFFF</color>
+    <color name="black_dark_light">#000000</color>
+    <color name="white">#000000</color>
+    <color name="off_white">#000000</color>
+    <color name="greayrefcode_light">#121212</color>
+    <color name="greayrefcode_dark">#616161</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="transparent_black">#80000000</color>
+    <color name="green">#38FD38</color>
+    <color name="middium_blue">#5E33A2D9</color>
+    <color name="dark_green">#008000</color>
+    <color name="red">#FA475C</color>
+    <color name="notification_red">#CC0000</color>
+    <color name="light_red">#df2228</color>
+    <color name="progress_grey">#000000</color>
+    <color name="progress_green">#93FFA9</color>
+    <color name="redeem">#05caa7</color>
+    <color name="light_green">#7450BB77</color>
+    <!--<color name="blue">#33A2D9</color>old-->
+    <color name="blue">#2f90d0</color>
+    <color name="light_blue_2">#ECF7FF</color>
+    <color name="light_blue">#2033A2D9</color>
+    <color name="progress_hard_red">#FE8F8E</color>
+    <color name="progress_medium_yellow">#EBF98B</color>
+    <color name="progress_easy_green">#52FBB3</color>
+    <color name="black_overlay">#FFFFFF</color>
+    <color name="dullBlack">#FFFFFF</color>
+    <color name="overlay">#AA1C1C1C</color>
+    <color name="rewards_color">#ff8b00</color>
+
+    <!--EpuBear SDK COLOR-->
+    <!--<color name="epubcolorPrimary">#a3c8ed</color>-->
+    <!--<color name="epubcolorPrimaryDark">#1976d2</color>-->
+    <!--<color name="epubcolorAccent">#a3c8ed</color>-->
+
+    <color name="colorPrimaryNight">#9a9a9a</color>
+    <color name="colorAccentNight">#ffffff</color>
+
+    <color name="color_circle">#cbcbcb</color>
+    <color name="textcolor">#52B8E7</color>
+    <color name="colorGray">#1f1f1f</color>
+    <color name="blue_dark">#008dff</color>
+    <color name="incorrect">#ea5d62</color>
+    <color name="skipped">#b7b7b7</color>
+    <color name="correct">#00a651</color>
+    <color name="colorGray2">#cccccc</color>
+    <color name="green_new">#50bb77</color>
+    <color name="ayp_item_selected">#90FFFFFF</color>
+    <color name="dark_quiz_grey">#a9a9a9</color>
+    <color name="overlay_dark_40">#66000000</color>
+    <color name="order_successful">#0e781d</color>
+    <color name="order_failed">#df2f2f</color>
+    <color name="order_pending">#e9793c</color>
+    <color name="colorGray3">#FFFFFF</color>
+    <color name="colorGray4">#7e7e7e</color>
+
+    <color name="grey_80">#37474F</color>
+    <color name="grey_new">#FFFFFF</color>
+
+    <color name="intro1">#3EB5DA</color>
+    <color name="intro2">#f28ab8</color>
+    <color name="pauseColor">#A6FF00</color>
+    <color name="swip_refresh_color1">#32316B</color>
+
+    <color name="gradient_light_blue_color">#4e15d1</color>
+
+
+    <!--for random color generator -->
+    <array name="mdcolor_random">
+        <item type="color">#e91e63</item>
+        <item type="color">#fdf501</item>
+        <item type="color">#673ab7</item>
+        <item type="color">#38FD38</item>
+
+        <item type="color">#5677fc</item>
+        <item type="color">#689F38</item>
+        <item type="color">#03a9f4</item>
+
+        <item type="color">#ff5722</item>
+        <item type="color">#795548</item>
+        <item type="color">#607d8b</item>
+        <item type="color">#ff9800</item>
+    </array>
+
+    <color name="light_quiz_grey">#eeeeee</color>
+    <color name="tabUnselectedColor">#CFE2F1</color>
+    <color name="bg_color">#1f1f1f</color>
+
+    <color name="grey_3">#000000</color>
+
+    <color name="dark_qbank">#294e9b</color>
+    <color name="light_qbank">#49afd2</color>
+    <color name="dark_test">#007641</color>
+    <color name="light_test">#00df78</color>
+    <color name="dark_ebook">#8432b1</color>
+    <color name="light_ebook">#d36a8e</color>
+    <color name="cb_grey">#e9e7e7</color>
+    <color name="page_background">#000000</color>
+    <color name="light_grey">#d3d3d3</color>
+    <color name="grey_2">#ffffff</color>
+
+    <color name="circular_progress_grey">#C9C9C9</color>
+    <color name="chat_user_bg_color">#c9efcc</color>
+    <color name="chat_bg_color">#eeeeee</color>
+    <color name="meet_expert_bg">#000000</color>
+    <color name="off_red">#F36363</color>
+    <color name="dark_white_trans">#000000</color>
+    <color name="black_color_title">#e6000000</color>
+    <color name="light_blue_text_rate">#2e90cf</color>
+
+    <color name="reg_pref_active">#f3faff</color>
+    <color name="stroke_reg_pref">#acacac</color>
+    <color name="light_black">#bd000000</color>
+    <color name="reg_tab_text_color">#80000000</color>
+    <color name="reg_screen_divider_color">#3d010101</color>
+    <color name="choose_file_bg_color">#d1d1d1</color>
+    <color name="light_gray">#8a000000</color>
+    <color name="reg_tab_active_bg_color">#ecf8ff</color>
+    <color name="reg_previous_btn_bg_color">#a1a1a1</color>
+    <color name="reg_cancel_btn_bg_color">#eb6f6f</color>
+    <color name="bg_light_green_color">#80ffc6</color>
+    <color name="bg_dark_green_color">#005931</color>
+    <color name="bg_graph_test_name_color">#3db880</color>
+
+    <color name="smily_1">#F17072</color>
+    <color name="smily_2">#E470FF</color>
+    <color name="smily_3">#6FFF88</color>
+    <color name="smily_4">#FFBD70</color>
+    <color name="smily_5">#709DFF</color>
+    <color name="left_panel_background_item_active_color">#121212</color>
+    <color name="left_panel_background_color">#1f1f1f</color>
+    <color name="left_panel_header_background_color">#121212</color>
+    <color name="left_panel_header_text_color">#FFFFFF</color>
+    <color name="bookmark_layout_bg_color">#121212</color>
+    <color name="popup_dialog_header_start_color">#414141</color>
+    <color name="popup_dialog_header_end_color">#414141</color>
+    <color name="course_bg_color">#121212</color>
+    <color name="toolbar_bg_color">#61a2f7</color>
+    <color name="question_text_color">#FFFFFF</color>
+    <color name="expandable_list_item_text_color">#FFFFFF</color>
+    <color name="live_on_text_color">@color/expandable_list_item_text_color</color>
+    <color name="result_analysis_tab_bg_color">#414141</color>
+    <color name="login_page_bg_color">#414141</color>
+    <color name="register_bg_color">#616161</color>
+    <color name="test_dark_green">#178052</color>
+    <color name="test_extra_dark_green">#006C3C</color>
+    <color name="bright_green">#00da74</color>
+    <color name="expandable_list_parent_item_text_color">#FFFFFF</color>
+    <color name="white_review_back">#FF1B1A1A</color>
+    <color name="black_expandable_child">#3A3B3C</color>
+    <color name="stream_bg_color">@color/course_bg_color</color>
+    <color name="grey_back">#FFFFFF</color>
+
+    <color name="record_course_list">#252836</color>
+    <color name="blue_lock">#ffffff</color>
+
+    <color name="course_summary_text">#ffffff</color>
+    <color name="toolbar_bg">#121212</color>
+    <color name="blue_button">#508DF4</color>
+    <color name="apply_txt_color">#ffffff</color>
+    <color name="redeem_text_color">#ffffff</color>
+
+    <color name="subscription_text">#ffffff</color>
+    <color name="subscription_desc">#1B1D28</color>
+
+    <color name="subscription_tick">#ffffff</color>
+    <color name="subscription_back">#ffffff</color>
+
+    <color name="subscription_list">#1B1D28</color>
+
+    <color name="sky_blue">#61a2f7</color>
+
+    <color name="skyBlue">#ffffff</color>
+
+    <color name="bg_dock">#3d3d3d</color>
+
+    <color name="grey_search">#ffffff</color>
+    <color name="grey_camera">#161616</color>
+
+    <color name="off_white_color">#FF1B1A1A</color>
+    <color name="video_sub_item_text">#FFFFFF</color>
+
+    <color name="notification_color">#161616</color>
+    <color name="notification_text">#ffffff</color>
+
+    <color name="notification_bell">#ffffff</color>
+    <color name="notification_bell_shadow">#7A7A7A</color>
+    <color name="list_item">#FF1B1A1A</color>
+
+    <color name="pop_up">#7b7272</color>
+
+    <color name="cart_skyBlue">#1B1D28</color>
+
+    <color name="grey_text">#ffffff</color>
+
+    <color name="notes_icons">#ffffff</color>
+
+
+    <color name="faq_white">#FF1B1A1A</color>
+    <color name="faq_white_1">#4061a2f7</color>
+    <color name="skyBlueReview">#FF1B1A1A</color>
+
+    <!-- Podcast New Design Night Mode Color -->
+    <color name="white1">#FFFFFF</color>
+    <color name="podcast_row_color">#1f1f1f</color>
+    <color name="podcast_row_header_text">#FFFFFF</color>
+    <color name="podcast_row_publisher_text">#FFFFFF</color>
+    <color name="podcast_file_size">#ffffff</color>
+    <color name="podcast_bg">#121212</color>
+    <color name="podcast_recent_added">#ffffff</color>
+    <color name="podcast_filter_text">#FFFFFF</color>
+    <color name="podcast_recent_added_bg_color">#1f1f1f</color>
+    <color name="podcast_left_round">#6a0a98</color>
+    <color name="podcast">#121212</color>
+    <color name="color_5701aa">#5701aa</color>
+
+    <color name="color_like_bg">#ff7d7d</color>
+    <color name="article_btt_bg">#7b7b7b</color>
+
+    //new color code
+    <color name="btn_background">#36c992</color>
+    <color name="text_white">#fFfFfF</color>
+    <color name="text_one">#4d4d4d</color>
+    <color name="back_color">#f2f3f8</color>
+    <color name="onboarding_text">#8e8e8e</color>
+    <color name="color_gradient">#EDF4FE</color>
+    <color name="color_248adc">#248adc</color>
+    <color name="color_892794">#892794</color>
+    <color name="fill_color">#1f1f1f</color>
+    <color name="color_light_blue_one">#121212</color>
+
+    <color name="color_text_gray">#9e9e9e</color>
+    <color name="color_light_blue">#1f1f1f</color>
+    <color name="header_text_color">#1976D2</color>
+    <color name="qr_color">#61a2f7</color>
+    <color name="white_like">#FFFFFF</color>
+    <color name="dialog_color">#191919</color>
+
+    <color name="color_number_gradient_1">#1f1f1f</color>
+    <color name="color_number_gradient_2">#121212</color>
+
+    <color name="book_bg_color">#1f1f1f</color>
+    <color name="incre_decrement_bg_color">#3b3b3b</color>
+
+</resources>

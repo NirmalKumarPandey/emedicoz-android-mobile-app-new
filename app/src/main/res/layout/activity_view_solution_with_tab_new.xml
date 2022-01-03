@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/course_bg_color">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_custom_toolbar" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp2"
+        android:layout_below="@id/toolbar"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:background="@color/blue"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/allTV"
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="@dimen/dp50"
+                    android:gravity="center"
+                    android:text="@string/all"
+                    android:textAlignment="center"
+                    android:textColor="@color/left_panel_header_text_color"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/viewAll"
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="@dimen/dp5"
+                    android:background="@drawable/bg_solution_tile"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/correctTV"
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="@dimen/dp50"
+                    android:gravity="center"
+                    android:text="Correct"
+                    android:textAlignment="center"
+                    android:textColor="@color/left_panel_header_text_color"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/viewCorrect"
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="@dimen/dp5"
+                    android:background="@drawable/bg_solution_tile"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/incorrectTV"
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="@dimen/dp50"
+                    android:gravity="center"
+                    android:text="Incorrect"
+                    android:textAlignment="center"
+                    android:textColor="@color/left_panel_header_text_color"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/viewIncorrect"
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="@dimen/dp5"
+                    android:background="@drawable/bg_solution_tile"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/skippedTV"
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="@dimen/dp50"
+                    android:gravity="center"
+                    android:text="Skipped"
+                    android:textAlignment="center"
+                    android:textColor="@color/left_panel_header_text_color"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/viewSkipped"
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="@dimen/dp5"
+                    android:background="@drawable/bg_solution_tile"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bookmarkedTV"
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="@dimen/dp50"
+                    android:gravity="center"
+                    android:text="Bookmarked"
+                    android:textAlignment="center"
+                    android:textColor="@color/left_panel_header_text_color"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/viewBookmarked"
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="@dimen/dp5"
+                    android:background="@drawable/bg_solution_tile"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/allLL"
+        android:layout_width="@dimen/dp200"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scrollView"
+        android:layout_marginTop="@dimen/dp5"
+        android:background="@drawable/bg_btn">
+
+        <TextView
+            android:id="@+id/filterTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/all"
+            android:textAlignment="center"
+            android:textColor="@color/left_panel_header_text_color"
+            android:textSize="@dimen/sp18" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/allLL" />
+
+</RelativeLayout>

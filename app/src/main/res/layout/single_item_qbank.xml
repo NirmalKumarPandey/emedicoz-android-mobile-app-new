@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp5"
+    android:layout_marginBottom="@dimen/dp5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/qBankLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp30"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:src="@mipmap/question_b" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nameTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="Anotomy and Pediatrics"
+                    android:textSize="@dimen/sp14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp3">
+
+                <TextView
+                    android:id="@+id/questions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/qbank_icon"
+                    android:drawablePadding="@dimen/dp3"
+                    android:text="Questions"
+                    android:textSize="@dimen/sp11" />
+
+
+                <View
+                    android:layout_width="@dimen/dp1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:background="@color/colorGray2" />
+
+                <TextView
+                    android:id="@+id/review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/stargold"
+                    android:drawablePadding="@dimen/dp5"
+                    android:text="Reviews"
+                    android:textSize="@dimen/sp11"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/newTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="#81d4fa"
+                    android:paddingStart="@dimen/dp5"
+                    android:paddingEnd="@dimen/dp5"
+                    android:layout_toEndOf="@id/nameTV"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:text="New"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/dp5"
+                    android:background="@drawable/bg_new_tag"
+                    android:textSize="@dimen/sp10" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/statusTV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp30"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:padding="@dimen/dp2"
+            android:src="@mipmap/start" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:background="@color/colorGray2" />
+
+</LinearLayout>

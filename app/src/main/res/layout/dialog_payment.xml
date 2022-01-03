@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/dp10">
+
+                <TextView
+                    android:id="@+id/titleDialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:gravity="center_horizontal"
+                    tools:text="Choose a way to pay 4900 INR"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/heading_text_size" />
+
+
+                <RadioGroup
+                    android:id="@+id/radioGroupPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/btn_paytm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp40"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/dp5"
+                        android:text="@string/paytm"
+                        android:textColor="@color/black" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/radio_btn_inApp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp40"
+                        android:padding="@dimen/dp5"
+                        android:text="@string/in_app_purchase"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/btn_ccAvenue"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp5"
+                        android:text="@string/ccAvenue"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/reviewTextTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp10"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="@dimen/dp10"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/small_text_size"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/btnControlReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/btn_continue"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp40"
+                            android:layout_centerHorizontal="true"
+                            android:layout_weight="1"
+                            android:background="@drawable/background_btn_red"
+                            android:padding="@dimen/dp5"
+                            android:text="Pay"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

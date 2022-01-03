@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/onBoardingItemIV"
+        android:layout_width="@dimen/dp300"
+        android:layout_height="@dimen/dp300"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp50"
+        android:layout_marginEnd="@dimen/dp10"
+        android:src="@drawable/otp_screen_image" />
+
+
+    <TextView
+        android:id="@+id/onBoardingItemTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/onBoardingItemIV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp30"
+        android:text="@string/daily_challenge"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp20"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/onBoardingItemSubTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/onBoardingItemTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/dp50"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp50"
+        android:text="@string/daily_challenge_sub_title"
+        android:textAlignment="center"
+        android:textColor="@color/gray_8e8e8e"
+        android:textSize="@dimen/sp12" />
+
+</RelativeLayout>

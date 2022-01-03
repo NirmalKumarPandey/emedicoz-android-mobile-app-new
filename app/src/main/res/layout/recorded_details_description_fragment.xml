@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/inner_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/learnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp5"
+                android:layout_marginBottom="@dimen/dp5"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:paddingStart="@dimen/dp15"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingEnd="@dimen/dp15"
+                    android:paddingBottom="@dimen/dp15"
+                    android:text="@string/what_you_ll_learn"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <!-- <com.borjabravo.readmoretextview.ReadMoreTextView
+                     android:id="@+id/tv_course_summary_show_more"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="@dimen/dp10"
+                     android:layout_marginEnd="@dimen/dp10"
+                     android:layout_marginBottom="@dimen/dp10"
+                     android:clickable="true"
+                     android:focusable="true"
+                     android:paddingStart="@dimen/dp15"
+                     android:paddingEnd="@dimen/dp15"
+                     android:textColor="@color/black"
+                     android:textSize="12sp"
+                     app:colorClickableText="@color/blue_2"
+                     app:showTrimExpandedText="true"
+                     app:trimCollapsedText="@string/show_more"
+                     app:trimExpandedText="@string/show_less"
+                     app:trimLines="4"
+                     tools:text="@string/instructor_details"
+                      />-->
+                <!--tools:text="@string/instructor_details"-->
+
+
+                <LinearLayout
+                    android:id="@+id/webviewLV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp5"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:layout_margin="@dimen/dp10"
+                    android:orientation="vertical">
+
+                    <WebView
+                        android:layout_margin="@dimen/dp3"
+                        android:id="@+id/tv_course_summary_show_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/seeTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="See More" />
+
+
+            <View
+                android:id="@+id/divider_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/instructor_description"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp5"
+                android:layout_marginBottom="@dimen/dp20"
+                android:background="?android:attr/listDivider" />
+
+
+        </LinearLayout>
+
+
+        <include
+            android:id="@+id/inc_layout_1"
+            layout="@layout/layout_instructor_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/learnLayout" />
+
+        <include
+            android:id="@+id/inc_layout_2"
+            layout="@layout/fragment_student_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inc_layout_1" />
+
+        <include
+            android:id="@+id/inc_layout_3"
+            layout="@layout/layout_instructor_reviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inc_layout_2" />
+
+        <LinearLayout
+            android:id="@+id/faqLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inc_layout_3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/instructor_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:padding="@dimen/dp5"
+                    android:text="Frequently Asked Questions"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/faqList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:layout_marginBottom="@dimen/dp20" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/showMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp5"
+                android:padding="@dimen/dp10"
+                android:text="Show More"
+                android:textColor="@color/skyBlue"
+                android:visibility="visible"
+                app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
+
+
+            <Button
+                android:id="@+id/needHelp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp30"
+                android:background="@drawable/background_btn_review"
+                android:text="Need Help?"
+                android:textAllCaps="false"
+                android:textColor="@color/skyBlue"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+

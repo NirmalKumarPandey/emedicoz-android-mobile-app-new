@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialogbox"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/dp15">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp30"
+        android:layout_marginStart="@dimen/dp50"
+        android:layout_marginEnd="@dimen/dp50"
+        android:background="@drawable/bg_capsule_fill_gray"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/dp5"
+        android:paddingBottom="@dimen/dp5"
+        android:text="Add New cards"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp15" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:gravity="center_vertical"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:gravity="center_horizontal"
+            android:paddingEnd="@dimen/dp10"
+            android:text="Subject"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15" />
+
+        <RelativeLayout
+            android:id="@+id/rl_subject_dropdown"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp35"
+            android:layout_weight="1.3"
+            android:background="@drawable/bg_capsule_fill_blue"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spin1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_subject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/all"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp13" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp15"
+                    android:rotation="90"
+                    android:src="@mipmap/profile_white_arrow" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp15"
+        android:gravity="center_vertical"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:gravity="center_horizontal"
+            android:paddingEnd="@dimen/dp10"
+            android:text="Subtopic"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15" />
+
+        <RelativeLayout
+            android:id="@+id/rl_subtopic_dropdown"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp35"
+            android:layout_weight="1.3"
+            android:background="@drawable/bg_capsule_fill_blue"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_sub_topic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/all"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp13" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp15"
+                    android:rotation="90"
+                    android:src="@mipmap/profile_white_arrow" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="-3dp"
+            android:paddingEnd="@dimen/dp10"
+            android:text="Number of Cards"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15" />
+
+        <RelativeLayout
+            android:id="@+id/rl_number_of_card_dropdown"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp35"
+            android:layout_weight="1.3"
+            android:background="@drawable/bg_capsule_fill_blue"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_number_of_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="5"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp13" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp15"
+                    android:rotation="90"
+                    android:src="@mipmap/profile_white_arrow" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginTop="@dimen/dp25"
+        android:background="@drawable/bg_capsule_fill_blue"
+        android:text="Confirm"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</LinearLayout>

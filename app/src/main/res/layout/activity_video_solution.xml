@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".courses.activity.VideoSolution">
+
+    <include layout="@layout/layout_common_toolbar"/>
+
+    <RelativeLayout
+        android:id="@+id/rootVideoSolution"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp200"
+        android:background="@color/black"
+        android:focusable="true"
+        android:visibility="gone"
+        android:keepScreenOn="true">
+
+        <include
+            layout="@layout/common_video_screen_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginEnd="@dimen/dp15"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp3"
+        android:layout_marginBottom="@dimen/dp5"
+        android:layout_width="match_parent"
+        app:cardElevation="@dimen/dp4"
+        app:cardBackgroundColor="@color/blue"
+        app:cardCornerRadius="@dimen/dp4"
+        android:layout_height="@dimen/dp40">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Subject"
+                android:textAlignment="center"
+                android:textSize="@dimen/sp13"
+                android:layout_gravity="center"
+                android:textColor="@color/left_panel_header_text_color"
+                android:layout_weight="1.4"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Duration"
+                android:textAlignment="center"
+                android:textSize="@dimen/sp13"
+                android:layout_gravity="center"
+                android:textColor="@color/left_panel_header_text_color"
+                android:layout_weight="0.8"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Download"
+                android:textAlignment="center"
+                android:textSize="@dimen/sp15"
+                android:layout_gravity="center"
+                android:textColor="@color/left_panel_header_text_color"
+                android:layout_weight="1.2"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Start"
+                android:textAlignment="center"
+                android:textSize="@dimen/sp15"
+                android:layout_gravity="center"
+                android:textColor="@color/left_panel_header_text_color"
+                android:layout_weight="0.8"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.emedicoz.app.customviews.NonScrollRecyclerView
+                android:id="@+id/videoSolutionRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:visibility="visible" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

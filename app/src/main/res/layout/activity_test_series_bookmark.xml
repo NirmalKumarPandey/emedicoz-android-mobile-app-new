@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/dams_logo_bg"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp10"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5">
+
+                <TextView
+                    android:id="@+id/tv_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/img_bookmark"
+                    android:background="@color/transparent"
+                    android:nestedScrollingEnabled="true"
+                    android:padding="@dimen/dp5"
+                    android:scrollbars="none"
+                    android:textColor="@color/question_text_color"
+                    android:textSize="@dimen/sp16" />
+
+                <ImageView
+                    android:id="@+id/img_bookmark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/dp5"
+                    android:src="@mipmap/bookmarked" />
+            </RelativeLayout>
+
+
+            <include
+                layout="@layout/common_video_screen_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp200"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imgQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp200"
+                android:visibility="gone" />
+
+            <WebView
+                android:id="@+id/table_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/mcqoptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginBottom="@dimen/dp5"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp5"
+                android:paddingRight="@dimen/dp5"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/LLmatchinquestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginBottom="@dimen/dp5"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp5"
+                android:paddingRight="@dimen/dp5"
+                android:visibility="gone">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp5"
+                    app:cardCornerRadius="@dimen/dp4"
+                    app:cardElevation="@dimen/dp4">
+
+                    <com.emedicoz.app.customviews.NonScrollRecyclerView
+                        android:id="@+id/rvmatchinquestion2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </androidx.cardview.widget.CardView>
+
+                <com.emedicoz.app.customviews.NonScrollRecyclerView
+                    android:id="@+id/rvmatchinquestion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <com.emedicoz.app.customviews.NonScrollRecyclerView
+                android:id="@+id/trueFalseRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@color/colorGray2" />
+
+        <LinearLayout
+            android:id="@+id/explanationLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp15"
+            android:background="@drawable/bg_explanation"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp5"
+                android:paddingEnd="@dimen/dp5"
+                android:paddingBottom="@dimen/dp5"
+                android:text="Explanation:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_explanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp5"
+                android:paddingEnd="@dimen/dp5"
+                android:paddingBottom="@dimen/dp5"
+                android:text="Explanation:"
+                android:textSize="@dimen/sp15" />
+
+            <ImageView
+                android:id="@+id/imgExplanation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp200"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp10"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!--        <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Explanation"
+                    android:textSize="@dimen/sp18"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:padding="@dimen/dp5"/>
+
+                <TextView
+                    android:id="@+id/tv_explanation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:padding="@dimen/dp5"
+                    android:textSize="@dimen/sp16"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:background="@color/transparent"/>-->
+
+        <include layout="@layout/layout_test_reference" />
+    </LinearLayout>
+</ScrollView>

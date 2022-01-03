@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="133dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp5"
+    android:id="@+id/parentRv"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="133dp"
+        android:layout_height="164dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <!--<com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/rectangle_bg"
+            app:riv_corner_radius="@dimen/dp5"/>-->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/dp10"
+            app:cardBackgroundColor="@color/book_bg_color">
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bookLV"
+        android:layout_width="133dp"
+        android:layout_height="137dp">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/subject_book"
+            app:riv_corner_radius="@dimen/dp5"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/bookLV"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp5"
+            android:background="@drawable/book_buy_bg"
+            android:text="@string/buy_now"
+            android:textColor="#fefefe"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp56"
+                android:background="@color/colorPrimary"
+                android:elevation="@dimen/dp5"
+                android:fitsSystemWindows="true"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/back_app_bar"
+                        android:layout_width="52sp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_back" />
+
+                    <TextView
+                        android:id="@+id/toolbarTitleTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="52sp"
+                        android:layout_toStartOf="@+id/searchSV"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:paddingLeft="@dimen/dp5"
+                        android:paddingRight="@dimen/dp5"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:textColor="@color/toolbar_bg_color"
+                        android:textSize="@dimen/dp14"
+                        tools:text="@string/app_name" />
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/searchSV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:queryHint="Search here"
+                        android:src="@drawable/search_tabss"
+                        android:theme="@style/Custom.Searching"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/quizNavigatorIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:padding="@dimen/dp5"
+                        android:visibility="gone"
+                        app:srcCompat="@mipmap/filter"
+                        app:tint="@color/black" />
+
+                    <Button
+                        android:id="@+id/next_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:background="@color/colorPrimary"
+                        android:padding="@dimen/dp5"
+                        android:text="@string/next"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/graphTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:background="@color/left_panel_header_text_color"
+                        android:drawableLeft="@mipmap/graph1"
+                        android:drawablePadding="@dimen/dp5"
+                        android:padding="@dimen/dp5"
+                        android:text="Graph"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:showIn="@layout/app_bar_main" />
+
+            <include layout="@layout/layout_error_message" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

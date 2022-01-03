@@ -1,0 +1,9 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/podcast_recent_added_bg_color" />
+    <padding android:left="10dp" android:top="10dp" android:right="10dp" android:bottom="10dp" />
+    <corners android:topLeftRadius="0dp" android:topRightRadius="70dp"
+        android:bottomLeftRadius="0dp" android:bottomRightRadius="70dp"/>
+
+    <stroke android:width="3dip"
+        android:color="@color/podcast" />
+</shape>

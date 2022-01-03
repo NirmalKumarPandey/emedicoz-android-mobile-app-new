@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".gamification.view.LiveQuizFragment">
+
+    <include
+        android:id="@+id/headerLayout"
+        layout="@layout/header_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rlBanner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp90"
+        android:layout_marginStart="@dimen/sp16"
+        android:layout_marginTop="@dimen/sp16"
+        android:layout_marginEnd="@dimen/sp16"
+        android:background="@drawable/ic_rectangle_1091"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout">
+
+        <ImageView
+            android:id="@+id/ivPrize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9sp"
+            android:layout_marginTop="@dimen/dp7"
+            android:layout_marginBottom="@dimen/sp8"
+            app:srcCompat="@drawable/ic_prize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/sp21"
+            android:layout_marginEnd="@dimen/dp15"
+            android:layout_toEndOf="@+id/ivPrize"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPrizeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:gravity="center"
+                android:text="Play this challenge and win prize"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/sp12" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp16"
+                android:background="@drawable/ic_rectangle_1090"
+                android:fontFamily="@font/helvetica_neue_bold"
+                android:gravity="center"
+                android:text="01:15:22"
+                android:textColor="@color/black_dark_light"
+                android:textSize="@dimen/sp10" />
+
+            <TextView
+                android:id="@+id/tvStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp4"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="Challenge starting in"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/sp8" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sp8"
+        android:layout_marginTop="@dimen/sp8"
+        android:layout_marginEnd="@dimen/sp8"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/rlBanner"
+        app:spanCount="2"
+        tools:listitem="@layout/live_quiz_adapter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

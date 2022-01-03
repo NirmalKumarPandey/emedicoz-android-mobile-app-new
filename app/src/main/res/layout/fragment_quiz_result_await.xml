@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".courses.fragment.QuizResultAwait">
+
+    <ImageView
+        android:layout_width="@dimen/dp200"
+        android:layout_height="@dimen/dp200"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp100"
+        android:src="@drawable/result_iamge" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:padding="@dimen/dp5"
+        android:text="Results will be out on"
+        android:textAlignment="center"
+        android:textSize="@dimen/sp20" />
+
+    <TextView
+        android:id="@+id/testArrivalDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp5"
+        android:text="Mon, Jan 12, 2019, 12:00 PM"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp20" />
+
+</LinearLayout>

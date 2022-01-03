@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <include
+        android:id="@+id/coin_header"
+        layout="@layout/coin_header" />
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coin_header"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="@dimen/dp14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/helvetica_neue_medium"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                tools:ignore="SpUsage" />
+
+            <include layout="@layout/redeem_save_money_view"
+                android:id="@+id/lytSaveAndMoneyView">
+            </include>
+            <View
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginBottom="@dimen/dp16"
+                android:background="#bdbdbd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp2">
+            </View>
+            <include layout="@layout/redeem_discount_view"
+                android:id="@+id/lytRedeemDiscount">
+            </include>
+            <RelativeLayout
+                android:id="@+id/lytViewAll"
+                android:layout_marginBottom="@dimen/dp16"
+                android:background="@drawable/bg_view_white_border_grey"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/dp12"
+                    android:layout_marginStart="@dimen/dp8"
+                    android:fontFamily="@font/helvetica_neue_medium"
+                    android:textColor="@color/toolbar_bg_color"
+                    android:text="@string/viewAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    app:srcCompat="@drawable/arrownext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </ImageButton>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

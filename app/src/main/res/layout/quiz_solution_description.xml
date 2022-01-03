@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.emedicoz.app.customviews.TestSeriesOptionWebView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/questionQuizTV"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp5"
+    android:text="" />
+

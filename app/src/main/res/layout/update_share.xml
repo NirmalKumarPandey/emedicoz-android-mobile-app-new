@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearOne"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp20"
+    android:background="@color/greayrefcode_light"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        app:cardCornerRadius="@dimen/dp20"
+        app:cardMaxElevation="@dimen/dp20"
+        app:cardPreventCornerOverlap="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp180">
+
+            <TextView
+                android:id="@+id/tvLikeShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="@string/title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvLikeShare2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvLikeShare"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="9dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/title_2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp14" />
+
+            <Button
+                android:id="@+id/btnShare"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_below="@+id/tvLikeShare"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="70dp"
+                android:layout_marginRight="2dp"
+                android:layout_toLeftOf="@+id/ivOne"
+                android:background="@drawable/btn_onboarding"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                android:text="@string/share_now"
+                android:textAllCaps="false"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/dp14" />
+
+            <ImageView
+                android:id="@+id/ivOne"
+                android:layout_width="142dp"
+                android:layout_height="86dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="-1dp"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginEnd="29dp"
+                android:layout_marginRight="@dimen/dp28"
+                android:layout_toEndOf="@+id/tvLikeShare2"
+                android:layout_toRightOf="@+id/tvLikeShare"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_58_layers" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardUpadteApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp20"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp20"
+        app:cardMaxElevation="@dimen/dp20"
+        app:cardPreventCornerOverlap="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp180">
+
+            <ImageView
+                android:id="@+id/ivApp"
+                android:layout_width="@dimen/dp150"
+                android:layout_height="@dimen/dp150"
+                android:layout_marginLeft="@dimen/dp24"
+                android:layout_marginTop="@dimen/dp17"
+                android:src="@drawable/update_app" />
+
+            <TextView
+                android:id="@+id/tvUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="@dimen/dp24"
+                android:layout_marginRight="@dimen/dp28"
+                android:layout_toRightOf="@+id/ivApp"
+                android:text="@string/title_update"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvUpdate"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp28"
+                android:layout_toRightOf="@+id/ivApp"
+                android:text="@string/header_2"
+                android:textColor="@color/text_one"
+                android:textSize="@dimen/dp12" />
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_below="@+id/tvOne"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp28"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_toRightOf="@+id/ivApp"
+                android:background="@drawable/btn_onboarding"
+                android:text="@string/btn_title"
+                android:textAllCaps="false"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/dp15" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

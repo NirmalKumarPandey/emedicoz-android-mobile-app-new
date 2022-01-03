@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#70AAFF"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/dp5"
+        android:text="Authenticate With"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="@dimen/sp20" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/password"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="45dp"
+            android:text="Password"
+            android:textSize="@dimen/sp13" />
+
+        <Button
+            android:id="@+id/smsOtp"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginLeft="@dimen/dp40"
+            android:text="SMS OTP"
+            android:textSize="@dimen/sp13" />
+    </TableRow>
+
+
+</LinearLayout>

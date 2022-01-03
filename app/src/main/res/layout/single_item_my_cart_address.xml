@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp200"
+    android:layout_height="@dimen/dp175"
+    android:layout_margin="@dimen/dp10"
+    app:cardCornerRadius="@dimen/dp5"
+    app:cardElevation="@dimen/dp5"
+    app:cardBackgroundColor="@color/color_248adc"
+    android:id="@+id/cartAddressCV">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/defaultBtn"
+            android:layout_marginBottom="@dimen/dp5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp15"
+                android:layout_marginEnd="@dimen/dp10"
+                android:paddingTop="@dimen/dp1"
+                android:textColor="@color/white"
+                android:paddingBottom="@dimen/dp1" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp10"
+                android:maxLines="3"
+                android:paddingTop="@dimen/dp1"
+                android:textColor="@color/white"
+                android:paddingBottom="@dimen/dp1" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp10"
+                android:paddingTop="@dimen/dp1"
+                android:textColor="@color/white"
+                android:paddingBottom="@dimen/dp1" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/defaultBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp30"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/white"
+            android:text="Default"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp5"
+            android:textColor="@color/color_248adc"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

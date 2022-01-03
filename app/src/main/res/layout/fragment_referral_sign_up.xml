@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Please fill the form to get started with  our affiliation program."
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp18"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:layout_marginTop="@dimen/dp5"
+            android:background="@color/grey_80" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="Personal Details"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/sp17"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginBottom="-5dp"
+                android:text="Profile Type"
+                android:textSize="@dimen/sp11" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/instructorNameSpinner"
+                style="@style/TextAppearance.AppCompat.Widget.DropDownItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="-4dp"
+                android:entries="@array/instructor_names" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dp4"
+                android:layout_marginRight="@dimen/dp5"
+                android:background="@color/colorGray4" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/firstNameTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/firstNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:digits="@string/text_type_string"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lastNameTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/lastNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:digits="@string/text_type_string"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/last_name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailAddressTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/emailAddressET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/email_address"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <com.rilixtech.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp5"
+                    app:ccp_defaultNameCode="@string/country_india_code"
+                    app:ccp_hideNameCode="true"
+                    app:ccp_textColor="@color/colorGray4"
+                    app:ccp_textSize="@dimen/sp14" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phoneNumberTIL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp4">
+
+                    <EditText
+                        android:id="@+id/phoneNumberET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dp17"
+                        android:hint="@string/referral_phone_number"
+                        android:inputType="number"
+                        android:maxLength="15"
+                        android:paddingTop="2dp"
+                        android:textSize="@dimen/sp14" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/imgPanCard">
+
+                    <EditText
+                        android:id="@+id/panCardET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp50"
+                        android:digits="@string/pan_card_digits"
+                        android:drawablePadding="@dimen/dp17"
+                        android:hint="@string/pan_card"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:paddingTop="2dp"
+                        android:textSize="@dimen/sp14" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgPanCard"
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp60"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@mipmap/attach" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/imgAadharCard">
+
+                    <EditText
+                        android:id="@+id/aadhaarCardET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp50"
+                        android:drawablePadding="@dimen/dp17"
+                        android:hint="@string/aadhaar_card"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:maxLines="1"
+                        android:paddingTop="2dp"
+                        android:textSize="@dimen/sp14" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgAadharCard"
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp60"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@mipmap/attach" />
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10">
+
+                <EditText
+                    android:id="@+id/addressET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/address"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/postalCodeET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/postal_code"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/cityET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:digits="@string/text_type_string"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/city"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/stateET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:digits="@string/text_type_string"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/state"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:text="Country"
+                android:textSize="@dimen/sp12" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/countryET"
+                style="@style/TextAppearance.AppCompat.Widget.DropDownItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp10"
+                android:entries="@array/country_arrays" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:layout_marginTop="@dimen/dp5"
+            android:background="@color/grey_80" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp12"
+            android:gravity="center"
+            android:text="Bank Details"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/sp17"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/accountHolderNameTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/accountHolderNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:digits="@string/text_type_string"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/account_holder_name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bankNameTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/bankNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:digits="@string/text_type_string"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/bank_name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/bankBranchNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:digits="@string/text_type_string"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/bank_branch_name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/accountNumberTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/accountNumberET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/account_number"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ifscCodeTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/ifscCodeET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:digits="@string/pan_card_digits"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/ifsc_code"
+                    android:inputType="textCapCharacters"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/bankDocTIL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp5"
+                    android:layout_toStartOf="@id/imgBankDoc"
+                    android:text="@string/upload_bank_document_photo" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgBankDoc"
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp60"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@mipmap/attach" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:background="@color/grey_80" />
+
+        <TextView
+            android:id="@+id/privacyPolicyTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp20"
+            android:text="Privacy Policy"
+            android:textColor="#5479C5"
+            android:textSize="@dimen/sp14"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/agreementTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp20"
+            android:text="Agreement Policy"
+            android:textColor="#5479C5"
+            android:textSize="@dimen/sp14"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp20"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBoxId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/termCondId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/i_have_read_terms_and_conditions"
+                android:textSize="@dimen/sp13" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signMeUpBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp48"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_signup_btn"
+            android:paddingLeft="@dimen/dp22"
+            android:paddingRight="@dimen/dp22"
+            android:text="Sign Me Up"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/updateInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp48"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_signup_btn"
+            android:paddingLeft="@dimen/dp22"
+            android:paddingRight="@dimen/dp22"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

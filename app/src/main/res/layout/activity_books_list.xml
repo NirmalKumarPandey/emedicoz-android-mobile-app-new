@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Books.Activity.BookHomeActivity">
+
+    <!--<include
+        android:id="@+id/toolbarAddressList"
+        layout="@layout/layout_common_toolbar" />-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp5"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp56"
+            android:background="@color/colorPrimary"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/toolbarBackIV"
+                    android:layout_width="52sp"
+                    android:layout_height="@dimen/dp56"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/ic_back" />
+
+                <TextView
+                    android:id="@+id/toolbarTitleTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp6"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:letterSpacing=".04"
+                    android:text="Toolbar Title"
+                    android:textColor="@color/toolbar_bg_color"
+                    android:textSize="@dimen/sp14" />
+
+                <ImageButton
+                    android:id="@+id/toolbarfilter"
+                    android:layout_width="80dp"
+                    android:layout_height="@dimen/dp56"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@mipmap/book_filter_icon" />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/sp10"
+                    android:layout_marginTop="@dimen/sp10"
+                    android:layout_marginEnd="@dimen/sp10"
+                    android:layout_marginBottom="@dimen/sp10"
+                    tools:listitem="@layout/record_courses_list_item_trending" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <FrameLayout
+            android:id="@+id/layoutNoContentFound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbarAddressList"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="No Data Found"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp18" />
+            </androidx.cardview.widget.CardView>
+
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

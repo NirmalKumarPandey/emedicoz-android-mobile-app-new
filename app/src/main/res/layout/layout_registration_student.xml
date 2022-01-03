@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/studentTypeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:padding="@dimen/dp5"
+            android:text="@string/student_type"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp10"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioNewStudent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:gravity="start"
+                android:padding="@dimen/dp5"
+                android:text="@string/new_student"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/sp14" />
+
+            <RadioButton
+                android:id="@+id/radioExistingStudent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:gravity="start"
+                android:padding="@dimen/dp5"
+                android:text="@string/existing_student"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/sp14" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/studentNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:padding="@dimen/dp5"
+            android:text="@string/student_name"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/sp12" />
+
+        <EditText
+            android:id="@+id/studentNameET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:digits="@string/text_type_string"
+            android:drawablePadding="@dimen/dp17"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dp2"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/dobTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:padding="@dimen/dp5"
+            android:text="@string/dob"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/sp12" />
+
+        <EditText
+            android:id="@+id/dobET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:drawablePadding="@dimen/dp17"
+            android:inputType="text"
+            android:maxLines="1"
+            android:focusable="false"
+            android:paddingTop="@dimen/dp2"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/genderTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp5"
+            android:padding="@dimen/dp5"
+            android:text="@string/gender"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp10"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:gravity="start"
+                android:padding="@dimen/dp5"
+                android:text="@string/male"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/sp14" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:gravity="start"
+                android:padding="@dimen/dp5"
+                android:text="@string/female"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/sp14" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fatherNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:padding="@dimen/dp5"
+            android:text="@string/father_name"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/sp12" />
+
+        <EditText
+            android:id="@+id/fatherNameET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:digits="@string/text_type_string"
+            android:drawablePadding="@dimen/dp17"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dp2"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/emailTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:padding="@dimen/dp5"
+            android:text="@string/email_id"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/sp12" />
+
+        <EditText
+            android:id="@+id/emailET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:digits="@string/text_type_string"
+            android:drawablePadding="@dimen/dp17"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dp2"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/mobileTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:padding="@dimen/dp5"
+            android:text="@string/mobile"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/sp12" />
+
+        <EditText
+            android:id="@+id/mobileET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:drawablePadding="@dimen/dp17"
+            android:inputType="number"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dp2"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/otpTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:padding="@dimen/dp5"
+            android:text="@string/otp"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/sp12" />
+
+        <EditText
+            android:id="@+id/otpET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:drawablePadding="@dimen/dp17"
+            android:inputType="number"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dp2"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/addressTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:padding="@dimen/dp5"
+            android:text="@string/address"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/sp12" />
+
+        <EditText
+            android:id="@+id/addressET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:digits="@string/text_type_string"
+            android:drawablePadding="@dimen/dp17"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dp2"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/countryTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:padding="@dimen/dp5"
+            android:text="@string/country"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/sp12" />
+
+        <EditText
+            android:id="@+id/countryET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:digits="@string/text_type_string"
+            android:drawablePadding="@dimen/dp17"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dp2"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/stateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:padding="@dimen/dp5"
+            android:text="@string/state"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/sp12" />
+
+        <EditText
+            android:id="@+id/stateET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:digits="@string/text_type_string"
+            android:drawablePadding="@dimen/dp17"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dp2"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/pinTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:padding="@dimen/dp5"
+            android:text="@string/pin_code"
+            android:maxLength="6"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/sp12" />
+
+        <EditText
+            android:id="@+id/pinET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:drawablePadding="@dimen/dp17"
+            android:inputType="number"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dp2"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/alternateMobileTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:padding="@dimen/dp5"
+            android:text="@string/alternate_mobile"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/sp12" />
+
+        <EditText
+            android:id="@+id/alternateMobileET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:drawablePadding="@dimen/dp17"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dp2"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/studentImageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp5"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dp5"
+            android:text="@string/student_image"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp75"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:background="@drawable/bg_choose_file">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp50"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                app:cardCornerRadius="@dimen/dp5"
+                app:cardElevation="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginBottom="@dimen/dp5"
+                android:layout_marginStart="@dimen/dp10">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/choose_file"
+                    android:textSize="@dimen/sp14"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp50"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/dp5"
+                android:text="@string/no_file_choosen"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textSize="@dimen/sp14"
+                android:textColor="@color/light_black"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/howYouKnowTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp5"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dp5"
+            android:text="@string/how_you_know_about_dams"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/howYouKnowET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:digits="@string/text_type_string"
+            android:drawablePadding="@dimen/dp17"
+            android:inputType="text"
+            android:background="@drawable/bg_registration_pref"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dp2"
+            android:textSize="@dimen/sp14" />
+
+
+        <TextView
+            android:id="@+id/remarksTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp5"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dp5"
+            android:text="@string/remarks"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/remarksET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:digits="@string/text_type_string"
+            android:drawablePadding="@dimen/dp17"
+            android:inputType="text"
+            android:background="@drawable/bg_registration_pref"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dp2"
+            android:textSize="@dimen/sp14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp20">
+
+
+            <Button
+                android:id="@+id/btnPrevious"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp40"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_btn"
+                android:elevation="@dimen/dp4"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp5"
+                android:text="@string/previous"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15"/>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp40"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_btn"
+                android:elevation="@dimen/dp4"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp5"
+                android:text="@string/next"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/important_notes"
+            android:textSize="@dimen/sp18"
+            android:padding="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginStart="@dimen/dp5"
+            android:textColor="@color/black"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

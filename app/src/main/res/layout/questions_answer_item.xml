@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/lytChild"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/question_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/off_white_color"
+            android:padding="@dimen/dp10"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:id="@+id/question"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/image_expanded"
+                android:text="How to Enroll The Course ?"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/image_expanded"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp25"
+                android:layout_alignParentEnd="true"
+                app:srcCompat="@drawable/ic_baseline_keyboard_arrow_up_24" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/question_description"
+            android:id="@+id/description_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/ans"
+                android:letterSpacing="0.07"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp5"
+                android:justificationMode="inter_word"
+                android:text="@string/answer_of_questions"
+                android:textColor="@color/help_ans"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_below="@+id/lytChild"
+        android:background="#bdbdbd"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </View>
+
+
+</RelativeLayout>

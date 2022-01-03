@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/instructorLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp7">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10">
+
+            <TextView
+                android:id="@+id/instructorTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/instructor"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp12" />
+
+            <RelativeLayout
+                android:id="@+id/imageRL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/instructorTV"
+                android:layout_marginTop="@dimen/dp7">
+
+                <com.emedicoz.app.customviews.CircleImageView
+                    android:id="@+id/profilepicIV"
+                    android:layout_width="@dimen/dp50"
+                    android:layout_height="@dimen/dp50"
+                    android:src="@mipmap/default_pic" />
+
+                <ImageView
+                    android:id="@+id/profilepicIVText"
+                    android:layout_width="@dimen/dp50"
+                    android:layout_height="@dimen/dp50"
+                    android:src="@mipmap/default_pic" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/instructorTV"
+                android:layout_alignTop="@+id/imageRL"
+                android:layout_alignBottom="@+id/imageRL"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_toRightOf="@+id/imageRL"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/instructornameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp2"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp12" />
+
+                <TextView
+                    android:id="@+id/instructorDesTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/instructornameTV"
+                    android:paddingLeft="@dimen/dp2"
+                    android:text=""
+                    android:textColor="@color/black_overlay"
+                    android:textSize="@dimen/sp11"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/instructorStatsLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageRL"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp5"
+                android:paddingBottom="@dimen/dp5">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/studentsCountTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|bottom"
+                        android:padding="@dimen/dp5"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp20"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/studentsCountTV"
+                        android:gravity="top|center"
+                        android:text="@string/students"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/sp12" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/coursesLL"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/coursescountTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|bottom"
+                        android:padding="@dimen/dp5"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp20"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/coursescountTV"
+                        android:gravity="top|center"
+                        android:text="@string/course"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/sp12" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ratingLL"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/ratingcountTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|bottom"
+                        android:padding="@dimen/dp5"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp20"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ratingtextTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ratingcountTV"
+                        android:gravity="top|center"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/rating"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/sp12" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/viewProfileBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/normal_button_height"
+                android:layout_below="@+id/instructorStatsLL"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp7"
+                android:background="@drawable/bg_signup_btn"
+                android:paddingLeft="@dimen/dp20"
+                android:paddingRight="@dimen/dp20"
+                android:text="@string/profile_view"
+                android:gravity="center_vertical"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp12" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

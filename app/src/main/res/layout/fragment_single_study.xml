@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/studyCourseRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/buttonLow"
+            android:overScrollMode="never" />
+
+        <RelativeLayout
+            android:id="@+id/buttonLow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/buyNowBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_signup_btn"
+                android:paddingLeft="@dimen/dp35"
+                android:paddingTop="@dimen/dp7"
+                android:paddingRight="@dimen/dp35"
+                android:paddingBottom="@dimen/dp7"
+                android:text="@string/buy_now"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp17"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp3"
+                android:layout_alignBottom="@+id/buyNowBtn"
+                android:background="@color/colorPrimary" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/noDataTV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_data_found"
+        android:textColor="@color/black"
+        android:textSize="@dimen/heading_text_size"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</RelativeLayout>

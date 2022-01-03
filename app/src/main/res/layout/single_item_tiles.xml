@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp2"
+    android:layout_marginRight="@dimen/dp2"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tilesTextTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Concepts"
+            android:layout_marginLeft="@dimen/dp2"
+            android:layout_marginRight="@dimen/dp2"
+            android:textColor="@color/black"
+            android:background="@drawable/white_tab_bar_design"
+            android:textSize="@dimen/post_text_size"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/tilesView"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp4"
+            android:layout_below="@+id/tilesTextTv"
+            android:layout_alignLeft="@+id/tilesTextTv"
+            android:layout_alignRight="@+id/tilesTextTv"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp2"
+            android:background="@drawable/bg_tile_view"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

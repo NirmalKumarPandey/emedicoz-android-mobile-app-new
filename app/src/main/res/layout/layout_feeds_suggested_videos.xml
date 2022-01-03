@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp10"
+        android:text="@string/suggested_videos"
+        android:textSize="@dimen/sp12"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ViewAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:gravity="right"
+        android:text="@string/viewAll"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp12" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commonRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textTV"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginBottom="@dimen/dp5"
+        android:background="@color/white"
+        android:overScrollMode="never"
+        android:paddingTop="@dimen/dp5"
+        android:paddingBottom="@dimen/dp5" />
+</RelativeLayout>

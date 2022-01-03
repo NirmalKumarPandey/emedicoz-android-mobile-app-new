@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="7">
+
+        <LinearLayout
+            android:id="@+id/ll_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/root_new"
+            android:background="@color/off_white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp4"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txt_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@color/off_white"
+                android:gravity="start"
+                android:padding="@dimen/dp10"
+                android:text="Index"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp13"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_timer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/off_white"
+                android:gravity="center_vertical|end"
+                android:padding="@dimen/dp10"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp13"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/root_new"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="@color/black"
+            android:focusable="true"
+            android:keepScreenOn="true">
+
+            <ProgressBar
+                android:id="@+id/newpostprogress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                layout="@layout/common_video_screen_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/video_overlay_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="Video Time exhausted..."
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp20"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/trans_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/trans_recycler_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/trans_linearLayout"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/trans_linearLayout"
+                        android:layout_width="@dimen/dp250"
+                        android:layout_height="@dimen/dp35"
+                        android:layout_marginLeft="@dimen/dp25"
+                        android:layout_marginBottom="@dimen/dp35"
+                        android:background="@drawable/trans_bg_lets_talk"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_admin"
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:src="@mipmap/default_profile_img"
+                            app:civ_border_color="@color/colorPrimaryDark"
+                            app:civ_border_width="0dp" />
+
+                        <EditText
+                            android:id="@+id/chat_massage"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:hint="Enter your message here"
+                            android:imeOptions="flagNoFullscreen"
+                            android:padding="@dimen/dp5"
+                            android:paddingLeft="@dimen/dp2"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/dp12" />
+
+                        <ImageView
+                            android:id="@+id/trans_iv_send"
+                            android:layout_width="@dimen/dp30"
+                            android:layout_height="@dimen/dp30"
+                            android:layout_gravity="center"
+                            android:paddingRight="@dimen/dp10"
+                            android:src="@mipmap/comment_send" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_toLeftOf="@+id/spinner_speeds"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="Auto"
+                    android:textColor="@color/black"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/debug_text_view_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textSize="@dimen/sp10"
+                    android:visibility="gone"
+                    tools:ignore="SmallSp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/live_chat_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/quality"
+                android:background="@drawable/ayp_background_item_selected"
+                android:clickable="true"
+                android:contentDescription="Settings"
+                android:focusable="true"
+                android:padding="@dimen/dp10"
+                android:src="@drawable/chaticon_selector"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/pull_chat_layout"
+            android:layout_width="@dimen/dp24"
+            android:layout_height="@dimen/dp24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/chat_arrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_chat"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="@color/dark_white_trans">
+
+        <LinearLayout
+            android:id="@+id/llll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp7"
+            android:background="@color/off_white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp4">
+
+            <TextView
+                android:id="@+id/index_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/off_white"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:text="Index"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp13"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/bookmark_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/off_white"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:text="Bookmark"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp13"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/liveChatRL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp5"
+                android:layout_weight="1"
+                android:background="@drawable/bg_live_chat_poll_disable">
+
+                <ImageView
+                    android:id="@+id/ivChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/chat_btn"
+                    android:src="@drawable/live_chat_icon" />
+
+                <TextView
+                    android:id="@+id/chat_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:padding="@dimen/dp10"
+                    android:text="Live Chat"
+                    android:textColor="@color/sky_blue"
+                    android:textSize="@dimen/sp13"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/livePollRL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:background="@drawable/bg_live_chat_poll_disable">
+
+                <ImageView
+                    android:id="@+id/ivPoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/pollBtn"
+                    android:src="@drawable/live_poll_img" />
+
+                <TextView
+                    android:id="@+id/pollBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:padding="@dimen/dp10"
+                    android:text="Live Poll"
+                    android:textColor="@color/sky_blue"
+                    android:textSize="@dimen/sp13"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dp40"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/pollBtn">
+
+                    <com.view.circulartimerview.CircularTimerView
+                        android:id="@+id/progress_circular"
+                        android:layout_width="@dimen/dp40"
+                        android:layout_height="@dimen/dp40"
+                        app:backgroundColor="#66bb6a"
+                        app:backgroundWidth="2"
+                        app:isClockwise="false"
+                        app:progressBackgroundColor="@color/transparent"
+                        app:progressColor="#477352"
+                        app:progressText="@string/sec"
+                        app:progressTextColor="@color/transparent"
+                        app:startingPoint="bottom"
+                        app:strokeWidthDimension="4"
+                        app:textSize="6dp" />
+
+                    <TextView
+                        android:id="@+id/progressText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textSize="@dimen/dp6"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ibt_single_sub_vd_RL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llll"
+            android:layout_marginTop="@dimen/dp2"
+            android:layout_marginBottom="@dimen/dp2"
+            android:padding="@dimen/dp3"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/dp5"
+            app:cardElevation="@dimen/dp5">
+
+
+            <RelativeLayout
+                android:id="@+id/study_single_itemLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dp12"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/action_settings"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp15"
+                    android:textStyle="bold" />
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="@dimen/dp30"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_alignParentRight="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:visibility="gone">
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:background="@mipmap/up" />
+                    </RelativeLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/linearLayoutBottom"
+            android:layout_below="@+id/ibt_single_sub_vd_RL"
+            android:background="@color/dark_white_trans" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/newPollLL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:background="#3361A2F7"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".8">
+
+                <ImageView
+                    android:id="@+id/viewPollIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:src="@drawable/live_chat_icon" />
+
+                <TextView
+                    android:id="@+id/viewPollTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_toEndOf="@id/viewPollIV"
+                    android:padding="@dimen/dp10"
+                    android:text="New Poll Start in 30 seconds"
+                    android:textColor="@color/sky_blue"
+                    android:textSize="@dimen/sp12"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/viewPollBtn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp30"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:text="View"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp8"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/commentimageRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/commentimageIV"
+                android:layout_width="@dimen/extralarge_image_size"
+                android:layout_height="@dimen/extralarge_image_size"
+                android:src="@mipmap/default_profile_img" />
+
+            <ImageView
+                android:id="@+id/commentdeleteIV"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_alignRight="@id/commentimageIV"
+                android:src="@android:drawable/ic_delete" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/linearLayout"
+            layout="@layout/layout_send_message" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/add_bookmark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dp5"
+            android:background="@drawable/bg_lets_talk"
+            android:gravity="center"
+            android:onClick="showDialog"
+            android:padding="@dimen/dp10"
+            android:text="Add New Bookmark"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>
+

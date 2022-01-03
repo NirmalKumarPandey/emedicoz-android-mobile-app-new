@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/helpView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/feeds_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp56"
+                    android:background="@drawable/bg_action_bar"
+                    android:fitsSystemWindows="true"
+                    app:contentInsetStartWithNavigation="0dp"
+                    app:titleMarginStart="0dp"
+                    app:contentInsetEnd="0dp"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetRight="0dp"
+                    app:contentInsetStart="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_course_title"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingStart="@dimen/dp30"
+                            android:text="Courses"
+                            android:textStyle="bold"
+                            android:textColor="@color/left_panel_header_text_color"
+                            android:textSize="@dimen/heading_text_size"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/titleRL"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:visibility="visible">
+
+                            <RelativeLayout
+                                android:id="@+id/titleinnerRL"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true">
+
+                                <TextView
+                                    android:id="@+id/toolbartitleTV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/dp5"
+                                    android:paddingRight="@dimen/dp5"
+                                    android:text="eMedicoz"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/left_panel_header_text_color"
+                                    android:textSize="@dimen/heading_text_size" />
+
+                                <TextView
+                                    android:id="@+id/toolbarsubtitleTV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/toolbartitleTV"
+                                    android:gravity="center_vertical"
+                                    android:maxWidth="@dimen/dp150"
+                                    android:paddingLeft="@dimen/dp5"
+                                    android:paddingRight="@dimen/dp5"
+                                    android:text="szdjhv,ajhnvaskjdvnhasldvjdsv"
+                                    android:textColor="@color/left_panel_header_text_color"
+                                    android:textSize="@dimen/extrasmall_text_size_11"
+                                    android:textStyle="bold"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/downarrowIV"
+                                android:layout_width="@dimen/dp30"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginBottom="@dimen/dp5"
+                                android:layout_toRightOf="@id/titleinnerRL"
+                                android:src="@mipmap/arrow_drop_down_white"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.SearchView
+                            android:id="@+id/searchSV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:queryHint="Search here"
+                            android:src="@mipmap/search"
+                            android:visibility="gone"
+                            android:theme="@style/Custom.Searching" />
+
+                        <RelativeLayout
+                            android:id="@+id/notify_layout"
+                            android:layout_width="@dimen/dp40"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/imageIV"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="match_parent"
+                                android:padding="7dp"
+                                android:src="@mipmap/bell_white" />
+
+                            <TextView
+                                android:id="@+id/notifyTV"
+                                android:layout_width="@dimen/dp12"
+                                android:layout_height="@dimen/dp12"
+                                android:layout_alignTop="@+id/imageIV"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="@dimen/dp16"
+                                android:layout_marginRight="@dimen/dp15"
+                                android:background="@drawable/round_bg"
+                                android:gravity="center"
+                                android:textColor="@color/left_panel_header_text_color"
+                                android:textSize="@dimen/extramini_extrasmall_text_size"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+
+                        <ImageView
+                            android:id="@+id/bookmarkIV"
+                            android:layout_width="@dimen/dp35"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dp7"
+                            android:src="@drawable/white_bookmark_icon" />
+
+                        <RelativeLayout
+                            android:id="@+id/cart_layout"
+                            android:layout_width="@dimen/dp40"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/cartIV"
+                                android:layout_width="@dimen/dp50"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/dp8"
+                                android:src="@drawable/ic_baseline_shopping_cart_24" />
+
+                            <TextView
+                                android:id="@+id/cartTV"
+                                android:layout_width="@dimen/dp12"
+                                android:layout_height="@dimen/dp12"
+                                android:layout_alignTop="@+id/cartIV"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="@dimen/dp12"
+                                android:layout_marginEnd="@dimen/dp8"
+                                android:background="@drawable/round_bg"
+                                android:gravity="center"
+                                android:textColor="@color/left_panel_header_text_color"
+                                android:textSize="@dimen/extramini_extrasmall_text_size"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/editAffiliateProfile"
+                            android:layout_width="@dimen/dp50"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="Edit"
+                            android:textColor="@color/left_panel_header_text_color"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/iv_course_drawer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:padding="@dimen/dp12"
+                            android:src="@mipmap/right_view"
+                             />
+
+                    </LinearLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    layout="@layout/content_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

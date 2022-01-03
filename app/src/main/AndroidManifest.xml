@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.emedicoz.app">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data
+                android:host="m.facebook.com"
+                android:scheme="http" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <data
+                android:host="m.facebook.com"
+                android:scheme="https" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+        </intent>
+    </queries>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE"
+        android:required="false" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".utilso.eMedicozApp"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/medicos_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/medicos_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:theme,android:icon,android:allowBackup,android:label">
+        <activity android:name=".Books.Activity.BookDescriptionActivity"></activity>
+        <activity android:name=".Books.Activity.BooksListActivity" />
+        <activity android:name=".Books.Activity.CartActivity" />
+        <activity android:name=".Books.Activity.BookHomeActivity" />
+        <activity
+            android:name=".gamification.GamificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".podcastnew.activity.PodcastMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".notifications.NotificationSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cart.activity.MyCartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".notifications.NotificationActivity"
+            android:exported="false" />
+        <activity android:name=".newsandarticle.NewsAndArticle" />
+        <activity
+            android:name=".feeds.activity.MyBookmarksActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mycourses.MyCourseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dailychallenge.activity.DailyChallengeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".courses.activity.MyScorecardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".feeds.activity.ReferEarnNowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".feeds.activity.JoinReferralSignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".feeds.activity.FeedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".feeds.activity.AppSettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".feeds.activity.RewardsPointsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reward.activity.MyCoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".testmodule.activity.TestInstructionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".support.HelpSupportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".podcastnew.activity.PodcastByAuthor"
+            android:exported="true" />
+        <activity android:name=".newsandarticle.Activity.BookmarkActivity" />
+        <activity android:name=".newsandarticle.Activity.NewAndArticalDetailActivity" />
+        <activity android:name=".newsandarticle.Activity.TopicAndTagActivity" />
+        <activity android:name=".newsandarticle.Activity.TopicAndTagDetailListActivity" />
+        <activity android:name=".newsandarticle.Activity.TopicTagDetailActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".cart.GoogleMapAddress"
+            android:label="@string/title_activity_google_map_address"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".cart.AddressSetting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cart.AddressList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".courseDetail.activity.CourseDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="${isExported}"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".video.activity.DVLVideosActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="content" />
+                <data android:scheme="asset" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".testmodule.activity.ViewSolutionWithTabNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".courses.activity.LiveCourse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feeds.activity.ResetContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".testmodule.activity.TestBookmarkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".flashcard.activity.ViewFlashCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".flashcard.activity.FlashCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pastpaperexplanation.activity.PastPaperExplanationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pastpaperexplanation.activity.ExamAndSubjectWiseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".courses.activity.FAQActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".registration.activity.FillRegistrationDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".courses.activity.VideoSolution"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="content" />
+                <data android:scheme="asset" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".courses.activity.NewTestQuizActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".feeds.activity.NewProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".courses.activity.TestQuizActionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".courses.activity.NewTestActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".combocourse.activity.ComboCourseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".testmodule.activity.TestBaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".courses.activity.AllLiveCourses"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".courses.activity.MyCoursesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".flashcard.activity.FlashCardMyProgressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".flashcard.activity.SubjectWiseCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".courses.activity.NewCurriculumActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="content" />
+                <data android:scheme="asset" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".courses.activity.LiveStreamActivity"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="content" />
+                <data android:scheme="asset" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--
+                <activity android:name=".Courses.Activity.FullScreenVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme"></activity>
+        -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".bookmark.NewBookMarkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".courses.activity.TestQuizActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <service
+            android:name=".utilso.offlinedata.OnClearFromRecentService"
+            android:stopWithTask="false" /> <!-- Fore more info, look into checklist.txt point-2 -->
+        <provider
+            android:name=".Utils.OfflineData.StoreProvider"
+            android:authorities="${applicationId}.utils.OfflineData.StoreProvider"
+            android:exported="${isExported}" />
+        <provider
+            android:name=".utilso.GenericFileProvider"
+            android:authorities="${applicationId}.utilso.GenericFileProvider"
+            android:exported="${isExported}"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name=".utilso.service.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".utilso.service.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".podcast.PhoneCallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Utils.service.ErrorAlertBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.emedicoz.app.INTENT_DISPLAY_ERROR" />
+            </intent-filter>
+        </receiver>
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/blue" />
+
+        <activity
+            android:name=".login.activity.SignInActivity"
+            android:parentActivityName=".login.activity.DemoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.emedicoz.app.login.activity.DemoActivity" />
+        </activity>
+        <activity
+            android:name=".login.activity.SliderActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppRemoveTitle" />
+        <activity
+            android:name=".login.activity.AuthActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".testmodule.activity.VideoTestBaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customviews.ExoSpeedDemo.PlayerActivityNew"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/PlayerTheme">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="content" />
+                <data android:scheme="asset" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- android:name=".SocketActivity" -->
+
+        <activity
+            android:name=".login.activity.SplashActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.emedicoz.app" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <!--
+        <activity
+            android:name=".PodcastNewKotlin"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        -->
+        <activity
+            android:name=".login.activity.DemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customviews.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customviews.PdfActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customviews.ClassRoomWebView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feeds.activity.ImageViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.activity.LoginCatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feeds.activity.FeedsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="3.7.22.193"
+                    android:scheme="http" />
+                <data
+                    android:host="www.emedicoz.com"
+                    android:scheme="https" />
+                <data
+                    android:host="www.emedicoz.com"
+                    android:scheme="applink" />
+                <data
+                    android:host="stgweb.emedicoz.com"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".video.activity.CommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customviews.imagecropper.CropImage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feeds.activity.PostActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".feeds.activity.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feeds.activity.YouTubeVideoPlayer"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".video.activity.VideoDetail"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="content" />
+                <data android:scheme="asset" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".courses.activity.CourseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".courses.activity.QuizActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".customviews.vimeo.VimeoPlayer" />
+        <activity
+            android:name=".courses.activity.LiveCourseActivity"
+            android:configChanges="keyboard|keyboardHidden|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:scheme="content" />
+                <data android:scheme="asset" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.demo.action.VIEW_LIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- <activity android:name=".coins.MyCoinActivity" -->
+        <!-- android:screenOrientation="portrait"> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".reward.activity.MyCoinVActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".coins.RedeemSaveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".coins.RedeemCouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".coins.EarnCoinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reward.activity.CoinInBankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".coins.RedeemSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".coins.CheckOutActivity"
+            android:screenOrientation="portrait" />
+
+       <activity android:name=".courseDetail.activity.TestInstructionDetailsActivity"
+           android:screenOrientation="portrait"/>
+        <activity
+            android:name=".epubear.ePubActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".epubear.reader.ReaderActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="false" />
+        <activity
+            android:name=".epubear.reader.FontSizeActivity"
+            android:theme="@style/TransparentActivityStyle" />
+        <activity
+            android:name=".epubear.SettingActivity"
+            android:theme="@style/TransparentActivityStyle" />
+        <activity
+            android:name=".video.exoplayer2.FullScreenVideoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:alwaysRetainTaskState="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".login.activity.AppUpdateActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+
+<!--        <activity android:name=".helpdesk.HelpAndSupportActivity"-->
+<!--            android:screenOrientation="portrait">-->
+
+<!--        </activity>-->
+        <activity android:name=".helpdesk.HelpAndSupportSelectionsActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+
+        <meta-data
+            android:name="fr.maxcom.libmedia.apiKey"
+            android:value="c6xd60uVgnZZX8cnx4TQOwrcMfEKFD4unqT0TL0jQVAnxj7uUvnYeOWb9V6H7dL2Uiq2GxaA8gF26JDD2jgbo15vekMAAAAAIDECVCYzCh4qPQAAbT8fCg==" />
+    </application>
+
+</manifest>

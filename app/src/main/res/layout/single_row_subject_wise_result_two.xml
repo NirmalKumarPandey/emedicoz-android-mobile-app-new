@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp50"
+    android:layout_marginStart="@dimen/dp5"
+    android:layout_marginEnd="@dimen/dp5"
+    android:background="@drawable/result_relative_bg"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp50"
+        android:layout_weight="0.8"
+        android:paddingStart="@dimen/dp5"
+        android:paddingTop="@dimen/sp10"
+        android:text="Total Questions"
+        android:textSize="@dimen/sp15" />
+
+    <View
+        android:layout_width="@dimen/dp1"
+        android:layout_height="@dimen/dp50"
+        android:background="@color/colorGray2" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp50"
+        android:layout_weight="0.2"
+        android:paddingTop="@dimen/sp10"
+        android:paddingEnd="@dimen/dp10"
+        android:text="10"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp15"
+        android:textStyle="bold" />
+
+</LinearLayout>

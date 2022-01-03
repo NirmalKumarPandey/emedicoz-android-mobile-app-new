@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp160"
+    android:layout_height="@dimen/dp160"
+    app:cardCornerRadius="@dimen/dp20"
+    android:layout_marginStart="@dimen/dp5"
+    android:layout_marginEnd="@dimen/dp5"
+    android:layout_marginTop="@dimen/dp10"
+    android:layout_marginBottom="@dimen/dp10"
+    app:cardElevation="@dimen/dp4">
+
+    <RelativeLayout
+        android:id="@+id/parentClassRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp110"
+            android:padding="@dimen/dp5">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@mipmap/login_logo" />
+
+
+            <ImageView
+                android:id="@+id/liveIV"
+                android:layout_width="@dimen/dp35"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp2"
+                android:src="@mipmap/live"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/upcomingDateTV"
+                android:layout_width="@dimen/dp75"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/dp2"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:background="@color/white"
+                android:textSize="9sp"
+                android:text="Upcoming\n11:45 AM\n15/10/2021"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/videoName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp10"
+                android:paddingEnd="@dimen/dp5"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textSize="@dimen/sp12"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/courseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp10"
+                android:paddingEnd="@dimen/dp5"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textSize="@dimen/sp10" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

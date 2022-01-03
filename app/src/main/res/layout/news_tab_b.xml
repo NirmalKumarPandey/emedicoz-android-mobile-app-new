@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+
+    android:orientation="vertical" >
+    <!--        android:background="@drawable/latest_news_gradient" -->
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll"
+    android:layout_margin="1dp"
+    android:layout_gravity="center"
+
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/logo"
+        android:adjustViewBounds="true"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible"
+        android:src="@mipmap/latest_small_a"
+
+        />
+
+
+    <TextView
+        android:id="@+id/textViewTabName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="Latest"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center|center_vertical" />
+</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_round_corner_fill_white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp10">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rectangle_white_grey_gradient"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:text="eMedicoz"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp17"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textPopup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp10"
+        android:gravity="center_horizontal"
+        android:text="Server is down currently..we will back soon"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp15" />
+
+    <ImageView
+        android:id="@+id/imgPopup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp175"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/dp10"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_marginEnd="@dimen/dp10"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel_popup"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_weight="1"
+            android:background="@drawable/bg_round_corner_fill_green"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnPopup"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_weight="1"
+            android:background="@drawable/bg_round_corner_fill_green"
+            android:text="Ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15" />
+    </LinearLayout>
+</LinearLayout>

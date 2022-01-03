@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_dialogbox"
+    android:paddingTop="@dimen/dp10"
+    android:paddingBottom="@dimen/dp12">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp10">
+
+            <TextView
+                android:id="@+id/pollsTextview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Poll"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/closeButton"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="@dimen/dp30"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp10"
+                android:padding="@dimen/dp5"
+                android:src="@drawable/ic_cross" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/questionTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topLayout"
+            android:layout_marginLeft="@dimen/dp17"
+            android:layout_marginRight="@dimen/dp17"
+            android:fontFamily="@font/helvetica_neue_medium"
+            android:maxLines="6"
+            android:text="Question 1"
+            android:textColor="@color/polls_question"
+            android:textSize="@dimen/dp12" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pollsAnswerRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/questionTextview"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp7" />
+
+        <TextView
+            android:id="@+id/remarkTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pollsAnswerRecyclerview"
+            android:layout_marginLeft="@dimen/dp17"
+            android:layout_marginRight="@dimen/dp17"
+            android:fontFamily="@font/helvetica_neue_medium"
+            android:gravity="center"
+            android:maxLines="6"
+            android:text="@string/polls_answer_result"
+            android:textColor="@color/polls_question"
+            android:textSize="@dimen/dp14" />
+
+    </RelativeLayout>
+
+</ScrollView>

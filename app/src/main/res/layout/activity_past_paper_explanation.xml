@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/flashcard_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/buyNowBtn"
+            android:layout_alignParentTop="true">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color"
+                app:elevation="6dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp250"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dams"
+                    app:layout_scrollFlags="scroll|enterAlwaysCollapsed" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp10"
+                    android:text="PPE KITS (Past Paper Explanation Kits)"
+                    android:textSize="@dimen/sp14"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    style="@style/MyTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp45"
+                    app:tabBackground="@drawable/ppe_tab_background"
+                    app:tabIndicatorColor="@color/transparent"
+                    app:tabMode="scrollable"
+                    app:tabPaddingEnd="@dimen/dp30"
+                    app:tabPaddingStart="@dimen/dp30"
+                    app:tabRippleColor="@null"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextColor="@color/black" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:layout_margin="@dimen/dp10"
+                    android:background="@color/stroke_reg_pref" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tab_layout"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <Button
+            android:id="@+id/buyNowBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_signup_btn"
+            android:paddingLeft="@dimen/dp35"
+            android:paddingTop="@dimen/dp7"
+            android:paddingRight="@dimen/dp35"
+            android:paddingBottom="@dimen/dp7"
+            android:text="@string/buy_now"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp17"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/noDataTV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_data_found"
+        android:textColor="@color/black"
+        android:textSize="@dimen/heading_text_size"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</LinearLayout>
+
+

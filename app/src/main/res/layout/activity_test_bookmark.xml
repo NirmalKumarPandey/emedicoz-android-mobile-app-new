@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".testmodule.activity.TestBookmarkActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp56"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:padding="@dimen/dp12"
+            android:src="@mipmap/back_arrow"
+            android:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/textbookmarkname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Bookmarked Questions"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/view_pager_bookmark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@id/rl1"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <FrameLayout
+            android:id="@+id/btn_prev"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp45"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_weight="1.2"
+            android:background="@drawable/background_bg_prev"
+            android:maxWidth="@dimen/dp100">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableLeft="@mipmap/arrow_test"
+                android:drawablePadding="@dimen/dp10"
+                android:gravity="center"
+                android:text="Prev"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp45"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_weight="1.2"
+            android:background="@drawable/background_bg_next"
+            android:maxWidth="@dimen/dp150">
+
+            <TextView
+                android:id="@+id/nextTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableRight="@mipmap/arrow_next_test"
+                android:drawablePadding="@dimen/dp10"
+                android:gravity="center"
+                android:text="Next"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btn_finish"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp45"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_weight="1.2"
+            android:background="@drawable/background_bg_clear"
+            android:maxWidth="@dimen/dp100"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableRight="@mipmap/arrow_next_test"
+                android:drawablePadding="@dimen/dp10"
+                android:gravity="center"
+                android:text="Finish"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

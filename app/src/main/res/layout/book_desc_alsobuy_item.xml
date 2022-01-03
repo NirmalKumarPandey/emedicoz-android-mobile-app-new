@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentRv"
+    android:layout_width="wrap_content"
+    android:layout_height="180dp"
+    android:layout_margin="@dimen/dp5"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/bookLV"
+        android:layout_width="101dp"
+        android:layout_height="135dp"
+        android:layout_centerHorizontal="true">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp5"
+            android:src="@mipmap/best_seller" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dp3"
+            android:src="@mipmap/checked_book_icon" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookLV"
+        android:layout_marginTop="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp3"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="1"
+            android:text="We have been honered by South a Asia..."
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+

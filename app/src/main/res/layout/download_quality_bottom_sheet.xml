@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dp5"
+        android:text="Download Video"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp18"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp5"
+        android:background="@color/colorGray2" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp2"
+        android:padding="@dimen/dp5">
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp10"
+            android:checked="false"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="@dimen/dp5" />
+
+        <TextView
+            android:id="@+id/text720"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/radio1"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="1280 x 720"
+            android:textColor="@color/colorGray3"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/size720"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp10"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="Size"
+            android:textColor="@color/colorGray3"
+            android:textSize="@dimen/sp15" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp2"
+        android:background="@color/colorGray2" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp2"
+        android:padding="@dimen/dp5">
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp10"
+            android:checked="false"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="@dimen/dp5" />
+
+        <TextView
+            android:id="@+id/text480"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/radio2"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="640 x 480"
+            android:textColor="@color/colorGray3"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/size480"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp10"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="Size"
+            android:textColor="@color/colorGray3"
+            android:textSize="@dimen/sp15" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp2"
+        android:background="@color/colorGray2" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp2"
+        android:padding="@dimen/dp5">
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp10"
+            android:checked="false"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="@dimen/dp5" />
+
+        <TextView
+            android:id="@+id/text360"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/radio3"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="480 x 360"
+            android:textColor="@color/colorGray3"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/size360"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp10"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="Size"
+            android:textColor="@color/colorGray3"
+            android:textSize="@dimen/sp15" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp2"
+        android:background="@color/colorGray2" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp2"
+        android:padding="@dimen/dp5">
+
+        <RadioButton
+            android:id="@+id/radio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp10"
+            android:checked="false"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="@dimen/dp5" />
+
+        <TextView
+            android:id="@+id/text240"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/radio4"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="352 x 240"
+            android:textColor="@color/colorGray3"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/size240"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp10"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="Size"
+            android:textColor="@color/colorGray3"
+            android:textSize="@dimen/sp15" />
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp2"
+        android:background="@color/colorGray2" />
+
+    <Button
+        android:id="@+id/downloadVideoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10"
+        android:background="@drawable/bg_signup_btn"
+        android:text="Download Now"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp18" />
+
+</LinearLayout>

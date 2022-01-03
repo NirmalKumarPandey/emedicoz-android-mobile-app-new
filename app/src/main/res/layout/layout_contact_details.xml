@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp30"
+                android:text="@string/enter_contact_details"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp12"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="262dp"
+                android:layout_height="155dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp30"
+                android:visibility="gone"
+                android:background="@color/progress_grey">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/uploadPicIV"
+                    android:layout_width="86dp"
+                    android:layout_height="86dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_action_profile_pic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload_profile_picture"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/sp12"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_below="@id/uploadPicIV"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp25"
+                android:layout_marginRight="@dimen/dp18"
+                android:textColorHint="@color/black">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@mipmap/gray_user"
+                    android:drawablePadding="@dimen/dp10"
+                    android:hint="@string/full_name"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_8e8e8e"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp56"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp8"
+                android:layout_marginRight="@dimen/dp18">
+
+                <com.rilixtech.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp18"
+                    android:paddingStart="@dimen/dp5"
+                    android:layout_weight=".3"
+                    app:ccp_backgroundColor="@color/white"
+                    app:ccp_defaultNameCode="@string/country_india_code"
+                    app:ccp_dialogTextColor="@color/black"
+                    app:ccp_hideNameCode="true"
+                    app:ccp_textColor="@color/black" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".55"
+                    android:layout_marginStart="@dimen/dp10"
+                    app:hintTextColor="@color/gray_8e8e8e">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phonenumberTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableStart="@mipmap/mobile_edit_profile"
+                        android:drawablePadding="@dimen/dp10"
+                        android:hint="@string/phone_number"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/verifyMobileBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_weight=".15"
+                    android:text="@string/verify"
+                    android:textSize="@dimen/sp10"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_signup_btn"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp8"
+                android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_email"
+                android:layout_width="0dp"
+                android:layout_weight=".8"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableStart="@drawable/email_icon"
+                    android:drawablePadding="@dimen/dp10"
+                    android:hint="@string/enter_your_email"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_8e8e8e"
+                    android:textSize="@dimen/sp14" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/verifyEmailBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_weight=".2"
+                    android:text="@string/verify"
+                    android:textSize="@dimen/sp11"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_signup_btn"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/countryTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp18"
+                android:drawablePadding="@dimen/dp10"
+                android:gravity="center_vertical"
+                android:hint="@string/country"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp12"
+                app:drawableEndCompat="@drawable/ic_baseline_arrow_drop_down_24"
+                app:drawableStartCompat="@drawable/country_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/stateTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp18"
+                android:drawablePadding="@dimen/dp10"
+                android:gravity="center_vertical"
+                android:hint="@string/state"
+                android:visibility="visible"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                app:drawableEndCompat="@drawable/ic_baseline_arrow_drop_down_24"
+                app:drawableStartCompat="@drawable/state_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:visibility="visible"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/cityTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp18"
+                android:drawablePadding="@dimen/dp10"
+                android:gravity="center_vertical"
+                android:hint="@string/city"
+                android:visibility="visible"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                app:drawableEndCompat="@drawable/ic_baseline_arrow_drop_down_24"
+                app:drawableStartCompat="@drawable/city_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:visibility="visible"
+                android:background="@color/black" />
+
+
+            <Switch
+                android:id="@+id/damsUserSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp18"
+                android:drawableStart="@drawable/dams_token_icon"
+                android:drawablePadding="@dimen/dp10"
+                android:shadowColor="@color/blue"
+                android:text="@string/are_you_already_dams_user"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginRight="@dimen/dp18"
+                android:background="@color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/damsIdTIL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp18"
+                android:textColorHint="@color/black"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/damsIdET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/dams_id"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_8e8e8e"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/nextBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginLeft="@dimen/dp18"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp18"
+                android:background="@drawable/drawable_bg_btn_new"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp12" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

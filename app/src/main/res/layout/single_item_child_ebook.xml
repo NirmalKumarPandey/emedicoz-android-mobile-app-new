@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp40">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="@dimen/dp25"
+        android:layout_height="@dimen/dp25"
+        android:layout_marginStart="@dimen/dp5"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/epub_new_course"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp5"
+        android:text="Topic Name"
+        android:paddingStart="@dimen/dp5"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/sp15"
+        android:textColor="@color/black"
+        android:layout_weight="0.6"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp30"
+        android:layout_marginStart="@dimen/dp5"
+        android:layout_marginEnd="@dimen/dp5"
+        android:text="Read"
+        android:background="@color/dark_ebook"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:layout_weight="0.2"/>
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

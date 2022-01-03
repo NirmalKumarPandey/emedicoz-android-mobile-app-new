@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Please fill the form to get started with  our affiliation program."
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp18"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:layout_marginTop="@dimen/dp5"
+            android:background="@color/grey_80" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="Personal Details"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/sp17"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp12"
+            android:gravity="center"
+            android:text="Bank Details"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/sp17"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/accountHolderNameTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/accountHolderNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:digits="@string/text_type_string"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/account_holder_name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bankNameTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/bankNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:digits="@string/text_type_string"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/bank_name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/bankBranchNameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:digits="@string/text_type_string"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/bank_branch_name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/accountNumberTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/accountNumberET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/account_number"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ifscCodeTIL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/ifscCodeET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:digits="@string/pan_card_digits"
+                    android:drawablePadding="@dimen/dp17"
+                    android:hint="@string/ifsc_code"
+                    android:inputType="textCapCharacters"
+                    android:maxLines="1"
+                    android:paddingTop="2dp"
+                    android:textSize="@dimen/sp14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/bankDocTIL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp5"
+                    android:layout_toStartOf="@id/imgBankDoc"
+                    android:text="@string/upload_bank_document_photo" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgBankDoc"
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp60"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@mipmap/attach" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp2"
+            android:background="@color/grey_80" />
+
+        <TextView
+            android:id="@+id/privacyPolicyTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp20"
+            android:text="Privacy Policy"
+            android:textColor="#5479C5"
+            android:textSize="@dimen/sp14"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/agreementTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp20"
+            android:text="Agreement Policy"
+            android:textColor="#5479C5"
+            android:textSize="@dimen/sp14"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp20"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBoxId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/termCondId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/i_have_read_terms_and_conditions"
+                android:textSize="@dimen/sp13" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signMeUpBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp48"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_signup_btn"
+            android:paddingLeft="@dimen/dp22"
+            android:paddingRight="@dimen/dp22"
+            android:text="Sign Me Up"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/updateInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp48"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_signup_btn"
+            android:paddingLeft="@dimen/dp22"
+            android:paddingRight="@dimen/dp22"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

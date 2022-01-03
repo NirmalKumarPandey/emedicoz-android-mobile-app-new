@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notifyRL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp10"
+    android:background="@color/white"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp10"
+        app:cardCornerRadius="@dimen/dp10"
+        android:elevation="@dimen/dp3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/notification_color"
+            android:padding="@dimen/dp10">
+
+            <RelativeLayout
+                android:id="@+id/imageRL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <com.emedicoz.app.customviews.CircleImageView
+                    android:id="@+id/imageIV"
+                    android:layout_width="@dimen/dp40"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/default_pic"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imageIVText"
+                    android:layout_width="@dimen/dp40"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:src="@mipmap/default_pic" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageRL">
+
+                <TextView
+                    android:id="@+id/descriptionTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:paddingStart="@dimen/dp5"
+                    android:paddingEnd="@dimen/dp5"
+                    android:textColor="@color/notification_text"
+                    android:textSize="12sp"
+                    tools:text="@string/about_course" />
+
+                <TextView
+                    android:id="@+id/timeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp20"
+                    android:paddingStart="@dimen/dp5"
+                    android:paddingEnd="@dimen/dp5"
+                    android:layout_below="@+id/descriptionTV"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:drawablePadding="@dimen/dp4"
+                    android:textColor="@color/notification_text"
+                    android:padding="@dimen/dp2"
+                    android:textSize="9sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

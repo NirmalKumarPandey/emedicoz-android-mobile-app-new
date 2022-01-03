@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailCourse"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/list_item"
+        android:padding="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/course_image"
+            style="@style/RecordedCoursesShapeAbleImageSize"
+            app:shapeAppearanceOverlay="@style/RoundImageView"
+            tools:src="@tools:sample/avatars" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_wishlist"
+            android:layout_width="@dimen/dp22"
+            android:layout_height="@dimen/dp22"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/dp3"
+            android:src="@drawable/wishlist_selected" />
+
+        <TextView
+            android:id="@+id/tv_course_name"
+            style="@style/CourseHeaderTextStyle"
+            android:layout_marginTop="@dimen/dp3"
+            android:layout_marginEnd="@dimen/dp20"
+            android:layout_toEndOf="@+id/course_image"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="@dimen/dp1"
+            android:paddingStart="@dimen/dp7"
+            android:paddingEnd="@dimen/dp20"
+            android:text="Mega Revision Session for\nNEETPG2021 DAMS DAVT"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/layout_middle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp20"
+            android:layout_below="@+id/tv_course_name"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_toEndOf="@+id/course_image"
+            android:gravity="center_vertical">
+
+            <RatingBar
+                android:id="@+id/course_rating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="2.0"
+                android:stepSize="1.0"
+                android:progressTint="@color/stay_skyBlue"
+                android:layout_marginRight="@dimen/dp5"/>
+
+            <TextView
+                android:id="@+id/tv_course_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_course_name"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/course_rating"
+                android:gravity="center"
+                android:textSize="@dimen/dp10"
+                android:text="@string/_4_9"
+                android:textAlignment="gravity"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:layout_width="@dimen/dp12"
+                android:layout_height="@dimen/dp12"
+                android:src="@drawable/ic_baseline_people_24"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/course_enrolled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_course_name"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/tv_course_rating"
+                android:gravity="center"
+                android:text="000"
+                android:textAlignment="gravity"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/course_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_middle"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="@dimen/dp10"
+            android:text="₹ 00 INR"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/lastUpdated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_middle"
+            android:layout_marginTop="@dimen/dp3"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="7dp"
+            android:layout_toEndOf="@+id/totalHours"
+            android:text="Updated 2|2021"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/totalHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_middle"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="@dimen/dp3"
+            android:layout_toEndOf="@+id/course_image"
+            android:text="64.4 Total Hours"
+            android:textColor="@color/blue"
+            android:textSize="10sp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

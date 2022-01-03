@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".referralcode.RefferralSignUpNewFragment">
+
+    <LinearLayout
+        android:id="@+id/refferalLL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10"
+        android:background="@drawable/bg_grid_list"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/personalDetailsTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp2"
+            android:layout_weight="1"
+            android:background="@drawable/referral_tab_bg"
+            android:gravity="center"
+            android:text="@string/personal_details"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/bankDetailsTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp2"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/bank_details"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/referralContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/refferalLL" />
+
+</RelativeLayout>

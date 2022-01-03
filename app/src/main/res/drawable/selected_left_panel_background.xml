@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/left_panel_background_item_active_color">
+
+    </solid>
+    <stroke
+        android:width="@dimen/dp2"
+        android:color="@color/left_panel_background_item_active_color">
+    </stroke>
+
+
+</shape>

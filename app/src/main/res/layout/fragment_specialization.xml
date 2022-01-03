@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp16">
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/bg_signup_btn"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp15" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nextBtn"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/headerLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp10">
+
+                <TextView
+                    android:id="@+id/mainstreamTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="4dp"
+                    android:paddingRight="@dimen/dp20"
+                    android:paddingBottom="@dimen/normal_button_padding_left_right"
+                    android:textSize="@dimen/small_text_size" />
+
+                <TextView
+                    android:id="@+id/substreamTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/reg_round_blue_bg"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp20"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingRight="@dimen/dp20"
+                    android:paddingBottom="@dimen/dp10"
+                    android:text="Sub-Streams"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp17"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+            <!--
+                <RelativeLayout
+                    android:id="@+id/substreamRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/headerLL"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:alpha="0.8"
+                        android:background="@color/greayrefcode_dark"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="Specialization"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/substreamoptionLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv1"
+                        android:orientation="vertical"></LinearLayout>
+                </RelativeLayout>-->
+            <RelativeLayout
+                android:id="@+id/specializationRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerLL">
+
+                <LinearLayout
+                    android:id="@+id/specializationoptionLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv1"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_marginRight="@dimen/dp16"
+                    android:orientation="vertical"></LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/otherET"
+                    android:layout_width="@dimen/dp250"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_below="@+id/specializationoptionLL"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:hint="Enter other options"
+                    android:paddingTop="@dimen/dp7"
+                    android:textSize="@dimen/sp14"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:alpha="0.8"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp20"
+                    android:paddingTop="@dimen/dp5"
+                    android:paddingBottom="@dimen/dp5"
+                    android:text="Select Specialization"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/post_text_size" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

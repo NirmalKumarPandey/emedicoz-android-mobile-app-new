@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".gamification.view.difficulty.DifficultyFragment">
+
+    <include
+        android:id="@+id/headerLayout"
+        layout="@layout/header_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp100"
+        android:layout_marginTop="@dimen/dp16"
+        android:background="@drawable/ic_rectangle_1227"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout" />
+
+    <TextView
+        android:id="@+id/tvChallenge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginTop="39dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="@string/host_a_challenge"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout" />
+
+    <TextView
+        android:id="@+id/tvKnowMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@drawable/rectangle_1235"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp16"
+        android:paddingTop="@dimen/dp6"
+        android:paddingEnd="@dimen/sp16"
+        android:paddingBottom="@dimen/dp6"
+        android:text="@string/know_more"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChallenge" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="83sp"
+        android:layout_marginEnd="@dimen/sp16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic__59_layers" />
+
+    <TextView
+        android:id="@+id/tvTakeChallenge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sp16"
+        android:layout_marginTop="@dimen/sp24"
+        android:fontFamily="@font/helvetica_neue_med"
+        android:text="Difficulty Level :-"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_layout" />
+
+    <HorizontalScrollView
+        android:id="@+id/levelLayout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp170"
+        android:layout_marginTop="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTakeChallenge">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginEnd="@dimen/dp16"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/easyLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp3"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include layout="@layout/easy_small_layout" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/largeEasyLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <include layout="@layout/easy_large_layout" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/smallMediumLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp3"
+                    android:layout_marginEnd="@dimen/dp3"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <include layout="@layout/medium_small_layout" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/largeMediumLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include layout="@layout/medium_large_layout" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/smallHardLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp3"
+                    android:layout_marginEnd="@dimen/dp3"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <include layout="@layout/hard_small_layout" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/largeHardLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp3"
+                    android:layout_marginEnd="@dimen/dp8"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <include layout="@layout/hard_large_layout" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/btnPrevious"
+        android:layout_width="136dp"
+        android:layout_height="@dimen/dp32"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginBottom="@dimen/dp32"
+        android:background="@drawable/ic_rectangle_quiz_blank"
+        android:fontFamily="@font/helvetica_neue_med"
+        android:gravity="center"
+        android:text="Previous"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvStep"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/btnNext"
+        android:layout_width="136dp"
+        android:layout_height="@dimen/dp32"
+        android:layout_marginEnd="@dimen/dp16"
+        android:layout_marginBottom="@dimen/dp32"
+        android:background="@drawable/ic_rectangle_btn"
+        android:fontFamily="@font/helvetica_neue_med"
+        android:gravity="center"
+        android:text="Next"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvStep"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp48"
+        android:fontFamily="@font/helvetica_neue_med"
+        android:text="step_3/4"
+        android:textSize="@dimen/sp10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

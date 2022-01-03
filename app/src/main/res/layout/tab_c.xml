@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginRight="2dip"
+    android:paddingBottom="5dip"
+    android:background="@drawable/tab_indicator_type_b"
+    android:orientation="vertical" >
+
+
+
+    <ImageView
+        android:layout_width="32dip"
+        android:id="@+id/logo"
+        android:adjustViewBounds="true"
+        android:layout_height="32dip"
+        android:visibility="gone"
+
+        />
+
+
+    <TextView
+        android:id="@+id/textViewTabName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:text="BookMarks"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center|center_vertical" />
+
+</LinearLayout>

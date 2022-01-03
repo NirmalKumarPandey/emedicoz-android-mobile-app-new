@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/testName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp5"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginTop="@dimen/dp5"
+            android:background="@color/colorGray2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/colorGray2" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/colorGray2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="@dimen/dp50"
+                        android:background="@color/colorGray2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Total Questions"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp13"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="@dimen/dp50"
+                        android:background="@color/colorGray2" />
+
+                    <TextView
+                        android:id="@+id/totalQues"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Correct Answer Percentage"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/sp13" />
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="@dimen/dp50"
+                        android:background="@color/colorGray2" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/colorGray2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="@dimen/dp50"
+                        android:background="@color/colorGray2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Total Time"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp13"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="@dimen/dp50"
+                        android:background="@color/colorGray2" />
+
+                    <TextView
+                        android:id="@+id/testTime"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Correct Answer Percentage"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/sp13" />
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="@dimen/dp50"
+                        android:background="@color/colorGray2" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/colorGray2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="@dimen/dp50"
+                        android:background="@color/colorGray2" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Maximum Marks"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp13"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="@dimen/dp50"
+                        android:background="@color/colorGray2" />
+
+                    <TextView
+                        android:id="@+id/maxMarks"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Correct Answer Percentage"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/sp13" />
+
+                    <View
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="@dimen/dp50"
+                        android:background="@color/colorGray2" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/colorGray2" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp3"
+                android:paddingEnd="@dimen/dp10"
+                android:paddingBottom="@dimen/dp3"
+                android:text="Please read the following instructions very carefully:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp3"
+                android:paddingEnd="@dimen/dp10"
+                android:paddingBottom="@dimen/dp3"
+                android:text="General Instructions"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp3"
+                android:paddingEnd="@dimen/dp10"
+                android:paddingBottom="@dimen/dp3"
+                android:text="1. You have 210 minutes to complete the test"
+                android:textSize="@dimen/sp13" />
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp3"
+                android:paddingEnd="@dimen/dp10"
+                android:paddingBottom="@dimen/dp3"
+                android:textSize="@dimen/sp13" />
+
+            <!--    <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingTop="@dimen/dp3"
+                    android:paddingBottom="@dimen/dp3"
+                    android:paddingEnd="@dimen/dp10"
+                    android:textSize="@dimen/sp13"
+                    android:text="3. The Question Palette displayed on the right side of screen will show the status of each question using one of the following symbols:"/>
+
+                <TextView
+                    android:id="@+id/bullet1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingTop="@dimen/dp3"
+                    android:paddingBottom="@dimen/dp3"
+                    android:paddingEnd="@dimen/dp10"
+                    android:textSize="@dimen/sp13"/>
+
+                <TextView
+                    android:id="@+id/bullet2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingTop="@dimen/dp3"
+                    android:paddingBottom="@dimen/dp3"
+                    android:paddingEnd="@dimen/dp10"
+                    android:textSize="@dimen/sp13"/>
+
+                <TextView
+                    android:id="@+id/bullet3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingTop="@dimen/dp3"
+                    android:paddingBottom="@dimen/dp3"
+                    android:paddingEnd="@dimen/dp10"
+                    android:textSize="@dimen/sp13"/>
+
+                <TextView
+                    android:id="@+id/bullet4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingTop="@dimen/dp3"
+                    android:paddingBottom="@dimen/dp3"
+                    android:paddingEnd="@dimen/dp10"
+                    android:textSize="@dimen/sp13"/>
+
+                <TextView
+                    android:id="@+id/bullet5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingTop="@dimen/dp3"
+                    android:paddingBottom="@dimen/dp3"
+                    android:paddingEnd="@dimen/dp10"
+                    android:textSize="@dimen/sp13"/>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp3"
+                android:paddingEnd="@dimen/dp10"
+                android:paddingBottom="@dimen/dp3"
+                android:textSize="@dimen/sp13"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp3"
+                android:paddingEnd="@dimen/dp10"
+                android:paddingBottom="@dimen/dp3"
+                android:text="Navigating to a question"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp3"
+                android:paddingEnd="@dimen/dp10"
+                android:paddingBottom="@dimen/dp3"
+                android:text="To answer a question, do the following:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp3"
+                android:paddingEnd="@dimen/dp10"
+                android:paddingBottom="@dimen/dp3"
+                android:textSize="@dimen/sp13"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp3"
+                android:paddingEnd="@dimen/dp10"
+                android:paddingBottom="@dimen/dp3"
+                android:textSize="@dimen/sp13"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp3"
+                android:paddingEnd="@dimen/dp10"
+                android:paddingBottom="@dimen/dp3"
+                android:textSize="@dimen/sp13"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp3"
+                android:paddingEnd="@dimen/dp10"
+                android:paddingBottom="@dimen/dp3"
+                android:textSize="@dimen/sp13"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp3"
+                android:paddingEnd="@dimen/dp10"
+                android:paddingBottom="@dimen/dp3"
+                android:textSize="@dimen/sp13"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/startQuizBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_button_height"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@color/colorPrimary"
+                android:text="Start Test"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp13" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

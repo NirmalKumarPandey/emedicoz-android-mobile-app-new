@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#8A000000">
+    <RelativeLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_pause_gradient_white"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/imgTestResume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp23"
+            app:srcCompat="@drawable/icon_test_multiplayer">
+        </ImageView>
+        <RelativeLayout
+            android:layout_marginStart="@dimen/dp25"
+            android:layout_marginEnd="@dimen/dp23"
+            android:layout_marginTop="27dp"
+            android:layout_below="@+id/imgTestResume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/lytPaused"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imgTestPause"
+                    app:srcCompat="@drawable/icon_paused_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:layout_toEndOf="@+id/imgTestPause"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Test Paused"
+                    android:textColor="@color/toolbar_bg_color"
+                    android:textSize="@dimen/dp14">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tvTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Time Remaining: 1:45:47"
+                    android:textColor="@color/toolbar_bg_color"
+                    android:textSize="@dimen/dp14"></TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lytResume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytPaused"
+                android:layout_marginTop="@dimen/dp20"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10">
+
+                <ImageView
+                    android:id="@+id/imgTestResumeIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/icon_resume_test"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="9dp"
+                    android:layout_toEndOf="@+id/imgTestResumeIcon"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Resume"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14"></TextView>
+
+                <ImageView
+                    android:id="@+id/imgTestResumeBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp7"
+                    app:srcCompat="@drawable/icon_forward_black"></ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lytAbort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytResume"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginBottom="@dimen/dp20"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10">
+
+                <ImageView
+                    android:id="@+id/imgTestAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/icon_abort_test"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="9dp"
+                    android:layout_toEndOf="@+id/imgTestAbout"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Abort"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14"></TextView>
+
+                <ImageView
+                    android:id="@+id/imgTestAboutBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp7"
+                    app:srcCompat="@drawable/icon_forward_black"></ImageView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

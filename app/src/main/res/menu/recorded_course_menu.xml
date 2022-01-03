@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/FreeRC"
+        android:title="Free"
+        android:tooltipText="free"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/PaidRC"
+        android:title="Paid"
+        android:tooltipText="paid"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/BestRC"
+        android:title="Best Seller"
+        android:tooltipText="best-seller"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/TopRatedRC"
+        android:title="Top Rated"
+        android:tooltipText="top-rated"
+        app:showAsAction="collapseActionView" />
+</menu>

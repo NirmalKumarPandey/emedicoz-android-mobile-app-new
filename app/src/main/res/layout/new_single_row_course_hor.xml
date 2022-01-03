@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp3"
+        android:layout_marginRight="@dimen/dp3"
+        android:layout_marginBottom="@dimen/dp5"
+        app:cardElevation="@dimen/dp2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp2"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageIV"
+                    android:layout_width="@dimen/dp60"
+                    android:layout_height="@dimen/dp60"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/courses_blue" />
+
+                <ImageView
+                    android:id="@+id/courseTypeIV"
+                    android:layout_width="@dimen/dp20"
+                    android:layout_height="@dimen/dp20" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp5">
+
+                    <TextView
+                        android:id="@+id/nameTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp10" />
+
+                    <TextView
+                        android:id="@+id/priceTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/learnerTV"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/dp2"
+                        android:text="@string/free"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/sp8" />
+
+                    <TextView
+                        android:id="@+id/learnerTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/dp2"
+                        android:text=""
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/sp8" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ratingTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3.0"
+                        android:textColor="@color/black_overlay"
+                        android:textSize="@dimen/sp10" />
+
+                    <RatingBar
+                        android:id="@+id/ratingRB"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp2"
+                        android:rating="5"
+                        android:scaleX="0.7"
+                        android:scaleY="0.7" />
+
+                    <TextView
+                        android:id="@+id/validityTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ratingRB"
+                        android:layout_marginTop="@dimen/dp1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Valid Till: 20-11-2019"
+                        android:textColor="@color/light_red"
+                        android:textSize="@dimen/sp10"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btnEnroll"
+                        android:layout_width="@dimen/dp70"
+                        android:layout_height="@dimen/dp22"
+                        android:background="@color/red"
+                        android:text="ENROLLED"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp10"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

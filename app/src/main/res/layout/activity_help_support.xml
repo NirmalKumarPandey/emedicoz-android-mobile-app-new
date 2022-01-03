@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context=".support.HelpSupportActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp5">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/feeds_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp56"
+            android:fitsSystemWindows="true"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:titleMarginStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/toolbartitleTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/helvetica_neue_med"
+                    android:letterSpacing="0.04"
+                    android:paddingStart="30dp"
+                    android:paddingLeft="@dimen/dp5"
+                    android:paddingRight="@dimen/dp5"
+                    android:text="@string/help_and_support"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp14" />
+
+                <ImageView
+                    android:id="@+id/crossHelp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="@dimen/dp5"
+                    android:paddingEnd="20dp"
+                    app:srcCompat="@drawable/ic_baseline_close_24" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp10">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp10"
+            android:background="@drawable/bg_capsule_fill_white_border_blue"
+            android:elevation="@dimen/dp10"
+            android:padding="5dp"
+            app:cardCornerRadius="@dimen/dp4">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <EditText
+                    android:id="@+id/helpSearchFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dp5"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:hint="@string/how_can_we_help"
+                    android:imeOptions="actionSearch"
+                    android:maxLength="40"
+                    android:maxLines="1"
+                    android:padding="2dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="italic"/>
+
+
+                <ImageView
+                    android:id="@+id/img_help_search_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_round_search_24"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/img_help_clear_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingEnd="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp10"
+                    android:src="@mipmap/cross_"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp40"
+                tools:listitem="@layout/help_and_support_question" />
+
+            <LinearLayout
+                android:id="@+id/btn_Start_Chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/background_btn_green"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/startChat"
+                    style="@style/RattingRedButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/normal_button_height"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:drawableStart="@drawable/ic_whatsapp"
+                    android:drawablePadding="10dp"
+                    android:text="@string/start_chat"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/course_bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/course_bg_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/damsDialogTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp5"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dp5"
+            android:text="@string/are_you_a_dams_student_verify"
+            android:textColor="@color/light_red"
+            android:textSize="@dimen/post_text_size"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/topTestQbank"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardQbank"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp40"
+                android:layout_margin="@dimen/dp5"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#c72c2c"
+                app:cardCornerRadius="@dimen/dp10"
+                app:cardElevation="@dimen/dp8">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/tileIcon"
+                        android:layout_width="@dimen/dp25"
+                        android:layout_height="@dimen/dp25"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:src="@mipmap/qbank_btn" />
+
+                    <TextView
+                        android:id="@+id/tileName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_toRightOf="@+id/tileIcon"
+                        android:text="QBank"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp16" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTestSeries"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp40"
+                android:layout_margin="@dimen/dp5"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#8500b4"
+                app:cardCornerRadius="@dimen/dp10"
+                app:cardElevation="@dimen/dp8">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp5">
+
+                    <ImageView
+                        android:id="@+id/tileIcon2"
+                        android:layout_width="@dimen/dp25"
+                        android:layout_height="@dimen/dp25"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:src="@mipmap/test_series_btn" />
+
+                    <TextView
+                        android:id="@+id/tileName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_toRightOf="@+id/tileIcon2"
+                        android:text="Test Series"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp16" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tileRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/liveCourseIV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:gravity="center_horizontal"
+            android:src="@mipmap/live_course"
+            android:visibility="gone" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvPreviousPaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp10"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/dp5"
+            app:cardElevation="@dimen/dp3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_corner_fill_gradient_blue"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp10"
+                    android:src="@mipmap/white_question_mark" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/previous_papers"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp10"
+                    android:src="@mipmap/dark_gray_lock" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_browse_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/dp5"
+            app:cardElevation="@dimen/dp5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/browse_combo_plan"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp15" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/dp5"
+            app:cardElevation="@dimen/dp5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/classroom_reg"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp15" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/bannerIV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp220"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:background="@drawable/bg_capsule_fill_white_border_blue"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10"
+                android:src="@mipmap/search_menu" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="Search course here..."
+                android:imeOptions="actionSearch"
+                android:maxLength="40"
+                android:padding="@dimen/dp7"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@+id/iv_clear_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp12"
+                android:src="@mipmap/cross_"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/catLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp5"
+                android:text="Categories"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/catRV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingEnd="@dimen/dp10"
+                    android:scrollbars="horizontal"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/all"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp65"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/bg_all_cat"
+                    android:gravity="end|center"
+                    android:paddingEnd="@dimen/dp7"
+                    android:text="ALL"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp17"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/courseListRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp5"
+            android:overScrollMode="never" />
+
+        <TextView
+            android:id="@+id/errorTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:minHeight="@dimen/dp60"
+            android:textSize="@dimen/post_text_size"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

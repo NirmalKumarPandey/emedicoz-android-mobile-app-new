@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGray"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp5"
+            android:padding="@dimen/dp2"
+            android:text="@string/modulequestionbank"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/creation_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp5"
+            android:padding="@dimen/dp2"
+            android:text="15, Jan 2020"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sub_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_top"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp25"
+        android:padding="@dimen/dp5"
+        android:text="Subject:"
+        android:textColor="@color/colorPrimaryNight"
+        android:textSize="@dimen/sp18"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_top"
+        android:layout_marginStart="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp25"
+        android:layout_toRightOf="@+id/tv_sub_lable"
+        android:padding="@dimen/dp5"
+        android:text="3 Subject Select"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp18" />
+
+
+    <TextView
+        android:id="@+id/tv_dificulty_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_sub_lable"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp5"
+        android:padding="@dimen/dp5"
+        android:text="Difficulty level:"
+        android:textColor="@color/colorPrimaryNight"
+        android:textSize="@dimen/sp18"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_dificulty_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_sub_lable"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_toRightOf="@+id/tv_dificulty_lable"
+        android:padding="@dimen/dp5"
+        android:text="High"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp18" />
+
+    <TextView
+        android:id="@+id/tv_sub_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_dificulty_lable"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp5"
+        android:padding="@dimen/dp5"
+        android:text="Mode:"
+        android:textColor="@color/colorPrimaryNight"
+        android:textSize="@dimen/sp18"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_exammode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_dificulty_lable"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_toRightOf="@+id/tv_sub_mode"
+        android:padding="@dimen/dp5"
+        android:text="Exam Mode"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp18" />
+
+    <LinearLayout
+        android:id="@+id/llcenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_sub_mode"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp25"
+        android:layout_marginEnd="@dimen/dp10"
+        android:background="@mipmap/bg_questionmark"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp10"
+            android:src="@mipmap/custom_qbank" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:padding="@dimen/dp2"
+            android:text="Question Bank"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/noOfQuestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp2"
+            android:text="10 Questions "
+            android:textAlignment="center"
+            android:textSize="@dimen/sp15" />
+
+
+        <Button
+            android:id="@+id/startQuiz"
+            android:layout_width="@dimen/dp120"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp30"
+            android:background="@drawable/bg_btn"
+            android:text="Start Now"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/createAndDeleteModule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llcenter"
+        android:layout_marginTop="@dimen/dp10"
+        android:padding="4dp"
+        android:text="@string/deletaAndCreate"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/sp15"
+        android:textStyle="bold" />
+</RelativeLayout>

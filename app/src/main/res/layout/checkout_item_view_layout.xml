@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:background="@drawable/bg_transparent_view_grey_corner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp16">
+        <ImageView
+            android:id="@+id/imgCheckoutCharacter"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp8"
+            android:src="@drawable/checkout_character"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txtCourseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginTop="@dimen/dp11"
+            android:layout_marginEnd="111dp"
+            android:layout_toEndOf="@+id/imgCheckoutCharacter"
+            android:fontFamily="@font/helvetica_neue_medium"
+            android:lineSpacingExtra="@dimen/dp1"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14">
+
+        </TextView>
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp17"
+            android:layout_below="@+id/txtCourseTitle"
+            android:layout_toEndOf="@+id/imgCheckoutCharacter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RatingBar
+                android:id="@+id/checkout_course_rating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:progressTint="#fcde0e"
+                android:rating="5.0"
+                android:stepSize="1.0">
+            </RatingBar>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/txtTotalRating"
+                android:layout_marginStart="@dimen/dp7"
+                android:layout_toEndOf="@+id/checkout_course_rating"
+                android:text="4.9 |"
+                android:textSize="@dimen/dp8"
+                android:textColor="@color/black"
+                android:fontFamily="@font/helvetica_neue_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:layout_marginStart="@dimen/dp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/txtTotalRating"
+                android:fontFamily="@font/helvetica_neue_medium"
+                android:text="265 Enrolled"
+                android:textColor="#8e8e8e"
+                android:textSize="@dimen/dp8">
+            </TextView>
+        </RelativeLayout>
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:id="@+id/imgDelete"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icon_delete">
+        </ImageView>
+        <TextView
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp24"
+            android:layout_below="@+id/imgCheckoutCharacter"
+            android:id="@+id/txtCheckoutCourseType"
+            android:textSize="@dimen/dp14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_neue_medium"
+            android:text="Course Type"
+            android:textColor="@color/black">
+        </TextView>
+        <TextView
+            android:id="@+id/txtVisibleStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgCheckoutCharacter"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp24"
+            android:layout_marginEnd="@dimen/dp7"
+            android:fontFamily="@font/helvetica_neue_medium"
+            android:text="Online"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14">
+
+        </TextView>
+
+        <TextView
+            android:layout_marginBottom="@dimen/dp8"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp13"
+            android:layout_below="@+id/txtCheckoutCourseType"
+            android:id="@+id/txtCheckoutCoursePrice"
+            android:textSize="@dimen/dp14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica_neue_medium"
+            android:text="Course Price + 10000"
+            android:textColor="@color/black">
+
+        </TextView>
+        <ImageView
+            android:id="@+id/imgCheckoutCoin"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp13"
+            android:layout_marginBottom="@dimen/dp8"
+            android:layout_toEndOf="@+id/txtCheckoutCoursePrice"
+            android:layout_below="@+id/txtCheckoutCourseType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_icon_coin">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txtCheckoutSubPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCheckoutCourseType"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp13"
+            android:layout_marginBottom="@dimen/dp8"
+            android:layout_toEndOf="@+id/imgCheckoutCoin"
+            android:fontFamily="@font/helvetica_neue_medium"
+            android:text="65000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14">
+        </TextView>
+
+
+        <TextView
+            android:layout_marginEnd="@dimen/dp7"
+            android:id="@+id/txtCheckoutTotalPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtCheckoutCourseType"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp13"
+            android:layout_marginBottom="@dimen/dp8"
+            android:fontFamily="@font/helvetica_neue_medium"
+            android:text="75000 INR"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp14">
+
+        </TextView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,950 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" tools:ignore="MissingTranslation">
+    <string name="app_name">eMedicoz</string>
+
+    <!-- FACEBOOK APP ID -->
+    <!--<string name="facebook_app_id">202640123616502</string>-->
+    <string name="facebook_app_id">202640123616502</string>
+    <string name="fb_login_protocol_scheme">fb202640123616502</string>
+
+    <!--old facebook id-->
+    <!--  <string name="facebook_app_id">1727329897559970</string>
+        <string name="fb_login_protocol_scheme">fb1727329897559970</string>-->
+
+    <string-array name="Review_Type">
+        <item>aaa</item>
+        <item>bbb</item>
+    </string-array>
+    <string name="allcourses">All Courses</string>
+    <string name="mycourse">My Courses</string>
+    <string name="feeds">Feeds</string>
+    <string name="podcast">Podcast</string>
+    <string name="specialities">Specialities</string>
+    <string name="savedNotes">Bookmarks</string>
+    <string name="bookmarks">My Bookmarks</string>
+    <string name="cpr">CPR</string>
+    <string name="course">Courses</string>
+    <string name="feedback">Feedback</string>
+    <string name="video">Videos</string>
+    <string name="live_classes">Live Courses</string>
+    <string name="my_courses">My Courses</string>
+    <string name="my_course_detail">My Course Details</string>
+    <string name="study">Study</string>
+
+    <!--Feed Preferences Strings-->
+    <string name="all_feed">All</string>
+    <string name="expert_feed">Expert Feed</string>
+    <string name="with_follow_feed">With Follow Feed</string>
+
+    <string name="appSettings">App Settings</string>
+    <string name="logout">Logout</string>
+    <string name="logoutMessage">Are you sure you want to logout?</string>
+    <string name="deleteMessage">Are you sure, You want to delete this post?</string>
+    <string name="deleteReviews">Are you sure, you want to delete this review?</string>
+    <string name="finishQuiz">Are you sure you want to submit this test?\nyou can\'t edit once you submit. </string>
+    <string name="pauseQuiz">Are you sure you want to pause this test?</string>
+    <string name="deleteCourse">Are you sure you want to delete all the content of this Course. </string>
+    <string name="choose_image">Choose your image from</string>
+    <string name="choose_media">Choose Media</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="reset_password">RESET PASSWORD</string>
+    <string name="submit">SUBMIT</string>
+    <string name="verfiy">VERIFY</string>
+    <string name="signup">SIGN UP</string>
+    <string name="login">LOG IN</string>
+
+    <string name="alert">Alert</string>
+    <string name="reGrantPermissionMsg">You have denied the required permission. Please grant to proceed further.</string>
+    <string name="changepassowrd_new_password">New Password</string>
+    <string name="changepassowrd_retype_password">Retype Password</string>
+
+    <string name="enter_phonenumber">Enter your phone number</string>
+    <string name="forgetpassword_otp_message">OTP will be sent to your Phone number</string>
+    <string name="mobile_no_message">Enter the Phone number that you registered with eMedicoz</string>
+
+    <string name="mobileverification_verificationmessage">Please enter your mobile number for verification</string>
+    <string name="save">SAVE</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="saving_image">Saving image</string>
+    <string name="preparing_card">Preparing card</string>
+    <string name="no_storage_card">No storage card</string>
+    <string name="not_enough_space">Not enough space</string>
+
+    <string name="signup_referralcode">Enter Referral Code!</string>
+
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone number</string>
+    <string name="password">Password</string>
+    <string name="are_you_a_dams_student">Are you a DAMS student?</string>
+    <string name="are_you_a_dams_student_verify">Are you a DAMS Student? Verify Here</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_up_with_social_media">Sign Up With Social Media</string>
+    <string name="write_your_post_here">Write your post here</string>
+    <string name="write_your_feedback_here">Write your feedback here</string>
+    <string name="write_your_question_here">"Write your question here"</string>
+    <string name="share">Share</string>
+    <string name="comment">Comment</string>
+    <string name="like">Like</string>
+    <string name="likes">Likes</string>
+    <string name="next">NEXT</string>
+    <string name="welcome_to_emedicoz">Welcome To eMedicoz</string>
+    <string name="choose_section">Choose Section</string>
+    <string name="change_password">Change Password</string>
+    <string name="forget_password">Forgot Password</string>
+    <string name="mobile_verification">Mobile Verification</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="professional_stream">Professional Stream</string>
+    <string name="new_post">New Post</string>
+    <string name="reward_transaction">Reward Transactions</string>
+    <string name="notifications">Notifications</string>
+
+    <string name="pin_content_desc">PIN input field</string>
+
+    <string name="follow">Follow</string>
+    <string name="following">Following</string>
+    <string name="add_media">Add Media</string>
+    <string name="attach">Attach</string>
+    <string name="add_question">Add Question</string>
+    <string name="add_tag">Add Tag</string>
+    <string name="tag_people">Tag People</string>
+    <string name="jsonparsing_error_message">Something went wrong with server</string>
+    <string name="internet_error_message">No internet connection found.\n Check your Connection</string>
+    <string name="exception_api_error_message">Something went wrong kindly try again</string>
+    <string name="you_cannot_add_more_opt">You cannot add more options</string>
+    <string name="no_more_opt_to_remov">No options to remove</string>
+    <string name="you_cannot_add_more_media">You cannot add other Media</string>
+    <string name="suggested_videos">Suggested Videos</string>
+    <string name="suggested_courses">Suggested Courses</string>
+    <string name="people_you_may_know">People You May Know</string>
+    <string name="meet_the_expert">Meet the Experts</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="no_data_in_daily_challenge">No challenge available for selected date</string>
+    <string name="please_select_the_stream">Please select the Stream</string>
+    <string name="please_input_title">Please input title of podcast</string>
+    <string name="please_input_description">Please input description of podcast</string>
+    <string name="please_select_the_subject">Please select the Subject</string>
+    <string name="please_select_audio_file">Please select the audio file</string>
+    <string name="please_select_thumbnail_image">Please select thumbnail image</string>
+    <string name="please_select_the_substream">Please select the Sub Stream</string>
+    <string name="please_select_the_specialisation">Please select the Specialisation</string>
+    <string name="no_data_changed">No Data Changed</string>
+    <string name="no_comments_found">No Comments Found</string>
+    <string name="pdf_extension">.pdf</string>
+    <string name="doc_extension">.doc</string>
+    <string name="xls_extension">.xls</string>
+    <string name="file_format_error">This file format is not supported</string>
+    <string name="liked_your_post">" liked your post."</string>
+    <string name="commented_your_post">" commented on your post."</string>
+    <string name="tagged_in_post">" tagged you in the post."</string>
+    <string name="tagged_in_comment">" tagged you in the comment."</string>
+    <string name="shared_your_post">" shared your post."</string>
+    <string name="following_you">" started following you."</string>
+    <string name="select_stream">Select Stream</string>
+    <string name="select_subject">Select Subject</string>
+    <string name="logout_confirmation_message">Do you really want to logout?</string>
+    <string name="verifying_your_number_n_we_have_sent_an_otp_on_your_number">Verify your Phone number!\n We have sent an OTP on your registered Phone number</string>
+    <string name="description">Description</string>
+    <string name="subject">Subject</string>
+    <string name="discuss_medical_cases_mcqs"><![CDATA[DISCUSS MEDICAL CASES & MCQs]]></string>
+    <string name="demo_screen4_text"><![CDATA[From Xrays, CT scans and ECGs to multiple choice questions for NEETPG & USMLE, eMedicoz helps you discuss relevant medical cases sorted by specialty and at all grades.]]></string>
+    <string name="demo_screen3_text">eMedicoz is the simple way to share and discuss clinical images and questions.</string>
+    <string name="no_feeds_found">No Feeds Found</string>
+    <string name="no_following_found">No Following Found</string>
+    <string name="no_followers_found">No Followers Found</string>
+    <string name="dams_roll_no">DAMS Roll No.</string>
+    <string name="update_app_dialog_title">Update App</string>
+    <string name="cart_delete_title">Are you sure want to delete this course from cart?</string>
+    <string name="update_app_dialog_message">You are using older version of app.\n Kindly update it from PlayStore</string>
+    <string name="enter_your_dams_roll_number">Enter your roll number</string>
+    <string name="read_more">Read More</string>
+    <string name="instructor">Instructor</string>
+    <string name="profile">Profile</string>
+    <string name="registration">Registration</string>
+    <string name="upload_profile_picture">Upload Profile Picture</string>
+    <string name="upload_podcast_image">Upload Podcast Image</string>
+    <string name="upload_pan_picture">Upload Pan Card</string>
+    <string name="upload_aadhar_picture">Upload Aadhar Card</string>
+    <string name="upload_bandoc_picture">Upload Bank Document</string>
+    <string name="no_question_with_media">You can’t add question along with the media</string>
+
+    <!--JWPlayer-->
+    <string name="YOUR_LICENSE_KEY">/JFSZ5yP9bbKb+ASKSmzu2hEcZGmlvLN6lMa/g==</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="viewAll">View All</string>
+    <string name="seeAll">See All</string>
+    <string name="seeAll_underline"><u>See All</u></string>
+    <string name="addreview">Add Review</string>
+    <string name="rating">Rating</string>
+    <string name="students">Students</string>
+    <string name="profile_view">View Profile</string>
+    <string name="buy">Buy</string>
+    <string name="faq_title">FAQ\'s</string>
+    <string name="submit_rev">Submit</string>
+    <string name="related_course">Related Course</string>
+    <string name="prev">Previous</string>
+    <string name="curriculum">Curriculum</string>
+    <string name="leaderboard">My Scorecard</string>
+
+    <string name="retry">Retry</string>
+
+    <string name="enable_random_adaptation">Enable random adaptation</string>
+
+    <string name="error_drm_not_supported">Protected content not supported on API levels below 18</string>
+
+    <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
+
+    <string name="error_drm_unknown">An unknown DRM error occurred</string>
+
+    <string name="error_no_decoder">This device does not provide a decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+
+    <string name="error_no_secure_decoder">This device does not provide a secure decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+
+    <string name="error_querying_decoders">Unable to query device decoders</string>
+
+    <string name="error_instantiating_decoder">Unable to instantiate decoder <xliff:g id="decoder_name">%1$s</xliff:g></string>
+
+    <string name="error_unsupported_video">Media includes video tracks, but none are playable by this device</string>
+
+    <string name="error_unsupported_audio">Media includes audio tracks, but none are playable by this device</string>
+
+    <string name="storage_permission_denied">Permission to access storage was denied</string>
+
+    <string name="ima_not_loaded">Playing sample without ads, as the IMA extension was not loaded</string>
+    <string name="no_videos_found">No Videos Found</string>
+    <string name="rewardpoints">Reward Points</string>
+    <string name="termscond">Terms And Condition</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="press_again_to_exit">Press once again to Exit</string>
+    <string name="loadmore">Load more</string>
+    <string name="download_pending">Downloading…</string>
+    <string name="download_queued">Queued</string>
+    <string name="video_download_in_progress">Video Download is in progress</string>
+    <string name="file_download_in_progress">File Download is in progress</string>
+    <string name="downloaded_offline">Downloaded Offline</string>
+    <string name="error_in_downloading">Error in downloading. Retry!</string>
+    <string name="download_pasued">Download Paused</string>
+    <string name="courseBuy">You have to buy course to view and download the content</string>
+    <string name="reportAbuseTitle">Help us understand what\'s Happening</string>
+    <string name="whatsWrong">What\'s wrong with this post?</string>
+    <string name="optingAttempt">Please Note : Re-attempt will not affect your Current Rank</string>
+    <string name="proceed">Proceed</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="finish">Finish</string>
+    <string name="submitanswer">Submit your answer</string>
+    <string name="add_servey">Add MCQ</string>
+    <string name="remove_survey">Remove MCQ</string>
+    <string name="let_s_talk">Let\'s Talk.....</string>
+
+    <item name="questions" type="id" />
+    <item name="optionsAns" type="id" />
+
+    <string-array name="feedTypeArray">
+        <item>@string/all_feed</item>
+        <item>@string/expert_feed</item>
+        <item>@string/with_follow_feed</item>
+    </string-array>
+
+    // to set rs. symbol
+    <!--<string name="rs">\u20A8</string>-->
+    <string name="rs">\u20B9</string>
+    <string name="dollar">\u0024</string>
+    <string name="purchased">Purchased</string>
+    <string name="enroll">Enroll</string>
+    <string name="enroll_now">Enroll Now</string>
+    <string name="renewText">RENEW</string>
+    <string name="enrolled">Enrolled</string>
+    <string name="renew">Renew</string>
+    <string name="alreadypurchased">Already Purchased</string>
+    <string name="already_enrolled">Already Enrolled</string>
+    <string name="invite">Invite</string>
+    <string name="try_again">Try Again</string>
+    <string name="showTransactions">Show Transactions</string>
+    <!--<string name="mcqNote">Mark your answer for this survey.</string>-->
+    <string name="mcqNote"><![CDATA[<font color="#00639f"><b>Note: </b> </font>Mark Your Answer.
+  ]]></string>
+    <string name="Invoice">Course Invoice</string>
+    <string name="course_name">"DAMS Ultimate Live Course\n App course"</string>
+    <string name="Question">1.  What kind of certificate will I get after completion of this course?</string>
+    <string name="attempted">Attempted</string>
+    <string name="notattempted">Not Attempted</string>
+
+    <!--CCAvenue Payment String-->
+
+    <string-array name="selectAction">
+        <item>Resend OTP</item>
+        <item>Enter OTP Manually</item>
+    </string-array>
+    <string name="pay_button">Pay</string>
+    <string name="merchant_id">Merchant Id</string>
+    <string name="currency">Currency</string>
+    <string name="amount">Amount</string>
+    <string name="redirect_url">Redirect Url</string>
+    <string name="cancel_url">Cancel Url</string>
+    <string name="rsa_url">RSA Key Url</string>
+    <string name="access_code">Access Code</string>
+    <string name="continueText">Continue</string>
+    <string name="paytm">Paytm</string>
+    <string name="ccAvenue">CCAvenue</string>
+    <string name="paymentModeSelcetion">Please choose any payment method</string>
+
+    <!--EpuBear SDK Strings File-->
+    <string name="header_default">Title</string>
+    <!--<string name="cancel">CANCEL</string>-->
+
+    <!--    MainActivity    -->
+
+    <!--    NoBooksActivity  -->
+    <string name="no_books_yes">YES</string>
+    <string name="no_books_no">NO</string>
+
+    <!--    Reader -->
+    <string name="reader_page_info">%1$d/%2$s pages</string>
+    <string name="reader_title_crop_symbols">…</string>
+
+    <string name="reader_drawer_open">Open drawer</string>
+    <string name="reader_drawer_close">Close drawer</string>
+
+    <!--    FontSizeActivity  -->
+    <string name="font_size">Font size</string>
+
+    <!--    PerformanceLogActivity  -->
+
+    <!--    SettingActivity -->
+    <string name="setting_unpack">Unpack files</string>
+    <string name="featuredPost">Featured post</string>
+    <string name="verfied">Verified</string>
+    <string name="back">Back</string>
+    <string name="newpost">" added a new post."</string>
+
+    <string name="channel_description">This Notification Channel manages all the basic notifications of the Dams App</string>
+    <string name="channel_name">Dams App Notification</string>
+    <string name="amount_wil_be_show_deducted_in_inr"><![CDATA[Please note \n Amount will be Converted & deducted in INR.]]></string>
+    <string name="CPR_invoice">Invoice</string>
+    <string name="course_summary">Course Summary</string>
+    <string name="summary">Summary</string>
+    <string name="CPR_subscription">Subscription</string>
+    <string name="subscribe">Subscribe</string>
+
+
+    <string name="terms_conditions">By Signing in, I agree to the \n <u><![CDATA[Terms & Conditions]]></u></string>
+    <string name="sign_in_to_continue">SIGN IN TO CONTINUE</string>
+    <string name="no_notification_found">No Notification Found</string>
+    <string name="email_roll_number">Email/Roll Number</string>
+    <string name="we_ll_email_instructions_on_how_to_reset_your_password">We\'ll Email Instructions on how to \n reset your password.</string>
+    <string name="pause">Pause</string>
+    <string name="start">Start</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="active">Active</string>
+    <string name="completed">Completed</string>
+    <string name="missed">Missed</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="all">All</string>
+    <string name="all_test">All Test</string>
+    <string name="quiz">Quiz</string>
+    <string name="test">Test</string>
+    <string name="my_bookmarks">My Bookmarks</string>
+    <string name="quick_summary">Quick Summary</string>
+    <string name="score">Score</string>
+    <string name="accuracy">Accuracy</string>
+    <string name="percentile">Percentile</string>
+    <string name="rank">Rank</string>
+    <string name="best_score">Best Score</string>
+    <string name="average_score">Average Score</string>
+    <string name="question_distribution">Question Distribution</string>
+    <string name="area_of_improvement">Area of Improvement</string>
+    <string name="leader_board">Leaderboard</string>
+    <string name="Rs">\u20B9</string>
+
+    <string name="qbank_module">Module from all qbank</string>
+    <string name="deletaAndCreate">Delete And Create New Module</string>
+    <string name="modulequestionbank">Module From all QBank</string>
+    <string name="start_review">Start Review</string>
+    <string name="my_progress">My Progress</string>
+    <string name="suspended_cards">Suspended Cards</string>
+    <string name="all_cards">All Cards</string>
+    <string name="current_streak">Current Streak :</string>
+    <string name="daily_average">Daily Average :</string>
+    <string name="longest_streak">Longest Streak :</string>
+    <string name="read">Read</string>
+    <string name="_3_days_easy">3 DAYS \nEASY</string>
+    <string name="_1_day_medium">1 DAY \nMEDIUM</string>
+    <string name="_10_mins_hard">10 MINS \nHARD</string>
+    <string name="studied">Studied</string>
+    <string name="bookmarked">Bookmarked</string>
+    <string name="suspended">Suspended</string>
+    <string name="confirm">Confirm</string>
+    <string name="price_range">75000-65000</string>
+    <string name="read_all_bookmarked">Read All Bookmarked</string>
+    <string name="view_suspended_cards">View Suspended Cards</string>
+    <string name="answer">Answer</string>
+    <string name="read_bookmarked">Read Bookmarked</string>
+    <string name="read_suspended">Read Suspended</string>
+    <string name="previous">Previous</string>
+    <string name="randomize_cards">Randomize Cards</string>
+    <string name="unrandomize_cards">Unrandomize Cards</string>
+    <string name="goto_flashcard_home">Go to Flashcard Home</string>
+    <string name="forecast">FORECAST</string>
+    <string name="progress">PROGRESS</string>
+    <string name="see_sujectwise_progress">See Subjectwise Progress</string>
+    <string name="see_sujectwise_forecast">See Subjectwise Forecast</string>
+    <string name="start_btn_test">Start</string>
+    <string name="paused_btn_test">PAUSED</string>
+    <string name="no">NO</string>
+    <string name="yes">YES</string>
+    <string name="do_you_really_want_to_pause_this_test">Do you really want to pause this test?</string>
+    <string name="do_you_really_want_to_submit_this_test">Do you really want to submit this test?</string>
+    <string name="suspend_card">Suspend Card !</string>
+    <string name="suspending_this_card_will_remove_this_card_from_your_review_schedule">Suspending this card will remove this card from your review schedule. Are you sure you want to suspend this card ?</string>
+
+
+    <string-array name="PlaybackSpeed">
+        <item>0.5x</item>
+        <item>1.0x(Normal)</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>1.75x</item>
+        <item>2x</item>
+        <item>2.5x</item>
+        <item>3x</item>
+    </string-array>
+    <string-array name="PlaybackSpeedText">
+        <item>0.5x</item>
+        <item>1x</item>
+        <item>1.2x</item>
+        <item>1.5x</item>
+        <item>1.7x</item>
+        <item>2x</item>
+        <item>2.5x</item>
+        <item>3x</item>
+    </string-array>
+    <string-array name="PlayQuality">
+        <item>Auto</item>
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
+    </string-array>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="delete">Delete</string>
+    <string name="if_you_reset_these_contents_you_can_not_get_back_your_previous_history">Note: If you reset these contents you can not get back your previous history</string>
+    <string name="clear">Clear</string>
+    <string name="you_have_to_buy_DVL_subscription_to_view_this_content">You have to buy DVL subscription to view this content.</string>
+    <string name="test_date_expired">Test Date Expired !</string>
+    <string name="close">Close</string>
+    <string name="this_test_will_be_available_on">This test will be available on</string>
+    <string name="you_have_to_buy_this_course_to_attempt_test">You have to buy this course to attempt test.</string>
+    <string name="you_have_to_buy_this_qbank_to_attempt">You have to buy this Qbank to attempt.</string>
+    <string name="add_to_my_course">Add To My Course</string>
+    <string name="you_have_to_buy_qbank_to_create_custom_question">You have to Buy Qbank to create custom question.</string>
+    <string name="you_have_to_buy_qbank_to_open_flashcard">You have to Buy Qbank to open flashcard.</string>
+    <string name="do_you_really_want_to_delete">Do you really want to Delete?</string>
+    <string name="ok">OK</string>
+    <string name="this_device_is_not_compitable_for_this_application">This device is not compitable for this application.</string>
+    <string name="you_must_have_to_finish_previous_cards_before_selecting_new_card">You must have to finish previous cards before selecting new card.</string>
+    <string name="resume">Resume</string>
+    <string name="result">Result</string>
+    <string name="are_you_sure_you_want_to_quit_the_quiz">Are you sure you want to quit the Quiz?</string>
+    <string name="images">Images</string>
+    <string name="videos">Videos</string>
+    <string name="time_out">Time out!</string>
+    <string name="your_test_time_is_over_click_ok_for_submit">Your test time is over. Click \'OK\' for submit.</string>
+    <string name="free">Free</string>
+    <string name="free_trial">Free Trial</string>
+    <string name="all_category">All Category</string>
+    <string name="no_test_found">No test found.</string>
+    <string name="others">Others</string>
+    <string name="no_completed_test_found">No completed test found.</string>
+    <string name="no_missed_test_found">No missed test found.</string>
+    <string name="no_upsoming_test_found">No upcoming test found.</string>
+    <string name="no_active_test_found">No active test found.</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="category_info">category_info</string>
+    <string name="course_list">course_list</string>
+    <string name="for_dams">for_dams</string>
+    <string name="non_dams">non_dams</string>
+    <string name="app_view_type">app_view_type</string>
+    <string name="coupon">Coupon</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="referral_phone_number">Phone Number</string>
+    <string name="address">Address</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="country">Country</string>
+    <string name="account_holder_name">Account Holder Name</string>
+    <string name="bank_branch_name">Bank Branch Name</string>
+    <string name="account_number">Account Number</string>
+    <string name="ifsc_code">IFSC Code</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="i_have_read_terms_and_conditions">I have read <font color='#5479C5'>Terms and Conditions</font></string>
+    <string name="referralcode">Referral Code</string>
+    <string name="pan_card">Pan Card</string>
+    <string name="aadhaar_card">Adhaar Card</string>
+    <string name="earned_money">\u20B90</string>
+    <string name="text_type_string">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="pan_card_digits">ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+    <string-array name="country_arrays">
+        <item>India</item>
+        <item>Malaysia</item>
+        <item>United States</item>
+        <item>Indonesia</item>
+        <item>France</item>
+        <item>Italy</item>
+        <item>Singapore</item>
+        <item>New Zealand</item>
+        <item>Portugal</item>
+    </string-array>
+
+    <string-array name="instructor_names" />
+
+    <string name="create_custom_module">Create Custom Module</string>
+    <string name="pubnub">PUBNUB</string>
+    <string name="in_app_purchase">In App Purchase</string>
+    <string name="no_match_found">No Match Found.</string>
+    <string name="internet_verification_msg">Please check your internet connection..</string>
+    <string name="please_buy_course_to_start_test">Please buy course before start Test Series</string>
+    <string name="please_enter_your_query">Please enter your query first.</string>
+    <string name="buy_course_to_download">You have to buy this course to download the content..</string>
+    <string name="retry_with_internet">Retry with internet connection..</string>
+    <string name="view_detail">View Detail</string>
+    <string name="online">Online</string>
+    <string name="please_pay_your_dues_befour_the_due_date_to_ensure_your_course_continues_smoothly_and_to_avoid_payment_penalties">Please pay your dues befour the due date to ensure your course continues smoothly and to avoid payment penalties.</string>
+    <string name="show_transaction_statement"><u>Show transaction statement</u></string>
+    <string name="pre_payment">Pre Payment</string>
+    <string name="installment_plan">Installment Plan</string>
+    <string name="see_details"><u>See Details</u></string>
+    <string name="book_your_seat">Book Your Seat for DAMS Classroom Courses.</string>
+    <string name="f_2_f_classes">Face To Face Classes</string>
+    <string name="vsat_classes">VSAT Classes</string>
+    <string name="choose_your_preference">Choose your preference</string>
+    <string name="franchise_name">Franchise Name</string>
+    <string name="session">Session</string>
+    <string name="course_group_name">Course Group Name</string>
+    <string name="course_list_reg">Course List</string>
+    <string name="important_notes">Important Notes :</string>
+    <string name="join_affiliate_program">Join Affiliate Program</string>
+    <string name="student_reg">Student</string>
+    <string name="course_reg">Course</string>
+    <string name="payment_reg">Payment</string>
+    <string name="new_student">New Student</string>
+    <string name="existing_student">Existing Student</string>
+    <string name="student_type">Student Type :</string>
+    <string name="student_name">Student Name</string>
+    <string name="dob">Date of Birth</string>
+    <string name="gender">Gender :</string>
+    <string name="father_name">Father Name</string>
+    <string name="email_id">Email ID</string>
+    <string name="mobile">Mobile</string>
+    <string name="otp">OTP</string>
+    <string name="pin_code">Pincode</string>
+    <string name="alternate_mobile">Alternate Mobile No.</string>
+    <string name="student_image">Student Image</string>
+    <string name="how_you_know_about_dams">How did you come to know about DAMS ?</string>
+    <string name="remarks">Remarks :</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="choose_file">Choose File</string>
+    <string name="no_file_choosen">No File Chosen</string>
+    <string name="select_fee">Select Fee :</string>
+    <string name="registration_fee">Registration Fee</string>
+    <string name="course_fee">Course Fee</string>
+    <string name="two_year_classroom_course">2 year classroom course ( for final year students )</string>
+    <string name="total_payable_amount">Total payable amount</string>
+    <string name="proceed_to_pay">proceed to pay</string>
+    <string name="gst">GST</string>
+    <string name="live_course">Live Courses</string>
+    <string name="live_courses">Live Courses</string>
+    <string name="select_an_image">Please select an image</string>
+    <string name="classroom_reg">Book Your Seat for DAMS Classroom Courses</string>
+    <string name="gt_given">Grand Tests Given</string>
+    <string name="best_score_in_gt">Best score in GT</string>
+    <string name="best_rank_in_gt">Best rank in GT</string>
+    <string name="avg_percentage_in_gt">Average % in GT</string>
+    <string name="scorecard">Scorecard</string>
+    <string name="archives">Archives</string>
+
+    <string name="marks">Marks</string>
+    <string name="expand_list">Expand List</string>
+    <string name="shrink_list">Shrink List</string>
+    <string name="order_detail">Order Detail</string>
+    <string name="expand_to_show_more">Expand to show more</string>
+    <string name="show_less">Show Less</string>
+    <string name="day_night_mode">Dark Mode</string>
+    <string name="upload_bank_document_photo">Attach Crossed Cheque photo</string>
+    <string name="download_membership_agreement">Download Membership Agreement</string>
+    <string name="not_completed_any_quiz">You have not completed any quiz.</string>
+    <string name="attempted_all_quiz">You have attempted all the quiz.</string>
+    <string name="not_paused_any_quiz">You have not paused any quiz.</string>
+    <string name="no_quiz_found">No Quiz Found.</string>
+    <string name="view_details">View Details</string>
+    <string name="invoice">Invoice</string>
+    <string name="continue_to_pay">Continue to Pay</string>
+    <string name="transactions">Transaction</string>
+    <string name="status">Status</string>
+    <string name="successfull">Successful</string>
+    <string name="subscription_plan">Subscription Plan</string>
+    <string name="initial_enrolment_amount">INITIAL ENROLMENT AMOUNT</string>
+    <string name="installment">Installment</string>
+    <string name="subscription">Subscription</string>
+    <string name="tap_here_to_see_your_progress">TAP HERE TO SEE YOUR PROGRESS</string>
+    <string name="add_coupon">Add Coupon</string>
+    <string name="enter_your_coupon_code">Enter your coupon code</string>
+    <string name="add_referral_code">Add Referral Code</string>
+    <string name="enter_your_referral_code">Enter your referral code</string>
+    <string name="saved_nothing">You have not saved anything.</string>
+    <string name="response_string">response:</string>
+    <string name="on_saved_instance_state">onSaveInstanceState:</string>
+    <string name="on_restore_instance_state">onRestoreInstanceState:</string>
+    <string name="on_create_method">onCreate method</string>
+    <string name="single_course_id">\"SINGLE_COURSE_ID : \"</string>
+    <string name="config_changed">Config Changed</string>
+    <string name="others_string">Others</string>
+    <string name="title_frag">titlefrag</string>
+    <string name="on_resume_is_called">onResume: onResume() is called</string>
+    <string name="please_check_your_internet_connectivity">Please check your internet connectivity..</string>
+    <string name="result_string">Result</string>
+    <string name="something_went_wrong_string">Something went wrong</string>
+    <string name="custom_string">Custom</string>
+    <string name="vatham_id_string">vatham_id</string>
+    <string name="please_select_any_option_to_clear">Please select any option to clear</string>
+    <string name="selected_media_removed_from_device">Selected Media Removed from device</string>
+    <string name="no_offline_media_found">No offline media found</string>
+    <string name="kindly_select_any_on_option_above">Kindly select any on option above</string>
+    <string name="you_cannot_add_other_media">You cannot add other Media</string>
+    <string name="kindly_select_any_option_first">Kindly select any Option first</string>
+    <string name="string_minutes_ago">0 minutes ago</string>
+    <string name="slider_string">Slider</string>
+    <string name="just_now_string">Just Now</string>
+    <string name="minutes_string">minutes</string>
+    <string name="no_comment_found">No Comment Found</string>
+
+    <string name="search_hint">Search here</string>
+    <string name="invite_n_earn">Invite and Earn</string>
+    <string name="referral_signup">Referral SignUp</string>
+    <string name="refer_earn_now">Refer and Earn Now</string>
+    <string name="update_affiliate">Update Affiliate Info</string>
+    <string name="qr_code">QR Code</string>
+    <string name="wait_till_data_loads">Please wait till data loads</string>
+    <string name="rate_before_submit">Please rate us. Before Submit</string>
+    <string name="search_course_hint">Search courses here</string>
+    <string name="enter_search_query">Please enter search query.</string>
+    <string name="data_inserted">Data Inserted</string>
+
+    <string name="no_record_found">No Record Found</string>
+    <string name="no_course">You don\'t have any course</string>
+    <string name="purchases_course_msg">You purchased course will be available here</string>
+    <string name="no_bookmarks_found">No Bookmarks Found !</string>
+    <string name="enter_old_password">Please enter old password.</string>
+    <string name="enter_new_password">Please enter new password.</string>
+    <string name="password_must_contain">Password must contain 8–15 characters..</string>
+    <string name="retype_password">Please retype password.</string>
+    <string name="submit_qbank">Submit Qbank</string>
+    <string name="submit_test">Submit Test</string>
+    <string name="do_you_want_to_submit_qbank">Do you want to submit the Qbank ?</string>
+    <string name="do_you_want_to_submit_test">Do you want to submit the Test ?</string>
+
+    <string name="rate_us">Rate Us</string>
+    <string name="are_you_sure_you_want_to_submit_qbank">Are you sure you want to submit this Qbank ?</string>
+    <string name="are_you_sure_you_want_to_submit_test">Are you sure you want to submit this Test ?</string>
+    <string name="dams_video_library">Dams Video Library</string>
+    <string name="talking_crs">Talking CRS</string>
+    <string name="subject_wise_crs">Subject Wise CRS</string>
+    <string name="premium_videos">Premium Videos</string>
+    <string name="free_videos">Free Videos</string>
+    <string name="you_pause_test_on">You pause this Test on </string>
+    <string name="you_completed_test_on">You completed this Test on </string>
+    <string name="you_completed_qbank_on">You completed this QBank on </string>
+    <string name="pl_clg_information">Please update your college information..</string>
+    <string name="enter_text_post_review">Please enter text to post review</string>
+    <string name="live_chat">Live Chat</string>
+    <string name="do_you_really_want_to_delete_video">Do you really want to delete the video?</string>
+    <string name="have_a_referral_code">Have a referral code?</string>
+    <string name="have_a_coupon_code">Have a coupon code?</string>
+    <string name="referral_code">Referral Code</string>
+    <string name="coupon_code">Coupon Code</string>
+    <string name="coupon_discount">Coupon discount</string>
+    <string name="referral_discount">Referral discount</string>
+    <string name="course_have_already_at_lower_price">Course have already at the lower Price.</string>
+    <string name="enter_referral_code_to_get_discount">Enter referral code to get Discount.</string>
+    <string name="enter_coupon_code_to_get_discount">Enter coupon code to get discount.</string>
+    <string name="you_do_not_have_enough_point_to_redeem">You don\'t have enough points to redeem.</string>
+    <string name="out_of_referral_discount_and_coupon_discount_you_can_avail_only_one_discount_at_a_time">Out of referral discount and coupon discount you can avail only one discount at a time.</string>
+    <string name="please_select_subscription_plan">Please select subscription plan.</string>
+    <string name="please_select_installment_plan">Please select installment plan.</string>
+    <string name="redeemed">Redeemed</string>
+    <string name="redeem">Redeem</string>
+    <string name="select_difficulty_level">Please select difficulty level</string>
+    <string name="finish_before_select_card">You must have to finish previous cards before selecting new card</string>
+    <string name="previous_papers">Previous Papers</string>
+    <string name="home">Home</string>
+    <string name="choose_exam_mode">Please choose mode of exam</string>
+    <string name="msg_video_play_without_internet">Downloaded Video would still need an active internet connection to play video. This will use only 15Kb of data.</string>
+    <string name="ask_a_question">Ask a Question...</string>
+    <string name="buy_to_watch">You have to buy this course to watch the content..</string>
+    <string name="buy_to_download_video">You have to buy this course to download the video..</string>
+    <string name="tap_a_star_to_give_your_rating">Tap a star to give your rating.</string>
+    <string name="session_expire_logout_msg">User %s is already logged in from some other device, so logging out from here</string>
+    <string name="update_your_app">Please Update your app</string>
+    <string name="reattempt">Reattempt</string>
+    <string name="review_solution">Review</string>
+    <string name="change_stream">Change Stream</string>
+    <string name="error_loading_the_video">Error loading the video</string>
+    <string name="download_your_favourite_contents_and_watch_them_later">Download your favourite contents and watch them later</string>
+    <string name="add_podcast">Add podcast</string>
+    <string name="reference">Reference</string>
+    <string name="warning_msg">All Downloaded video, pdf, epub and podcast will be deleted once you uninstall the app</string>
+    <string name="no_orders_found">oops!\n It seems you have not placed any order yet</string>
+    <string name="select_podcast_author">Select Podcast Author</string>
+    <string name="title_podcast">Title</string>
+    <string name="Podcast_description">Description</string>
+    <string name="Record_audio">Record audio </string>
+    <string name="select_audio">Select audio </string>
+    <string name="audio_file">Audio file:</string>
+    <string name="restart_app_msg">Something went wrong kindly close the app and open it again.</string>
+    <string name="test_series">Test Series</string>
+    <string name="qbank">Qbank</string>
+    <string name="search_courses_here">Search courses here</string>
+    <string name="filter">Filter</string>
+    <string name="trending">Trending</string>
+    <string name="dams_fast_track_tnd_live"> DAMS Fast Track TND\nLIVE</string>
+    <string name="live_class_description">Next Class:Anatomy\nDate:13/01/2021\nTime:4PM</string>
+    <string name="remind">Remind Me</string>
+    <string name="time">Time: 4 PM</string>
+    <string name="duration">30 min</string>
+    <string name="dams_ultimate_live_napp_course">DAMS Ultimate Live    \n  App Course</string>
+    <string name="paid">Paid</string>
+    <string name="_3455_enrolled">3455 Enrolled</string>
+    <string name="_113_enrolled">Enrolled</string>
+    <string name="_600000">₹ 600000</string>
+    <string name="_650000">650000</string>
+    <string name="module_title">Module 1</string>
+    <string name="_4_9">4.9</string>
+    <string name="live_foundation_code">Live Foundation\nCode</string>
+    <string name="book_your_seat_for_dams_classroom_courses">Book Your Seat For DAMS Classroom Courses</string>
+    <string name="best_seller">Best Seller</string>
+    <string name="curriculum_header">Curriculum</string>
+    <string name="curriculum_header_details">2 Modules, 10 Topics, 25 Videos</string>
+    <string name="dams_ultimate_live_app_course">DAMS Ultimate Live App Course</string>
+    <string name="rc_title_trending_courses">Trending Courses</string>
+    <string name="rc_title_categories">Categories</string>
+    <string name="rc_title_recently_viewed">Recently Viewed</string>
+    <string name="rc_title_student_viewing">Students are viewing</string>
+    <string name="rc_title_best_seller">Best Seller</string>
+    <string name="live_title_my_live_courses">My Live Courses</string>
+    <string name="live_title_upcoming_live_classes">Upcoming Live Classes</string>
+    <string name="live_title_upcoming_lecture_today">Upcoming Lecture Today</string>
+    <string name="rc_title_searched_courses">Courses As Per Search</string>
+    <string name="browse_combo_plan">Browse Combo Plan</string>
+    <string name="notes_text"><![CDATA[Notes & Text]]></string>
+    <string name="_14_videos_42_minutes">14 Videos-42 minutes</string>
+    <string name="about_course">What do we learn in this course?
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="Answer_text">Post Successful completion of this program you wil get an Master of Business Adminstration(MBA) Degree from Deakin Business School, Australia. Post Graduate certificate from IMT Ghaziabad.</string>
+    <string name="show_more">Show more</string>
+    <string name="faq">Frequently Asked Questions</string>
+    <string name="show_all_reviews">Show More Reviews</string>
+    <string name="instructor_details">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="f">Paid</string>
+    <string name="recorde_co">Recorded Courses</string>
+    <string name="recorded_courses">Recorded\nCourses</string>
+    <string name="newsand_articls">News And Articles</string>
+    <string name="course_type">Courses Type</string>
+    <string name="course_price">Course Price</string>
+    <string name="course_amount">Course Amount</string>
+    <string name="courses_price">Courses Price</string>
+    <string name="payment_details">Payment Details</string>
+    <string name="price_details">Price Details</string>
+    <string name="grand_total">Grand Total</string>
+    <string name="referral_applied">Referral Applied</string>
+    <string name="Coupon_applied">Coupon Applied</string>
+    <string name="enter_referral_code">Enter referral code</string>
+    <string name="enter_coupon_code">Enter coupon code</string>
+    <string name="enter_coupon_referral_code">Enter coupon/referral code</string>
+    <string name="select_coupon_code">Select coupon code</string>
+    <string name="enter_coupon_code_error">Enter coupon code to get discount</string>
+    <string name="enrolled_text">%s Enrolled</string>
+    <string name="total_courses">Total Courses</string>
+    <string name="no_of_courses">No. of Course(s)</string>
+    <string name="mci_screening">MCI Screening</string>
+    <string name="no_cost_available_on_6_months_above_subscription_plan"><![CDATA[No cost available on 6 months & above Subscription Plan]]></string>
+    <string name="choose_payment_">"Choose a way to pay ₹%s"</string>
+    <string name="Student_Feedback">Student Feedback</string>
+    <string name="course_Expiry">Expiry On: 05 Jan 2021</string>
+    <string-array name="reviewList">
+        <item>All Ratings</item>
+        <item>1 Star Review</item>
+        <item>2 Star Review</item>
+        <item>3 Star Review</item>
+        <item>4 Star Review</item>
+        <item>5 Star Review</item>
+    </string-array>
+    <string name="polls_answer_result">You marked the wrong answer.<br /> The correct answer is A.</string>
+    <string name="polls_option_comment">67% students selected this answer,</string>
+
+    <string name="invalid_coupon_code">Invalid Coupon Code</string>
+    <string name="interact">Interact</string>
+    <string name="start_chat">Start Chat</string>
+    <string name="empty_cart_msg">There is nothing in your cart, Let\'s add some course(s).</string>
+    <string name="no_coupons_available">No coupons available</string>
+    <string name="thank_you_for_using_our_application">Thank you for using our Application</string>
+    <string name="help_support"><![CDATA[Help & Support]]></string>
+
+    <string name="video_length">Video Length</string>
+    <string name="what_you_ll_learn">What you\'ll learn</string>
+    <string name="videoo_preview_limit">You have watched the preview video limit</string>
+    <string name="how_can_we_help">How can we help?</string>
+    <string name="help_and_support">Help and Support</string>
+    <string name="emedicoz_live_course">eMedicoz Live Course</string>
+    <string name="emedicoz_recorded_course">eMedicoz Recorded Course</string>
+    <string name="no_new_notification">No New Notification!</string>
+    <string name="you_have_no_new_notification_yet">You have no new Notification yet</string>
+    <string name="chat">Chat</string>
+    <string name="added_in_cart">Added in cart</string>
+    <string name="show_more_reviews">Show More Reviews</string>
+    <string name="remind_me">Hi, we are here to keep you on track, you will get a reminder before one hour of your live class timing.</string>
+    <string name="total_number_of_questions">Total Number Of Questions</string>
+    <string name="total_attempted">Total Attempted</string>
+    <string name="unattempted">Unattempted</string>
+    <string name="marked_for_review">Marked For Review</string>
+
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="title_activity_google_map_address">Map</string>
+
+    <string name="my_address">My Address </string>
+    <string name="purchase_this_course">Please purchase this course to access the content.</string>
+    <string name="login_account">Login Account</string>
+    <string name="hello">Hello, welcome back to our account</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="verify">Verify</string>
+    <string name="otp_sent_to">OTP Sent to</string>
+    <string name="help">Help</string>
+    <string name="wait_while_auto_verify_your_otp">Wait while auto verify your OTP</string>
+    <string name="verify_proceed">Verify &amp; Proceed</string>
+    <string name="daily_challenge">"Daily Challenge "</string>
+    <string name="daily_challenge_sub_title">The most advanced performance booster customised for PG exam. Improvement performance guaranteed. Thousands of PG aspirants are talking daily challenge everyday.</string>
+    <string name="instant_doubt_solving">Instant Doubt Solving</string>
+    <string name="register_login">Register / Login</string>
+    <string name="by_login_text">By login, I agree to the Term &amp; Conditions</string>
+    <string name="instant_doubt_solving_sub_title">Dedicated team for all your doubts round the clock.</string>
+    <string name="qbank_sub_title">A collection of most probable questions for PG exam covering all topics, segregated subject wise, difficulty level with easy to understand solutions.</string>
+    <string name="we_will_send_you_otp">We\'ll send an OTP code for Verification</string>
+    <string name="enter_contact_details">1. Enter Contact Details</string>
+    <string name="full_name">Full Name</string>
+    <string name="dams_id">Dams ID</string>
+    <string name="are_you_already_dams_user">Are you already a DAMS student</string>
+    <string name="test_series_sub_title">Exact simulation of real test, attended by thousands of aspirants, with most reliable ranking. Highest number of users in India.</string>
+    <string name="select_your_college">Select Your College</string>
+    <string name="select_your_stream">Select Your Stream</string>
+    <string name="select_your_sub_stream">Select Your Sub Stream</string>
+    <string name="select_your_college_city">Select Your College City</string>
+    <string name="enter_academic_details">2. Enter Academic Details:</string>
+    <string name="enter_email_id">Enter Email Id</string>
+    <string name="enter_your_mobile_number">Enter Your Mobile Number</string>
+    <string name="dont_receive_otp">Don\'t receive OTP? Resend OTP</string>
+    <string name="episodes">Episodes</string>
+    <string name="channels">Channels</string>
+    <string name="bookmark">Bookmarks</string>
+
+
+    //----------------------------------add string----------------
+    <string name="title">Like This App!</string>
+    <string name="title_2">Tell your friends\nabout eMedicoz</string>
+    <string name="title_update">Update Your App</string>
+    <string name="share_now">Share Now</string>
+    <string name="header_2">Don\'t miss out on latest feature</string>
+    <string name="btn_title">Update Now</string>
+    <string name="update">Update</string>
+    <string name="term_cond">By login, I agree to the Term &amp; Conditions</string>
+    <string name="my_cart">My Cart</string>
+    <string name="dams">Delhi Academy of medical \n sciences Pvt. Ltd.</string>
+
+    <string name="recorded_courses_next">Recorded\nCourses</string>
+    <string name="select_your_address">Select Your Address</string>
+    <string name="topic_and_tags">Category And Tags</string>
+    <string name="oval_window">Oval Window</string>
+    <string name="tag">Tags :</string>
+
+    <string name="fallow">FOLLOW THIS #</string>
+
+    <string name="search_topics_and_tags_here">Search topics and tags here</string>
+
+    <string name="explore">Explore</string>
+    <string name="know_more">KNOW MORE</string>
+    <string name="host_a_challenge">Host A Challenge</string>
+    <string name="i_want_to_challenge">I want to challenge</string>
+    <string name="group">Group</string>
+    <string name="step_1_4" tools:ignore="TypographyFractions">Step 1/4</string>
+    <string name="live_quiz_challenge">Live Quiz Challenge</string>
+
+
+    <string name="see_more">SEE MORE</string>
+
+    <string name="my_attempted">My Attempted</string>
+
+    <string name="app_rating_title">Loved this app? Let us know how much !</string>
+    <string name="view_summary"><u>View Summary </u></string>
+    <string name="accept_challenges"><u>Accept Challenges</u></string>
+
+    <string name="personal_details">Personal Details</string>
+    <string name="bank_details">Bank Details</string>
+
+    <string name="select_number_of_questions">Select number of questions :-</string>
+    <string name="miss_feedback">Opps ! we missed something. \nlet us know your feedback ?</string>
+
+    <string name="topics_and_tags">Category And Tags</string>
+    <!--<string name="topics_and_tags">Topics And Tags</string>-->
+    <string name="invite_player">Invite Player</string>
+    <string name="play_now">Play Now</string>
+    <string name="available_player">Available Player</string>
+    <string name="joining_code">Joining Code</string>
+    <string name="challenge">Challenge</string>
+    <string name="use_save">Save</string>
+    <string name="books">Books</string>
+    <string name="mycoins">My Coins</string>
+    <string name="subscripti">Subscription</string>
+    <string name="order_enroll">Order &amp; Enrollment</string>
+    <string name="classes">Classes</string>
+    <string name="offers">Offers</string>
+    <string name="notification_setting">Notification Settings</string>
+    <string name="use_an_save">use &amp; Save</string>
+    <string name="checkout_title">Dams ultimate Live \nApp Course</string>
+    <string name="redeem_save_money">Redeem &amp; Save Money</string>
+    <string name="coupon_code_sms">Code has been send to your email id and sms check this code this is my coupon</string>
+    <string name="sec">15\nsec</string>
+    <string name="go_to_home">Go To Home</string>
+
+    <string name="book_description">Chapter-wise MCQs with Explanations (Medicine, Surgery,
+Obstetrics and Gynaecology, Orthopaedics, Paediatrics)
+“This exclusive DAMS material has been prepared by our
+excellent faculty and Medical Editorial board from standard
+books including Exhaustive set of questions along with
+explanations, Covering all the important topics including
+past three years’ exams, Prepared &amp; edited by expert
+faculty members of DAMS, Available in online interactive
+mode on eMedicoz app &amp; offline in print, Unique initiative
+to help students, Practice questions topic-wise, Develop
+the art of solving MCQs, Consolidate applications of theory.
+See More</string>
+
+    <string name="price_symble">\u20B9</string>
+
+    <string name="help_and_supports">Help &amp; Support</string>
+    <string name="answer_of_questions">By clicking on button you can enroll to the course? \nDo you still need help call us 9876543210 or chat with us\nlink or email us at support@emedicoz.com</string>
+>>>>>>> 2ad3ef7861c8493775ddf9b66051f5149eeea8bf
+
+
+</resources>

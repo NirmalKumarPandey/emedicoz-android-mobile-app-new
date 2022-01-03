@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="false"
+        android:scrollbars="vertical" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="36dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:layout_height="36dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_height="60dp">
+
+      <TextView
+          android:id="@+id/seeMoreTv"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/see_more"
+          android:drawablePadding="5dp"
+          android:drawableRight="@drawable/ic_baseline_expand_more_24"
+          android:drawableLeft="@drawable/ic_baseline_expand_more_24"
+          android:textColor="#248adc"
+          android:textStyle="bold"
+          android:textSize="@dimen/dp20"/>
+    </LinearLayout>
+
+
+    
+    
+    
+
+</RelativeLayout>

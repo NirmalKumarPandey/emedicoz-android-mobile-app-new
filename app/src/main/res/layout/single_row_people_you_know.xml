@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp125"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/left_panel_background_color"
+    app:cardCornerRadius="@dimen/dp4"
+    app:cardElevation="@dimen/dp4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/dp12">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp68">
+
+            <com.emedicoz.app.customviews.CircleImageView
+                android:id="@+id/imageIV"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+                android:layout_gravity="center"
+                android:src="@mipmap/default_pic"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageIVText"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+                android:layout_alignParentTop="true"
+                android:src="@mipmap/default_pic" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/verified" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp3"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="sdgdhg"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/specialisationTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="zdsvdvdvdfzb"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/followersTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Followers"
+            android:textColor="@color/blue"
+            android:textSize="9sp" />
+
+        <com.emedicoz.app.utilso.ShadowContainerView
+            android:id="@+id/scvFollowBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            app:ms9_shadowElevation="@dimen/dp2">
+
+            <LinearLayout
+                android:id="@+id/llFollow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp25"
+                android:layout_margin="@dimen/dp2"
+                android:background="@drawable/reg_round_white_bg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivFollow"
+                    android:layout_width="@dimen/dp12"
+                    android:layout_height="@dimen/dp12" />
+
+                <TextView
+                    android:id="@+id/tvFollow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blue"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </com.emedicoz.app.utilso.ShadowContainerView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

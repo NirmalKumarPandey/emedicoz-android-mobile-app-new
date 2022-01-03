@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".login.fragment.ProfileSubmissionFragment">
+
+    <LinearLayout
+        android:id="@+id/switchLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp30"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp30">
+
+        <RelativeLayout
+            android:id="@+id/switchContactRL"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:background="@drawable/circle_white_stroke_gray">
+
+            <ImageView
+                android:id="@+id/switchContactTV"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/dp2"
+                app:srcCompat="@drawable/ic_outline_person_outline_24" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/switchContactView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp3"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/gray_8e8e8e" />
+
+        <RelativeLayout
+            android:id="@+id/switchAcademicRL"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:background="@drawable/circle_white_stroke_gray">
+
+            <ImageView
+                android:id="@+id/switchAcademicTV"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/dp2"
+                app:srcCompat="@drawable/ic_degree_cap" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/switchAcademicView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp3"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/gray_8e8e8e" />
+
+        <RelativeLayout
+            android:id="@+id/switchCourseRL"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:background="@drawable/circle_white_stroke_gray">
+
+            <ImageView
+                android:id="@+id/switchCourseTV"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/dp2"
+                app:srcCompat="@drawable/ic_baseline_cast_for_education" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/switchCourseView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp3"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/gray_8e8e8e"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/switchFollowRL"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:background="@drawable/circle_white_stroke_gray">
+
+            <ImageView
+                android:id="@+id/switchFollowTV"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/dp2"
+                app:srcCompat="@drawable/ic_baseline_bookmark_border" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_below="@id/switchLL">
+
+        <TextView
+            android:id="@+id/contactTextTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/gray_8e8e8e"
+            android:text="1.Contact"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp3"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/academicTextTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/gray_8e8e8e"
+            android:text="2.Academic"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp3"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/courseTextTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="3.Course"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp1"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/followTextTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/gray_8e8e8e"
+            android:text="4.Follow"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp10"
+        android:id="@+id/profileSubmissionContainer"/>
+
+</LinearLayout>

@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--
+<ru.noties.scrollable.ScrollableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollable_layout"
+    app:scrollable_maxScroll="@dimen/header_height"
+    app:scrollable_considerIdleMillis="125"
+    app:scrollable_friction="0.075"
+    app:scrollable_closeUpAnimationMillis="250"
+    app:scrollable_defaultCloseUp="true"
+    app:scrollable_scrollerFlywheel="false"
+    android:background="@color/podcast_bg"
+    app:scrollable_closeUpAnimatorInterpolator="@android:anim/accelerate_decelerate_interpolator">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toplinear"
+        android:paddingBottom="30dp"
+        android:background="@drawable/bottom_round"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height"
+            android:background="@color/color_tool_bar"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:visibility="gone"
+            android:text="Header"
+            android:id="@+id/header"
+            android:gravity="center"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/header2"
+            android:layout_height="@dimen/header_height">
+
+            <include
+                android:id="@+id/tool_bar"
+                layout="@layout/tool_bar_transparent"></include>
+
+
+
+            <ImageView
+                android:id="@+id/photo"
+                android:transitionName="photo_hero"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:tint="@color/photo_tint"
+                android:scaleType="centerCrop"
+
+                android:contentDescription="Hi I am Ram" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/profile_pic_layout"
+                    android:layout_height="wrap_content">
+
+
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center_vertical"
+                        android:clickable="true"
+                        android:id="@+id/follow_layout"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/follow_layout_new"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="40sp"
+                                android:visibility="visible"
+                                android:text="PodCast"
+
+                                android:layout_margin="10dip"
+                                />
+
+
+                            <ProgressBar
+                                style="?android:attr/progressBarStyleSmall"
+                                android:layout_width="40dip"
+                                android:layout_height="40dip"
+                                android:visibility="gone"
+                                android:layout_centerInParent="true"
+                                android:id="@+id/progressBar2" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="15dp"
+                    android:layout_below="@+id/profile_pic_layout"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Your Podcast Lives Here"
+                        android:textSize="@dimen/menu_item_text_size"
+                        android:textColor="@color/white1"
+                        />
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_margin="5dp"
+            android:background="@drawable/edit_round_bg_look_tab"
+            android:layout_height="wrap_content"
+            app:layout_collapseMode="pin"
+            android:scrollIndicators="none"
+            android:visibility="gone"
+            android:tabStripEnabled="false"
+             />
+
+        <LinearLayout
+            android:id="@+id/podcastLL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp10"
+            android:background="@drawable/bg_grid_list"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/episode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp2"
+                android:layout_weight="1"
+                android:background="@drawable/bg_podcast_tab"
+                android:gravity="center"
+                android:text="@string/episodes"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/channel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/channels"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/bookmark"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/bookmark"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp15" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+&lt;!&ndash;    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/tabs_height"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>&ndash;&gt;
+
+</ru.noties.scrollable.ScrollableLayout>
+-->
+
+    <RelativeLayout
+        android:id="@+id/layout_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent_background"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/btn_cross"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/dp10"
+            android:src="@mipmap/cross"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/txv_podcast_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/btn_cross"
+            android:maxLines="2"
+            android:padding="@dimen/dp12"
+            android:text="This is the currently played podcast"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/layout_player_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/dp4"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="4dp"
+            android:weightSum="4">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/rew"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerInParent="true"
+                    android:background="?selectableItemBackground"
+                    android:padding="@dimen/dp10"
+                    android:src="@drawable/reverse_10sec" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/play"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="@dimen/dp10"
+                    android:background="?selectableItemBackground"
+                    android:padding="@dimen/dp5"
+                    android:src="@drawable/exo_play" />
+
+
+                <ProgressBar
+                    android:id="@+id/loader"
+                    android:layout_width="@dimen/dp48"
+                    android:layout_height="@dimen/dp48"
+                    android:layout_margin="@dimen/dp10"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/ffwd"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerInParent="true"
+                    android:background="?selectableItemBackground"
+                    android:padding="@dimen/dp10"
+                    android:src="@drawable/forward_10sec" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_player_controls"
+            android:layout_margin="@dimen/dp12"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txv_current_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/seek_bar"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp32"
+                android:layout_weight="1"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txv_podcast_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+</RelativeLayout>

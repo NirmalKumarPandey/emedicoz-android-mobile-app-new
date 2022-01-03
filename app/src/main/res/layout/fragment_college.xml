@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dp15"
+    android:orientation="vertical"
+    tools:context=".feeds.fragment.CollegeFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:text="Which college did you go to?"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp16" />
+
+    <EditText
+        android:id="@+id/collegeNameEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:hint="Enter college name"
+        android:singleLine="true"
+        android:textSize="@dimen/sp15" />
+
+    <EditText
+        android:id="@+id/countryEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:clickable="true"
+        android:focusable="false"
+        android:hint="Select Country"
+        android:singleLine="true"
+        android:textSize="@dimen/sp15" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        style="@style/ButtonRoundCornerBlue"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp10"
+        android:text="Submit" />
+
+</LinearLayout>

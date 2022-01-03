@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="onOutsideClick">
+
+    <TableLayout
+        android:layout_width="@dimen/font_size_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:background="@drawable/white_shadow_background"
+        android:clickable="true"
+        android:paddingLeft="@dimen/dialog_padding_sides"
+        android:paddingTop="@dimen/dialog_padding_top_bottom"
+        android:paddingRight="@dimen/dialog_padding_sides"
+        android:paddingBottom="@dimen/dialog_padding_top_bottom">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/font_size"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_text_size" />
+
+            <ImageView
+                android:id="@+id/decrease_button"
+                android:layout_width="@dimen/font_size_icons_size"
+                android:layout_height="@dimen/font_size_icons_size"
+                android:layout_marginLeft="@dimen/font_size_icons_gap"
+                android:layout_marginRight="@dimen/font_size_icons_gap"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:src="@drawable/decrease_icon" />
+
+            <ImageView
+                android:id="@+id/increase_button"
+                android:layout_width="@dimen/font_size_icons_size"
+                android:layout_height="@dimen/font_size_icons_size"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:src="@drawable/increase_icon" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</FrameLayout>

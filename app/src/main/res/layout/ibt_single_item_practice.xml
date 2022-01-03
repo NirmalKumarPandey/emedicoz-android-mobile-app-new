@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ibt_single_item_RL"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ibt_single_item_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/dp7"
+            android:layout_margin="@dimen/dp5"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="@dimen/dp5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp10">
+
+                <TextView
+                    android:id="@+id/practiceNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/courseCatseeAllBtn"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/sp15"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp5"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"
+                    android:gravity="center_vertical"
+                    tools:text="Category Name"
+                    />
+
+                <TextView
+                    android:id="@+id/viewAllTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/viewAll"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/post_text_size"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/dp3">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ibt_practice_single_RV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginBottom="@dimen/dp10"
+                android:background="@color/white"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

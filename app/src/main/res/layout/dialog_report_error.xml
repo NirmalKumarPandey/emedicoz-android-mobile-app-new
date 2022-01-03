@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp5"
+            android:text="Feedback/Report error"
+            android:textAlignment="center"
+            android:textSize="@dimen/sp18" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What are you reporting?"
+            android:textAlignment="center"
+            android:textSize="@dimen/sp15" />
+
+        <RadioGroup
+            android:id="@+id/radioError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp30"
+                android:text="Factual Error" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp30"
+                android:text="Confusing Question" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp30"
+                android:text="Inadequate Explanation" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/feedbackET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp100"
+            android:layout_margin="@dimen/dp10"
+            android:background="@drawable/bg_edit_text"
+            android:drawablePadding="@dimen/dp10"
+            android:gravity="start"
+            android:hint="Your feedback here"
+            android:paddingStart="@dimen/dp20"
+            android:paddingTop="@dimen/dp10" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15" />
+
+    </LinearLayout>
+</RelativeLayout>

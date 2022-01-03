@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lytSaveAndMoneyView">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        tools:ignore="MissingConstraints">
+        <RelativeLayout
+            android:paddingTop="@dimen/dp8"
+            android:paddingBottom="@dimen/dp8"
+            android:paddingEnd="@dimen/dp8"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_capsule_fill_white_border_blue_corner">
+
+                <ImageView
+                    android:id="@+id/imgRedeemSaveLeft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp17"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:layout_marginEnd="@dimen/dp17"
+                    app:srcCompat="@drawable/ic_ultimate_course" />
+
+                <TextView
+                    android:id="@+id/txtRedeemSaveLiveCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgRedeemSaveLeft"
+                    android:layout_marginStart="@dimen/dp11"
+                    android:layout_marginTop="@dimen/dp13"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:fontFamily="@font/helvetica_neue_medium"
+                    android:gravity="center"
+                    android:text="Ultimate Live Course"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp13" />
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtRedeemSaveLiveCourse"
+                    android:layout_marginStart="@dimen/dp11"
+                    android:layout_marginTop="@dimen/dp3"
+                    android:layout_marginEnd="@dimen/dp11"
+                    android:fontFamily="@font/helvetica_neue_medium"
+                    android:lineSpacingExtra="@dimen/dp2"
+                    android:lines="3"
+                    android:text="Lorem lpsum is simply dummy      text printing typesetting the"
+                    android:textAlignment="textStart"
+                    android:textColor="#9e9e9e"
+                    android:textSize="@dimen/dp10">
+                </TextView>
+                <RelativeLayout
+                    android:id="@+id/rytLytBuyPintLeft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtDescription"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:layout_marginEnd="34dp"
+                    android:background="@drawable/bg_capsule_fill_white_border_blue_corner">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp7"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_marginEnd="@dimen/dp6"
+                        android:layout_marginBottom="@dimen/dp3"
+                        android:gravity="center"
+                        android:text="Buy in 10000 PT"
+                        android:textSize="@dimen/dp10"
+                        tools:ignore="SpUsage">
+
+                    </TextView>
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginBottom="@dimen/dp12"
+                    android:layout_below="@+id/rytLytBuyPintLeft"
+                    app:cardBackgroundColor="@color/toolbar_bg_color"
+                    app:cardCornerRadius="4px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:text="Enroll Now"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dp10">
+                    </TextView>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingTop="@dimen/dp8"
+            android:paddingBottom="@dimen/dp8"
+            android:paddingStart="@dimen/dp8"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_capsule_fill_white_border_blue_corner">
+
+                <ImageView
+                    android:id="@+id/imgRedeemSaveRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp17"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:layout_marginEnd="@dimen/dp17"
+                    app:srcCompat="@drawable/ic_ultimate_course" />
+
+                <TextView
+                    android:id="@+id/txtRedeemSaveLiveCourseRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgRedeemSaveRight"
+                    android:layout_marginStart="@dimen/dp11"
+                    android:layout_marginTop="@dimen/dp13"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:fontFamily="@font/helvetica_neue_medium"
+                    android:gravity="center"
+                    android:text="Ultimate Live Course"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp13" />
+
+                <TextView
+                    android:id="@+id/txtDescriptionRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtRedeemSaveLiveCourseRight"
+                    android:layout_marginStart="@dimen/dp11"
+                    android:layout_marginTop="@dimen/dp3"
+                    android:layout_marginEnd="@dimen/dp11"
+                    android:fontFamily="@font/helvetica_neue_medium"
+                    android:lineSpacingExtra="@dimen/dp2"
+                    android:lines="3"
+                    android:text="Lorem lpsum is simply dummy      text printing typesetting the"
+                    android:textAlignment="textStart"
+                    android:textColor="#9e9e9e"
+                    android:textSize="@dimen/dp10">
+
+                </TextView>
+                <RelativeLayout
+                    android:id="@+id/rytLytBuyPointRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtDescriptionRight"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:layout_marginEnd="34dp"
+                    android:background="@drawable/bg_capsule_fill_white_border_blue_corner">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp7"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_marginEnd="@dimen/dp6"
+                        android:layout_marginBottom="@dimen/dp3"
+                        android:gravity="center"
+                        android:text="Buy in 10000 PT"
+                        android:textSize="@dimen/dp10"
+                        tools:ignore="SpUsage">
+                    </TextView>
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginBottom="@dimen/dp12"
+                    android:layout_below="@+id/rytLytBuyPointRight"
+                    app:cardBackgroundColor="@color/toolbar_bg_color"
+                    app:cardCornerRadius="4px">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:text="Enroll Now"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dp10">
+                    </TextView>
+                </androidx.cardview.widget.CardView>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

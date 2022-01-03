@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tileCardView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp40"
+    android:layout_margin="@dimen/dp1"
+    app:cardCornerRadius="@dimen/dp5"
+    app:cardElevation="@dimen/dp5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/tileIcon"
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp10"
+            android:src="@mipmap/test_series_btn" />
+
+        <TextView
+            android:id="@+id/tileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_toRightOf="@+id/tileIcon"
+            android:text="Category Name"
+            android:textColor="#000000"
+            android:textSize="@dimen/sp16" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

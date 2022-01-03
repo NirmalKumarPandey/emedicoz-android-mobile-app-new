@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/dailyChallenge"
+        android:icon="@drawable/ic_icon_awesome_clipboard_list"
+        android:title="@string/daily_challenge"/>
+
+    <item
+        android:id="@+id/liveCoursesFragment"
+        android:icon="@drawable/ic_icon_material_play_circle_filled"
+        android:title="@string/live_courses"/>
+
+    <item
+        android:id="@+id/recordedFragment"
+        android:icon="@drawable/ic_icon_metro_file_play"
+        android:title="@string/recorde_co"/>
+
+    <item
+        android:id="@+id/videoFragment"
+        android:icon="@drawable/ic_outline_videocam_24"
+        android:title="@string/video" />
+
+    <item
+        android:id="@+id/studyFragment"
+        android:icon="@drawable/ic_group_1133"
+        android:title="@string/study"/>
+
+    <item
+        android:id="@+id/feedsFragment"
+        android:icon="@drawable/ic_outline_home_24"
+        android:title="@string/interact"/>
+
+    <item
+        android:id="@+id/podcast"
+        android:icon="@drawable/ic_podcast"
+        android:title="@string/podcast"/>
+
+
+    <item
+        android:id="@+id/NewsAndArticleFragment"
+        android:title="@string/newsand_articls"
+        android:icon="@drawable/ic_icon_awesome_clipboard_list"/>
+
+    <item
+        android:id="@+id/bookNav"
+        android:title="@string/books"
+        android:icon="@drawable/ic_icon_awesome_clipboard_list"/>
+
+    <item
+        android:id="@+id/myCourse"
+        android:icon="@mipmap/side_pannel_my_courses"
+        android:title="@string/my_courses"/>
+
+    <item
+        android:id="@+id/myScorecard"
+        android:icon="@mipmap/side_pannel_my_scorecard"
+        android:title="@string/leaderboard"/>
+
+    <item
+        android:id="@+id/savedNotes"
+        android:icon="@drawable/ic_icon_material_bookmark"
+        android:title="@string/my_bookmarks"
+        android:iconTintMode="src_in">
+
+    </item>
+
+    <item
+        android:id="@+id/help_support"
+        android:icon="@mipmap/side_pannel_my_courses"
+        android:title="@string/help_support">
+
+    </item>
+
+    <item
+        android:id="@+id/helpSupport"
+        android:icon="@drawable/ic_icon_material_feedback"
+        android:title="@string/feedback">
+
+    </item>
+
+    <item
+        android:id="@+id/app_bar_switch"
+        android:icon="@drawable/ic_outline_dark_mode_24"
+        android:title="@string/day_night_mode"
+        app:actionLayout="@layout/switch_item" />
+
+    <item
+        android:id="@+id/appSettings"
+        android:icon="@drawable/ic_outline_settings_24"
+        android:title="@string/appSettings">
+
+    </item>
+
+    <item
+        android:id="@+id/rewardPoints"
+        android:icon="@mipmap/side_pannel_invite_and_earn"
+        android:title="@string/invite_n_earn" />
+
+    <item
+        android:id="@+id/join"
+        android:icon="@mipmap/side_pannel_invite_and_earn"
+        android:title="@string/join_affiliate_program" />
+
+    <item
+        android:id="@+id/rating"
+        android:icon="@mipmap/rate_us"
+        android:title="@string/rate_us">
+    </item>
+
+    <item
+        android:title="">
+    </item>
+
+</menu>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <include
+            layout="@layout/activity_help_support_header"
+            android:id="@+id/lytHelpSupportHeader">
+        </include>
+
+        <TextView
+            android:layout_marginTop="@dimen/dp24"
+            android:layout_marginStart="@dimen/dp16"
+            android:id="@+id/txtSelectedTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/lytHelpSupportHeader"
+            android:fontFamily="@font/helvetica_neue_medium"
+            android:letterSpacing="0.04"
+            android:text="You need help with (Live) courses"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp12">
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="@dimen/dp24"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_below="@+id/txtSelectedTopic"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="4px"
+            app:cardBackgroundColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp20">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/lytAskFrequentlyQuestions"
+                    android:layout_marginStart="@dimen/dp12"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/imgAskQuestions"
+                        app:srcCompat="@drawable/icon_ask_questions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </ImageView>
+                    <TextView
+                        android:layout_toEndOf="@+id/imgAskQuestions"
+                        android:layout_marginStart="@dimen/dp8"
+                        android:id="@+id/txtAskQuestions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/helvetica_neue_medium"
+                        android:letterSpacing="0.04"
+                        android:text="You need help with (Live) courses"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dp14">
+                    </TextView>
+                </RelativeLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="@dimen/dp18"
+                    android:id="@+id/recyclerQuestionsView"
+                    android:layout_marginStart="@dimen/dp12"
+                    android:layout_marginEnd="@dimen/dp12"
+                    android:layout_below="@+id/lytAskFrequentlyQuestions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/questions_answer_item"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+                </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

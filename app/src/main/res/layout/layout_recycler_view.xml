@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp40">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.emedicoz.app.customviews.NonScrollRecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/noDataLL"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/noDataImage"
+                    android:layout_width="@dimen/dp200"
+                    android:layout_height="@dimen/dp200"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp100"
+                    android:src="@mipmap/image" />
+
+                <TextView
+                    android:id="@+id/noDataText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:padding="@dimen/dp5"
+                    android:text="You don't have any test"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp20"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/testArrivalDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp5"
+                    android:text="Mon, Jan 12, 2019, 12:00 PM"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/sp15"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="No Data Found."
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/parentBottomLAY"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:background="@color/light_gray"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:id="@+id/activeParentLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp5"
+            android:background="@drawable/bg_study_tab_test"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/active_default"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/activeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/active"
+                android:padding="@dimen/dp5"
+                android:textSize="@dimen/sp13"
+                android:textColor="@color/left_panel_header_text_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/upcomingParentLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp5"
+            android:background="@drawable/bg_study_tab_test"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/active_default"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/upcomingTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/upcoming"
+                android:padding="@dimen/dp5"
+                android:textSize="@dimen/sp13"
+                android:textColor="@color/left_panel_header_text_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/missedParentLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp5"
+            android:background="@drawable/bg_study_tab_test"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/active_default"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/missedTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/missed"
+                android:padding="@dimen/dp5"
+                android:textSize="@dimen/sp13"
+                android:textColor="@color/left_panel_header_text_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/completedParentLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_study_tab_test"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp5"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/active_default"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/completedTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/completed"
+                android:padding="@dimen/dp5"
+                android:textSize="@dimen/sp13"
+                android:textColor="@color/left_panel_header_text_color" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

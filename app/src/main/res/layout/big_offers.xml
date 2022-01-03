@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lytBigOffer">
+    <RelativeLayout
+        android:layout_marginStart="@dimen/dp8"
+        android:layout_marginEnd="@dimen/dp8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            tools:ignore="MissingConstraints">
+            <RelativeLayout
+                android:padding="@dimen/dp8"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:id="@+id/crdLiveCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_capsule_fill_whitw_grey_box">
+                    <ImageView
+                        android:id="@+id/imgLiveCourse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp17"
+                        android:layout_marginTop="@dimen/dp12"
+                        android:layout_marginEnd="@dimen/dp17"
+                        app:srcCompat="@drawable/ic_ultimate_course"/>
+                    <TextView
+                        android:id="@+id/txtLeftLiveCourse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgLiveCourse"
+                        android:layout_marginStart="@dimen/dp12"
+                        android:layout_marginTop="@dimen/dp13"
+                        android:fontFamily="@font/helvetica_neue_medium"
+                        android:gravity="center"
+                        android:text="Ultimate Live Course"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dp13" />
+
+                    <TextView
+                        android:id="@+id/txtEarnCoinLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtLeftLiveCourse"
+                        android:layout_marginStart="@dimen/dp13"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:fontFamily="@font/helvetica_neue_medium"
+                        android:text="Earn 200 Coins"
+                        android:textColor="@color/toolbar_bg_color"
+                        android:textSize="@dimen/dp11">
+
+                    </TextView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtEarnCoinLeft"
+                        android:layout_margin="@dimen/dp12"
+                        app:cardBackgroundColor="@color/toolbar_bg_color"
+                        app:cardCornerRadius="4px">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_marginBottom="@dimen/dp5"
+                            android:text="Enroll Now"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dp10">
+
+                        </TextView>
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:padding="@dimen/dp8"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:id="@+id/crdObs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_capsule_fill_whitw_grey_box">
+
+                    <ImageView
+
+                        android:id="@+id/imgObs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp17"
+                        android:layout_marginTop="@dimen/dp12"
+                        android:layout_marginEnd="@dimen/dp17"
+                        app:srcCompat="@drawable/ic_obs_gyne" />
+
+                    <TextView
+                        android:id="@+id/txtObsGyne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgObs"
+                        android:layout_marginStart="@dimen/dp12"
+                        android:layout_marginTop="@dimen/dp13"
+                        android:fontFamily="@font/helvetica_neue_medium"
+                        android:gravity="center"
+                        android:text="Obs and Gyne"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dp13" />
+
+                    <TextView
+                        android:id="@+id/txtRightEarnPoint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtObsGyne"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:fontFamily="@font/helvetica_neue_medium"
+                        android:text="Earn 200 Coins"
+                        android:textAlignment="center"
+                        android:textColor="@color/toolbar_bg_color"
+                        android:textSize="@dimen/dp11">
+                    </TextView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_below="@+id/txtRightEarnPoint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp12"
+                        app:cardBackgroundColor="@color/toolbar_bg_color"
+                        app:cardCornerRadius="4px">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:layout_marginBottom="@dimen/dp5"
+                            android:text="Enroll Now"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dp10">
+                        </TextView>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+

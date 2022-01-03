@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp3"
+            android:layout_marginTop="@dimen/dp10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp3"
+                android:src="@mipmap/stream" />
+
+            <Spinner
+                android:id="@+id/streamSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginLeft="@dimen/dp10" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/substreamTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_button_padding_left_right"
+            android:drawableLeft="@mipmap/stream"
+            android:drawablePadding="@dimen/dp17"
+            android:gravity="center_vertical"
+            android:hint="Select Sub Stream"
+            android:padding="@dimen/dp4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/specialisationTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:drawableLeft="@mipmap/specialization"
+            android:drawablePadding="@dimen/dp17"
+            android:gravity="center_vertical"
+            android:hint="Select Specialisation"
+            android:padding="@dimen/dp4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/IntcoursesTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:drawableLeft="@mipmap/course_interested"
+            android:drawablePadding="@dimen/dp17"
+            android:gravity="center_vertical"
+            android:hint="Select Courses Interested In"
+            android:padding="@dimen/dp4"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/bg_signup_btn"
+        android:paddingLeft="@dimen/normal_button_padding_left_right"
+        android:paddingRight="@dimen/normal_button_padding_left_right"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp13" />
+</RelativeLayout>
+

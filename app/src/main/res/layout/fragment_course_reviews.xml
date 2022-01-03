@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.emedicoz.app.courses.fragment.CourseReviews">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reviewsListRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/addReviewLL"
+        android:layout_marginLeft="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp5" />
+
+    <TextView
+        android:id="@+id/errorTV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:minHeight="@dimen/dp60"
+        android:textSize="@dimen/post_text_size"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/addReviewLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="@dimen/dp7"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/writereviewET"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:hint="Write your review here"
+            android:maxHeight="@dimen/dp150"
+            android:textSize="@dimen/small_text_size" />
+
+        <ImageButton
+            android:id="@+id/postreviewIBtn"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:background="@mipmap/send" />
+    </LinearLayout>
+
+</RelativeLayout>

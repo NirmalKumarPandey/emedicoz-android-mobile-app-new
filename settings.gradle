@@ -1,0 +1,1 @@
+include ':app', ':epub-release_v1.3.2' , ':scrollpager'

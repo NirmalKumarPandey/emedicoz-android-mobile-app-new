@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_custom_toolbar">
+
+    </include>
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rl1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp56"-->
+<!--        android:background="@drawable/bg_action_bar">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_back"-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="@dimen/dp10"-->
+<!--            android:src="@mipmap/back"-->
+<!--            android:v/>-->
+
+<!--    </RelativeLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp10"
+            app:cardElevation="@dimen/dp2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/quiz_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:padding="@dimen/dp5"
+                    android:text="Medicine Cardiology Q Bank"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp3"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp3"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:layout_marginBottom="@dimen/dp3"
+                    android:background="@color/colorGray2" />
+
+                <TextView
+                    android:id="@+id/question_num_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:text="Question:250"
+                    android:textSize="@dimen/sp15" />
+
+                <TextView
+                    android:id="@+id/ques_rating_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:text="Rating:4.6"
+                    android:textSize="@dimen/sp15" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <include layout="@layout/common_bookmark_layout" />
+
+        <LinearLayout
+            android:id="@+id/startQuizLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/start_action_quiz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10"
+                android:background="@drawable/bg_signup_btn"
+                android:text="@string/start_btn_test"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15"
+                android:visibility="visible" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/continue_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp10"
+            app:cardElevation="@dimen/dp2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:text="@string/paused_btn_test"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp3"
+                    android:layout_margin="@dimen/dp5"
+                    android:background="@color/colorGray2" />
+
+                <TextView
+                    android:id="@+id/paused_time_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="You paused this test on 12/02/2020 at 12:45 pm"
+                    android:textAlignment="center" />
+
+                <!--                <include layout="@layout/common_bookmark_layout" />-->
+
+                <Button
+                    android:id="@+id/continue_action_quiz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp10"
+                    android:background="@drawable/bg_signup_btn"
+                    android:text="Continue"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/completed_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp10"
+            app:cardElevation="@dimen/dp2">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp15"
+                                android:layout_marginBottom="@dimen/dp10"
+                                android:text="Completed"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp15"
+                                android:layout_marginBottom="@dimen/dp10"
+                                android:src="@drawable/ic_check_correct" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp3"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginTop="@dimen/dp3"
+                            android:layout_marginRight="@dimen/dp5"
+                            android:layout_marginBottom="@dimen/dp3"
+                            android:background="@color/colorGray2" />
+
+                        <TextView
+                            android:id="@+id/complete_time_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/dp10"
+                            android:paddingEnd="@dimen/dp10"
+                            android:text="You completed this test on 12/02/2020 at 12:45 PM"
+                            android:textAlignment="center" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp3"
+                            android:layout_margin="@dimen/dp5"
+                            android:background="@color/colorGray2" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp2"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp60"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/quizCorrectTV"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="@dimen/dp5"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="#3fa066"
+                                    android:textSize="@dimen/sp15"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="@dimen/dp60"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/dp10"
+                                    android:background="@drawable/bg_btn_grey"
+                                    android:text="Right"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/sp13" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp60"
+                                android:layout_gravity="center"
+
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/quizIncorrectTV"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="@dimen/dp5"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="#ef5b66"
+                                    android:textSize="@dimen/sp15"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="@dimen/dp60"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/dp10"
+                                    android:background="@drawable/bg_btn_grey"
+                                    android:text="Wrong"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/sp13" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp2"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp60"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/quizSkippedTV"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="@dimen/dp5"
+                                    android:text="00"
+                                    android:textAlignment="center"
+                                    android:textColor="#c6c6c6"
+                                    android:textSize="@dimen/sp15"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="@dimen/dp60"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/dp10"
+                                    android:background="@drawable/bg_btn_grey"
+                                    android:text="Skipped"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/sp13" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp3"
+                        android:layout_margin="@dimen/dp5"
+                        android:background="@color/colorGray2" />
+
+                    <LinearLayout
+                        android:id="@+id/quizRateLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:text="Please rate this Q bank Module"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/sp20" />
+
+                        <RatingBar
+                            android:id="@+id/quizRatingBar1"
+                            style="?android:attr/ratingBarStyleIndicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:isIndicator="false"
+                            android:numStars="5"
+                            android:scaleX=".8"
+                            android:scaleY=".8"
+                            android:stepSize="1.0" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp3"
+                            android:layout_margin="@dimen/dp5"
+                            android:background="@color/colorGray2" />
+                    </LinearLayout>
+
+                    <!--                    <include layout="@layout/common_bookmark_layout" />-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/reattempt_test_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp5"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_signup_btn"
+                            android:text="Reattempt"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp15" />
+
+                        <Button
+                            android:id="@+id/review_test_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp5"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_signup_btn"
+                            android:text="Review"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp15"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

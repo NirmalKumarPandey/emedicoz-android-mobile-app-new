@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/easyLayout"
+    android:layout_width="@dimen/dimen_96dp"
+    android:layout_height="@dimen/dp120"
+    android:layout_centerVertical="true"
+    android:layout_marginStart="@dimen/dp5"
+    android:layout_marginTop="@dimen/dp5"
+    android:layout_marginEnd="@dimen/dp5"
+    android:layout_marginBottom="@dimen/dp5"
+    android:elevation="@dimen/dp5"
+    app:cardCornerRadius="@dimen/dp8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_smiley_first" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sp24"
+            android:fontFamily="@font/helvetica_neue_med"
+            android:text="Easy"
+            android:textColor="@color/black"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30"
+            app:srcCompat="@drawable/ic_light_blue_dot" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

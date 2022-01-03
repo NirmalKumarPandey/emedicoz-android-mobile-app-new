@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginRight="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginBottom="@dimen/dp16"
+        android:background="@drawable/notification_background">
+
+        <ImageView
+            android:id="@+id/ivIcons"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginLeft="@dimen/dp12"
+            android:layout_marginTop="@dimen/dp12"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp12"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_marginBottom="@dimen/dp16">
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/ivNext"
+                android:fontFamily="@font/helvetica_bold"
+                android:lines="2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp12">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvTimeSpand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvMessage"
+                android:layout_toLeftOf="@+id/ivNext"
+                android:layout_marginTop="@dimen/dp10"
+                android:textSize="@dimen/dp8">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/ivNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/dp10"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_baseline_navigate_next_24" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

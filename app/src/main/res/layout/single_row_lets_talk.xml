@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/upperPanelFeed"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp5"
+    android:layout_marginTop="@dimen/dp10"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/dp5"
+    android:paddingLeft="@dimen/dp7"
+    android:paddingRight="@dimen/dp7"
+    android:paddingTop="@dimen/dp5"
+    android:weightSum="3"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:id="@+id/imageRL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.emedicoz.app.customviews.CircleImageView
+            android:id="@+id/profilepicIV"
+            android:layout_width="@dimen/dp45"
+            android:layout_height="@dimen/dp45"
+            android:src="@mipmap/default_pic" />
+
+        <ImageView
+            android:id="@+id/profilepicIVText"
+            android:layout_width="@dimen/dp45"
+            android:layout_height="@dimen/dp45"
+            android:src="@mipmap/default_pic" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:background="@drawable/bg_lets_talk"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp20"
+        android:text="@string/ask_a_question"
+        android:textSize="@dimen/sp14" />
+
+</LinearLayout>
+
+
+

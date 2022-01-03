@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/franchiseNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/franchise_name"
+        android:textSize="@dimen/sp12"
+        android:padding="@dimen/dp5"
+        android:layout_marginStart="@dimen/dp5"
+        android:textColor="@color/light_black"/>
+
+    <Spinner
+        android:id="@+id/franchiseNameSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp5"
+        android:entries="@array/country_arrays"
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
+
+    <TextView
+        android:id="@+id/sessionTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/session"
+        android:textSize="@dimen/sp12"
+        android:padding="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginStart="@dimen/dp5"
+        android:textColor="@color/light_black"/>
+
+    <Spinner
+        android:id="@+id/sessionSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp5"
+        android:entries="@array/country_arrays"
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
+
+    <TextView
+        android:id="@+id/courseGroupTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/course_group_name"
+        android:textSize="@dimen/sp12"
+        android:layout_marginTop="@dimen/dp10"
+        android:padding="@dimen/dp5"
+        android:layout_marginStart="@dimen/dp5"
+        android:textColor="@color/light_black"/>
+
+    <Spinner
+        android:id="@+id/courseGroupSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp5"
+        android:entries="@array/country_arrays"
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
+
+    <TextView
+        android:id="@+id/courseListTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/course_list_reg"
+        android:textSize="@dimen/sp12"
+        android:layout_marginTop="@dimen/dp10"
+        android:padding="@dimen/dp5"
+        android:layout_marginStart="@dimen/dp5"
+        android:textColor="@color/light_black"/>
+
+    <Spinner
+        android:id="@+id/courseListSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp5"
+        android:entries="@array/country_arrays"
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_btn"
+        android:elevation="@dimen/dp4"
+        android:layout_marginStart="@dimen/dp5"
+        android:layout_marginEnd="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp20"
+        android:text="@string/next"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp15"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/important_notes"
+        android:textSize="@dimen/sp18"
+        android:padding="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp5"
+        android:textColor="@color/black"/>
+
+
+</LinearLayout>

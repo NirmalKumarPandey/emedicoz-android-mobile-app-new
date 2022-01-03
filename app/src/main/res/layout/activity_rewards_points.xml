@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".feeds.activity.RewardsPointsActivity">
+
+    <include layout="@layout/header_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dp300"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp20"
+            android:src="@mipmap/refer_earn_image" />
+
+        <TextView
+            android:id="@+id/earnedValueTV"
+            android:layout_width="@dimen/dp200"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center"
+            android:background="@drawable/reward_points_bg"
+            android:gravity="center"
+            android:text="Total Points 0"
+            android:textColor="@color/left_panel_header_text_color"
+            android:textSize="@dimen/heading_text_size" />
+
+        <Button
+            android:id="@+id/showTransactionBtn"
+            android:layout_width="@dimen/dp180"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/reg_round_blue_bg"
+            android:text="@string/showTransactions"
+            android:textAllCaps="false"
+            android:textColor="@color/left_panel_header_text_color"
+            android:textSize="@dimen/small_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp20"
+            android:alpha=".8"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp30"
+            android:paddingRight="@dimen/dp30"
+            android:text="Share the app by inviting your friends and both of you will get Reward Points"
+            android:textColor="@color/black"
+            android:textSize="@dimen/post_text_size" />
+
+
+        <TextView
+            android:id="@+id/referralcodeTV"
+            android:layout_width="@dimen/dp180"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp20"
+            android:alpha=".8"
+            android:background="@drawable/bg_ref_code_text"
+            android:elevation="@dimen/dp5"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/heading_text_size" />
+
+        <Button
+            android:id="@+id/inviteBtn"
+            android:layout_width="@dimen/dp180"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/reg_round_blue_bg"
+            android:text="@string/invite"
+            android:textAllCaps="false"
+            android:textColor="@color/left_panel_header_text_color"
+            android:textSize="@dimen/sp15" />
+
+    </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

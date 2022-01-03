@@ -1,0 +1,377 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: "org.sonarqube"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'kotlin-kapt'
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'emedicoz'
+            keyPassword '12345678'
+            storeFile file('damskey.jks')
+            storePassword '12345678'
+        }
+        debug {
+            keyAlias 'emedicoz'
+            keyPassword '12345678'
+            storeFile file('damskey.jks')
+            storePassword '12345678'
+        }
+    }
+    compileSdkVersion 30
+    buildToolsVersion '30.0.3'
+    ext {
+        APP_NAME = "eMedicoz"
+    }
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.emedicoz.app"
+        vectorDrawables.useSupportLibrary = true
+
+
+        minSdkVersion 19
+        targetSdkVersion 30
+//        versionCode 279
+//         versionName "4.1.3(28)"
+        versionCode 300
+        versionName "4.1.3(60)"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        def STRING = "String"
+        def API_VERSION = "API_VERSION"
+
+        def ENC_IV_KEY = "ENC_IV_KEY"
+        def ENC_SECRET_KEY = "ENC_SECRET_KEY"
+
+        def PAYTM_MID = "PAYTM_MID"
+        def PAYTM_WEBSITE = "PAYTM_WEBSITE"
+        def PAYTM_CHANNEL_ID = "PAYTM_CHANNEL_ID"
+        def PAYTM_SERVER_TYPE = "PAYTM_SERVER_TYPE"
+        def PAYTM_INDUSTRY_TYPE_ID = "PAYTM_INDUSTRY_TYPE_ID"
+        def PAYTM_CALLBACK_URL = "PAYTM_CALLBACK_URL"
+        def WHATSAPP_NO = "WHATSAPP_NO"
+        def DRM_SITE_ID = "SITE_ID"
+        def DRM_SITE_KEY = "SITE_KEY"
+
+        buildConfigField STRING, ENC_IV_KEY, "${IV_KEY}"
+        buildConfigField STRING, ENC_SECRET_KEY, "${SECRET_KEY}"
+
+        buildConfigField STRING, API_VERSION, "${APP_API_VERSION}"
+        buildConfigField STRING, WHATSAPP_NO, "${WHATSAPP_NUMBER}"
+
+        buildConfigField STRING, PAYTM_MID, "${API_PAYTM_MID}"
+        buildConfigField STRING, PAYTM_WEBSITE, "${API_PAYTM_WEBSITE}"
+        buildConfigField STRING, PAYTM_CHANNEL_ID, "${API_PAYTM_CHANNEL_ID}"
+        buildConfigField STRING, PAYTM_SERVER_TYPE, "${API_PAYTM_SERVER_TYPE}"
+        buildConfigField STRING, PAYTM_INDUSTRY_TYPE_ID, "${API_INDUSTRY_TYPE_ID}"
+        buildConfigField STRING, PAYTM_CALLBACK_URL, "${API_CALLBACK_URL}"
+
+        buildConfigField STRING, DRM_SITE_ID, "${SITE_ID}"
+        buildConfigField STRING, DRM_SITE_KEY, "${SITE_KEY}"
+
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries true
+
+    }
+    buildTypes {
+
+        def BASE_URL = "BASE_URL"
+        def BASE_URL_DOMAIN = "BASE_URL_DOMAIN"
+        def STRING = "String"
+        def AMAZON_S3_BUCKET = "AMAZON_S3_BUCKET"
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            debuggable false
+            zipAlignEnabled true
+
+            manifestPlaceholders = [appName: APP_NAME]
+            manifestPlaceholders = [isExported: false]
+
+            buildConfigField STRING, BASE_URL, "${PROD_BASE_URL}"
+            buildConfigField STRING, BASE_URL_DOMAIN, "${PROD_BASE_URL_DOMAIN}"
+            buildConfigField STRING, AMAZON_S3_BUCKET, "${AMAZON_S3_BUCKET_PROD}"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'proguard-rules-epubear.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            debuggable true
+            zipAlignEnabled true
+            ext.enableCrashlytics = false
+            manifestPlaceholders = [appName: APP_NAME]
+            manifestPlaceholders = [isExported: false]
+
+            buildConfigField STRING, BASE_URL, "${PROD_BASE_URL}"
+            buildConfigField STRING, BASE_URL_DOMAIN, "${PROD_BASE_URL_DOMAIN}"
+            buildConfigField STRING, AMAZON_S3_BUCKET, "${AMAZON_S3_BUCKET_PROD}"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'proguard-rules-epubear.pro'
+            signingConfig signingConfigs.debug
+        }
+
+        preprod {
+//            debuggable true
+//            minifyEnabled false
+
+            minifyEnabled true
+            shrinkResources true
+            debuggable true
+            zipAlignEnabled true
+
+            applicationIdSuffix ""
+            versionNameSuffix '-preprod'
+            manifestPlaceholders = [appName: versionNameSuffix + APP_NAME]
+            manifestPlaceholders = [isExported: false]
+
+            buildConfigField STRING, BASE_URL, "${PRE_PROD_BASE_URL}"
+            buildConfigField STRING, BASE_URL_DOMAIN, "${PRE_PROD_BASE_URL_DOMAIN}"
+            buildConfigField STRING, AMAZON_S3_BUCKET, "${AMAZON_S3_BUCKET_PRE_PROD}"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'proguard-rules-epubear.pro'
+            signingConfig signingConfigs.debug
+        }
+
+        development {
+            debuggable true
+            ext.enableCrashlytics = false
+//            minifyEnabled false
+            matchingFallbacks = ['debug', 'release']
+            minifyEnabled false
+            shrinkResources false
+            debuggable true
+            zipAlignEnabled true
+
+            applicationIdSuffix ""
+            versionNameSuffix '-dev'
+            manifestPlaceholders = [appName: versionNameSuffix + APP_NAME]
+            manifestPlaceholders = [isExported: false]
+
+            buildConfigField STRING, BASE_URL, "${DEV_BASE_URL}"
+            buildConfigField STRING, BASE_URL_DOMAIN, "${DEV_BASE_URL_DOMAIN}"
+            buildConfigField STRING, AMAZON_S3_BUCKET, "${AMAZON_S3_BUCKET_PROD}"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'proguard-rules-epubear.pro'
+            signingConfig signingConfigs.debug
+        }
+
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "eMedicoz_${variant.buildType.name}_${defaultConfig.versionName}.apk"
+            variant.mergedFlavor.manifestPlaceholders = [appName: variant.buildType.versionNameSuffix + APP_NAME]
+
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    configurations.all {
+        resolutionStrategy.force 'org.hamcrest:hamcrest-core:1.3'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+repositories {
+    jcenter()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar','*.aar'], dir: 'libs')
+    artifacts.add("default", file('[PallyconWVMSDK].aar'))
+    implementation project(':epub-release_v1.3.2')
+    implementation project(':scrollpager')
+//    implementation files('libs/PGSDK_V2.0.jar')
+    implementation group: 'com.pubnub', name: 'pubnub', version: '4.0.5'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'com.paytm.appinvokesdk:appinvokesdk:1.6.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+
+    implementation "androidx.activity:activity:1.2.0"
+    implementation "androidx.fragment:fragment:1.3.0"
+    implementation 'com.facebook.android:facebook-android-sdk:4.22.1'
+
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+    implementation 'com.google.android.gms:play-services-analytics:17.0.0'
+    implementation 'com.google.android.gms:play-services-plus:17.0.0'
+    implementation 'com.google.firebase:firebase-analytics:18.0.0'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.2'
+
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'com.google.firebase:firebase-invites:17.0.0'
+    implementation 'com.google.firebase:firebase-auth:20.0.0'
+    implementation 'com.google.firebase:firebase-core:18.0.0'
+    implementation 'com.google.firebase:firebase-database:19.5.1'
+    implementation 'com.google.firebase:firebase-storage:19.2.0'
+
+    implementation 'com.amazonaws:aws-android-sdk-core:2.14.0'
+    implementation 'com.amazonaws:aws-android-sdk-s3:2.14.0'
+    implementation 'com.amazonaws:aws-android-sdk-ddb:2.14.0'
+
+    implementation 'joda-time:joda-time:2.10.5'
+    implementation 'com.nex3z:flow-layout:1.2.4'
+    implementation 'com.tonyodev.fetch:fetch:1.1.5'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation 'com.kofigyan.stateprogressbar:stateprogressbar:1.0.0'
+    implementation 'com.white:progressview:1.0.1'
+    implementation 'com.tuyenmonkey:mkloader:1.4.0'
+    implementation 'com.koushikdutta.ion:ion:2.1.6'
+
+    implementation 'org.jsoup:jsoup:1.9.1'
+    implementation 'me.leolin:ShortcutBadger:1.1.18@aar'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'org.apache.commons:commons-lang3:3.6'
+    implementation 'commons-io:commons-io:2.6'
+    implementation 'org.apache.commons:commons-text:1.9'
+
+    implementation 'com.github.antonKozyriatskyi:CircularProgressIndicator:1.3.0'
+    implementation 'com.github.darsh2:MultipleImageSelect:v0.0.4'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    implementation 'com.github.joielechong:countrycodepicker:2.1.5'
+
+
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation 'com.zhy:base-adapter:2.0.1'
+    implementation 'com.balysv:material-ripple:1.0.2'
+    implementation 'com.github.jaiselrahman:FilePicker:1.0.5'
+    implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    implementation 'com.github.mofneko:EmulatorDetector:1.1.0'
+    implementation 'com.borjabravo:readmoretextview:2.1.0'
+
+    implementation 'com.android.billingclient:billing:3.0.0'
+
+    //exoplayer library
+    implementation 'com.google.android.exoplayer:exoplayer:2.9.6'
+    implementation 'com.github.adrielcafe:AndroidAudioRecorder:0.3.0'
+
+    implementation 'org.jsoup:jsoup:1.10.3'
+    implementation 'androidx.annotation:annotation:1.0.0'
+
+    // Butterknife library
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'com.google.firebase:firebase-config:21.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    implementation 'com.jakewharton.timber:timber:4.1.2'
+    implementation 'tech.gusavila92:java-android-websocket-client:1.2.2'
+
+    implementation 'com.google.android.material:material:1.3.0'
+
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+
+    implementation 'com.github.mahimrocky:ShowMoreText:1.0.2'
+    implementation 'com.borjabravo:readmoretextview:2.0.1'
+
+    // RxJava dependency
+    implementation "io.reactivex.rxjava3:rxjava:3.1.0"
+    implementation "io.reactivex.rxjava3:rxandroid:3.0.0"
+
+    implementation 'com.google.firebase:firebase-dynamic-links:20.1.1'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.github.GoodieBag:Pinview:v1.4'
+    implementation 'com.tbuonomo:dotsindicator:4.2'
+    implementation 'com.github.MasayukiSuda:BubbleLayout:v1.2.2'
+    //app updater library
+    implementation 'com.google.android.play:core:1.9.1'
+
+    //add UX cam for monitoring
+    implementation 'com.uxcam:uxcam:3.3.5@aar'
+    //dialog plus bottom
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+
+    // Kotlin navigation component
+    def nav_version = "2.3.5"
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+    //kotlinx.coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    //live data and view model
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    // Auto Otp Retriever
+    implementation 'com.google.android.gms:play-services-base:17.5.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:17.5.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'androidx.webkit:webkit:1.4.0'
+
+    implementation "com.squareup.okhttp3:okhttp:4.9.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
+
+    implementation 'com.nshmura:recyclertablayout:1.5.0'
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.5.1'
+    implementation 'com.github.sureshmaidaragi1919:CircularTimer:1.3'
+    implementation 'com.balsikandar.android:crashreporter:1.1.0'
+    implementation 'it.xabaras.android:recyclerview-swipedecorator:1.2.3'
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "eMedicoz"
+        property "sonar.projectKey", "com.emedicoz.app"
+
+        property "sonar.host.url", "http://103.228.153.237:9000"
+        property "sonar.login", "admin"
+        property "sonar.password", "admSonr@\$%^"
+
+        property "sonar.test.inclusions", "**/*Test*/**"
+        property "sonar.sourceEncoding", "UTF-8"
+        property "sonar.sources", "src/main/java"
+        property "sonar.exclusions", '**/*Test*/**,' +
+                '*.json,' +
+                '**/*test*/**,' +
+                '**/.gradle/**,' +
+                '**/R.class'
+    }
+}
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android'

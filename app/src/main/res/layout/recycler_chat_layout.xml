@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainLL"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/normalParentLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp5"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_admin"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:gravity="center"
+            android:src="@mipmap/default_profile_img"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="0dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp5"
+            android:layout_weight="1"
+            android:background="@drawable/bg_chat_drawable"
+            android:gravity="center|start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp5"
+                android:text="name"
+                android:textColor="@color/black_dark_light"
+                android:textSize="@dimen/sp13" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/imgAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:paddingTop="@dimen/dp15"
+                    android:paddingBottom="@dimen/dp15"
+                    android:minHeight="@dimen/dp200"
+                    android:src="@drawable/image_placeholder"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp5"
+            android:layout_weight="1"
+            android:background="@drawable/bg_chat_drawable_user"
+            android:gravity="right|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:padding="@dimen/dp5"
+                android:text="name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp13" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/imgUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:paddingTop="@dimen/dp15"
+                    android:paddingBottom="@dimen/dp15"
+                    android:minHeight="@dimen/dp200"
+                    android:src="@drawable/percent"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:gravity="center"
+            android:src="@mipmap/default_profile_img"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="0dp" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pollParentLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp10"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_live_chat_poll_disable">
+
+            <TextView
+                android:id="@+id/questionTV"
+                android:layout_width="312dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica"
+                android:paddingTop="@dimen/dp5"
+                android:paddingBottom="@dimen/dp5"
+                android:paddingStart="@dimen/dp10"
+                android:paddingEnd="@dimen/dp10"
+                android:text="What is the earliest bony change of osteomyelitis on X-rays? "
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+
+            <LinearLayout
+                android:id="@+id/pollLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/dp10"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/isCorrectTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/helvetica"
+            android:layout_marginTop="@dimen/dp10"
+            android:paddingTop="@dimen/dp5"
+            android:paddingBottom="@dimen/dp5"
+            android:paddingStart="@dimen/dp10"
+            android:paddingEnd="@dimen/dp10"
+            android:text=""
+            android:lineHeight="@dimen/sp20"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp12" />
+        
+        <View
+            android:layout_width="@dimen/dp48"
+            android:layout_height="@dimen/dp2"
+            android:background="#707070"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp10"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

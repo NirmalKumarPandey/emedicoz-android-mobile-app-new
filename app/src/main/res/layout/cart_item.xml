@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        card_view:cardBackgroundColor="@color/podcast_row_color"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="1dp">
+
+        <RelativeLayout
+            android:id="@+id/view_background"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/red"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/dp20">
+
+                <ImageView
+                    android:id="@+id/delete_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/icon_delete" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Delete"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp14" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+
+                    android:id="@+id/imageIV"
+                    android:layout_width="92dp"
+                    android:layout_height="122dp"
+                    android:layout_marginTop="@dimen/dp7"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:background="@mipmap/cart_book"
+                    android:scaleType="centerCrop"></com.makeramen.roundedimageview.RoundedImageView>
+
+                <TextView
+                    android:layout_width="32dp"
+                    android:layout_height="@dimen/dp14"
+                    android:layout_marginLeft="@dimen/dp8"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:background="@mipmap/new_tag_bg"
+                    android:scaleType="fitXY"
+                    android:text="New"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/coursenameTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp7"
+                    android:layout_marginTop="@dimen/dp7"
+                    android:layout_marginEnd="@dimen/dp50"
+                    android:layout_toStartOf="@+id/delete"
+                    android:layout_toEndOf="@+id/imageIV"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="DAMS Neurosciences Question Bank (For.... Enterance.........Enterance....."
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/autherTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/coursenameTV"
+                    android:layout_marginStart="@dimen/dp7"
+                    android:layout_marginTop="@dimen/dp7"
+                    android:layout_marginEnd="@dimen/dp50"
+                    android:layout_toStartOf="@+id/delete"
+                    android:layout_toEndOf="@+id/imageIV"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="By: DAMS Faculty (Author)"
+                    android:textSize="11sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rel_extra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/autherTv"
+                    android:layout_toEndOf="@+id/imageIV">
+
+                    <RatingBar
+                        android:id="@+id/ratingRB"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/dp5"
+                        android:numStars="5"
+                        android:rating="2.0"
+                        android:stepSize="1.0" />
+
+                    <TextView
+                        android:id="@+id/txtLearnerValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp2"
+                        android:layout_toEndOf="@+id/ratingRB"
+                        android:text="21 Ratings"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/priceRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rel_extra"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toEndOf="@+id/imageIV"
+                    android:gravity="center_vertical">
+
+
+                    <TextView
+                        android:id="@+id/priceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:text="119"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/mrpTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_toEndOf="@+id/priceTv"
+                        android:text="119"
+                        android:textSize="14sp"
+                        tools:ignore="SmallSp" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="@dimen/dp1"
+                        android:layout_height="12dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/mrpTv"
+                        android:background="@color/greayrefcode_dark" />
+
+                    <TextView
+                        android:id="@+id/parcentageTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp2"
+                        android:layout_toEndOf="@+id/view"
+                        android:text="(28%off)"
+                        android:textColor="#428852"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp30"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp20"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/increment_decrement_bg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/itemIncreaseTV"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                    <!-- android:background="@mipmap/up_count"-->
+
+                    <TextView
+                        android:id="@+id/noOfItemTV"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                    <!--all text and widht size is 29 ac avocode but not fited in screen-->
+
+                    <TextView
+                        android:id="@+id/itemDecreaseTv"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                    <!-- android:background="@mipmap/bottom_count"-->
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

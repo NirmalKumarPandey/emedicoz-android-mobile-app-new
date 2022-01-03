@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/RL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/left_panel_background_color"
+        android:elevation="@dimen/dp4"
+        android:gravity="center"
+        android:padding="@dimen/dp5"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/coursesLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/coursesIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/rec_course" />
+
+            <TextView
+                android:id="@+id/coursesTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/course"
+                android:textColor="@color/black"
+                android:padding="@dimen/dp2"
+                android:textSize="@dimen/extrasmall_text_size_11" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/liveClassesLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/liveClassesIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/live_course" />
+
+            <TextView
+                android:id="@+id/liveClassesTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/course"
+                android:textColor="@color/black"
+                android:padding="@dimen/dp2"
+                android:textSize="@dimen/extrasmall_text_size_11" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/videosLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/videosIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_baseline_videocam_24" />
+
+            <TextView
+                android:id="@+id/videosTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/video"
+                android:textColor="@color/black"
+                android:textSize="@dimen/extrasmall_text_size_11" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/qbankLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/qbankIV"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp5"
+                android:src="@mipmap/study" />
+
+            <TextView
+                android:id="@+id/qbankTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/study"
+                android:padding="@dimen/dp2"
+                android:layout_marginTop="@dimen/dp3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/extrasmall_text_size_11" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/feedsLL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/dp2">
+
+            <ImageView
+                android:id="@+id/feedIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_baseline_home_24" />
+
+            <TextView
+                android:id="@+id/feedTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/interact"
+                android:textColor="@color/black"
+                android:textSize="@dimen/extrasmall_text_size_11" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

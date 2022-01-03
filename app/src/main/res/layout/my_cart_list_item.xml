@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/courseCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="@dimen/dp10">
+
+            <RelativeLayout
+                android:id="@+id/topLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageIV"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/dp7"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundImageView"
+                    tools:src="@tools:sample/avatars" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/delete"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp25"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp10"
+                app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+
+            <TextView
+                android:id="@+id/coursenameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp7"
+                android:layout_marginTop="@dimen/dp7"
+                android:layout_marginEnd="@dimen/dp50"
+                android:layout_toEndOf="@+id/imageIV"
+                android:layout_toStartOf="@+id/delete"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@string/dams_ultimate_live_app_course"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/rel_extra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/coursenameTV"
+                    android:layout_toEndOf="@+id/imageIV">
+
+                    <RatingBar
+                        android:id="@+id/ratingRB"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/dp5"
+                        android:numStars="5"
+                        android:rating="2.0"
+                        android:stepSize="1.0" />
+
+                    <TextView
+                        android:id="@+id/txtLearnerValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_toEndOf="@+id/view_extra"
+                        android:text="113"
+                        android:textSize="12sp"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/txtLearner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_toEndOf="@+id/txtLearnerValue"
+                        android:text="@string/_113_enrolled"
+                        android:textSize="12sp"
+                        tools:ignore="SmallSp" />
+
+                    <View
+                        android:id="@+id/view_extra"
+                        android:layout_width="@dimen/dp3"
+                        android:layout_height="12dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/ratingTV"
+                        android:background="@color/greayrefcode_dark" />
+
+                    <TextView
+                        android:id="@+id/ratingTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/ratingRB"
+                        android:text="@string/_4_9"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/subscriptionDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topLayout"
+                android:layout_margin="@dimen/dp2"
+                android:elevation="@dimen/dp3"
+                app:cardCornerRadius="@dimen/dp10">
+
+                <RelativeLayout
+                    android:id="@+id/ll_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/subscription_list"
+                    android:padding="@dimen/dp10">
+
+
+                    <ImageView
+                        android:id="@+id/iv_select"
+                        android:layout_width="@dimen/dp24"
+                        android:layout_height="@dimen/dp24"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/iv_select"
+                        android:text="1 month"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/off_percentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/tv_name"
+                        android:background="@drawable/sub_bg"
+                        android:paddingStart="@dimen/dp5"
+                        android:paddingTop="@dimen/dp2"
+                        android:paddingEnd="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp2"
+                        android:text="20 % off"
+                        android:textColor="@color/subscription_text_1"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/month_amount_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@id/view"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/per_month_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="10dp"
+                            android:text="Rs.75000"
+                            android:textColor="@color/black"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="per month"
+                            android:textColor="@color/black"
+                            android:textSize="8sp" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:layout_toStartOf="@+id/total_amount_lay"
+                        android:background="@color/black" />
+
+                    <LinearLayout
+                        android:id="@id/total_amount_lay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical|end"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/total_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Rs.75000"
+                            android:textColor="@color/black"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="inclusive of all taxes"
+                            android:textColor="@color/black"
+                            android:textSize="8sp" />
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="25dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@mipmap/down_black" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:id="@+id/course_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subscriptionDetails"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginBottom="@dimen/dp5"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/txtCourseType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/course_type"
+                    android:textColor="@color/course_summary_text"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtCourseTypeValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/online"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/course_summary_text"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/course_mrp_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/course_type_layout"
+                android:layout_marginTop="@dimen/dp5"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/course_mrp_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/courses_price"
+                    android:textColor="@color/course_summary_text"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/course_mrp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="₹ 7500 INR"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/greayrefcode_dark" />
+
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <WebView
+
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.02" />
+
+    <FrameLayout
+        android:id="@+id/otp_frame"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp80"
+        android:layout_alignBottom="@+id/webView"
+        android:layout_centerHorizontal="true"></FrameLayout>
+
+</RelativeLayout>

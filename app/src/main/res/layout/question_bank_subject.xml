@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".courses.fragment.QuestionBankSubject">
+
+        <LinearLayout
+            android:id="@+id/topTestQbank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/damsDialogTV"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp5"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/createCustom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5"
+                android:layout_weight="1"
+                android:minHeight="@dimen/dp60"
+                app:cardBackgroundColor="@color/left_panel_background_color"
+                app:cardCornerRadius="@dimen/dp20"
+                app:cardElevation="@dimen/dp3">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dp60">
+
+                    <ImageView
+                        android:id="@+id/imgCreateCustom"
+                        android:layout_width="@dimen/dp35"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/create2x" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_toEndOf="@id/imgCreateCustom"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Custom Module"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/sp12"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Customized MCQs"
+                            android:textColor="@color/colorGray3"
+                            android:textSize="@dimen/sp8" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/flashCard"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp60"
+                android:layout_margin="@dimen/dp5"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/left_panel_background_color"
+                app:cardCornerRadius="@dimen/dp20"
+                app:cardElevation="@dimen/dp3">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp60">
+
+                    <ImageView
+                        android:id="@+id/imgFlashCard"
+                        android:layout_width="@dimen/dp35"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/flashcard3x" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_toEndOf="@id/imgFlashCard"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Flashcard"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/sp12"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Create Flashcard"
+                            android:textSize="@dimen/sp8"
+                            android:textColor="@color/colorGray3"/>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvPreviousPaper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp10"
+            app:cardCornerRadius="@dimen/dp5"
+            app:cardElevation="@dimen/dp3"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_corner_fill_gradient_blue"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp10"
+                    android:src="@mipmap/white_question_mark" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/previous_papers"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp12" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp10"
+                    android:src="@mipmap/dark_gray_lock" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <include layout="@layout/common_bookmark_layout" />
+
+        <com.emedicoz.app.customviews.NonScrollRecyclerView
+            android:id="@+id/qbankSubjectRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5" />
+
+    </LinearLayout>
+
+</ScrollView>

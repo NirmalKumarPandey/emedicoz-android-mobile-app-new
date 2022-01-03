@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginTop="@dimen/dp6"
+        android:background="@drawable/gradient_drawable"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sp16"
+                app:srcCompat="@drawable/ic_banner_rate" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12"
+                android:ellipsize="end"
+                android:fontFamily="@font/helvetica_bold"
+                android:maxLines="2"
+                android:text="How was your experience?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp10" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".2">
+
+            <TextView
+                android:id="@+id/tvDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/sp16"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginEnd="@dimen/sp22"
+                android:background="@drawable/ic_rectangle_border_radius_fill_2px"
+                android:fontFamily="@font/helvetica_bold"
+                android:paddingStart="@dimen/dp6"
+                android:paddingTop="@dimen/dp1"
+                android:paddingEnd="@dimen/dp6"
+                android:text="@string/rate_us"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/dimen_8dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginEnd="@dimen/sp24"
+        android:background="@color/transparent"
+        app:srcCompat="@drawable/ic_close_gray" />
+</FrameLayout>

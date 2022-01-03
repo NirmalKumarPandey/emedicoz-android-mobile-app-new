@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/meet_expert_bg">
+
+    <TextView
+        android:id="@+id/peopleknownTV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_button_padding_left_right"
+        android:layout_marginTop="@dimen/dp10"
+        android:text="@string/people_you_may_know"
+        android:textSize="@dimen/sp12"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/peopleknownViewAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="@dimen/normal_button_padding_left_right"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginRight="@dimen/normal_button_padding_left_right"
+        android:gravity="right"
+        android:text="@string/seeAll_underline"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp12"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/pymkRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/peopleknownTV1">
+
+        <!--Banner Layout View-->
+        <LinearLayout
+            android:id="@+id/bannerLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginBottom="@dimen/dp5"
+            android:padding="@dimen/dp10"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/adheading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp10"
+                android:text="Advertisement Heading"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/advertismentText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Advertisement Text"
+                android:textSize="@dimen/sp12" />
+
+            <ImageView
+                android:id="@id/imageIV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="200dp"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10"
+                android:src="@mipmap/helpbanner" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/actionbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp40"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:layout_margin="@dimen/dp3"
+                    android:background="@drawable/bg_signup_btn"
+                    android:paddingLeft="@dimen/dp10"
+                    android:paddingRight="@dimen/dp10"
+                    android:text="Read More"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp12" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/peopleRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

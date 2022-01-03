@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="@dimen/dp5"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/dp20">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Please set your email and password for future benefits."
+        android:textSize="@dimen/dp20" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/bg_refcode_et">
+
+        <EditText
+            android:id="@+id/emailET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:background="@color/transparent"
+            android:drawableLeft="@mipmap/email"
+            android:drawablePadding="@dimen/dp17"
+            android:hint="@string/email"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingTop="2dp"
+            android:textSize="@dimen/sp14"
+            android:typeface="monospace" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/til2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/til1"
+        android:layout_marginTop="@dimen/dp5"
+        android:background="@drawable/bg_refcode_et">
+
+
+        <EditText
+            android:id="@+id/passwordET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:background="@color/transparent"
+            android:drawableLeft="@mipmap/lock"
+            android:drawablePadding="@dimen/dp17"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingTop="2dp"
+            android:textSize="@dimen/sp14"
+            android:typeface="monospace" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/til2"
+        android:layout_marginTop="@dimen/dp5"
+        android:background="@drawable/bg_refcode_et">
+
+
+        <EditText
+            android:id="@+id/cnpasswordET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:background="@color/transparent"
+            android:drawableLeft="@mipmap/lock"
+            android:drawablePadding="@dimen/dp17"
+            android:hint="Confirm password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingTop="2dp"
+            android:textSize="@dimen/sp14"
+            android:typeface="monospace" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/normal_button_height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/bg_signup_btn"
+        android:elevation="4dp"
+        android:paddingLeft="@dimen/normal_button_padding_left_right"
+        android:paddingRight="@dimen/normal_button_padding_left_right"
+        android:text="@string/submit"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp13" />
+
+</LinearLayout>

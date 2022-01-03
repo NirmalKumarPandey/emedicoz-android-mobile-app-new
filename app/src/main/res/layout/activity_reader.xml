@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/reader_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:background="@color/colorPrimary"
+                android:contentInsetStart="0dp"
+                android:contentInsetLeft="0dp"
+                android:padding="0dp"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:contentInsetEnd="0dp"
+                app:contentInsetStart="0dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+                <include layout="@layout/actionbar_reader" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <com.emedicoz.app.epubear.view.HtmlView
+                android:id="@+id/html_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/footer"
+                android:layout_below="@+id/reader_toolbar"
+                android:layout_marginLeft="@dimen/reader_footer_margin_sides"
+                android:layout_marginRight="@dimen/reader_footer_margin_sides" />
+
+            <TextView
+                android:id="@+id/floatingText_video_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp12"
+                android:layout_marginRight="@dimen/dp5"
+                android:background="@color/transparent"
+                android:ellipsize="marquee"
+                android:fadingEdge="horizontal"
+                android:gravity="center_horizontal"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:minWidth="@dimen/dp150"
+                android:paddingTop="@dimen/dp12"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/floatingColorText"
+                android:textSize="@dimen/sp11"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingTop="@dimen/reader_footer_margin_bottom"
+                android:paddingBottom="@dimen/reader_footer_margin_bottom">
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seek_bar">
+
+                    <TextView
+                        android:id="@+id/chapter_info"
+                        style="@style/ReaderText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="@dimen/reader_footer_margin_sides"
+                        android:layout_marginRight="@dimen/reader_footer_margin_sides"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:textAlignment="viewStart" />
+
+                    <TextView
+                        android:id="@+id/pages_info"
+                        style="@style/ReaderText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/reader_footer_margin_sides"
+                        android:text="@string/reader_page_info"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <fragment
+        android:id="@+id/reader_drawer"
+        android:name="com.emedicoz.app.epubear.drawer.ReaderDrawerFragment"
+        android:layout_width="@dimen/reader_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        tools:layout="@layout/fragment_reader_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

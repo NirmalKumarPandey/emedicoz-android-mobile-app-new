@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/indexingTV"
+        android:layout_width="@dimen/dp160"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp8"
+        android:paddingBottom="@dimen/dp8"
+        android:textColor="@color/black"
+        android:text="Medical IAS"
+        android:textAlignment="center"
+        android:textSize="@dimen/sp12" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginStart="@dimen/dp6"
+        android:layout_marginEnd="@dimen/dp6"
+        android:background="@color/black" />
+
+</LinearLayout>

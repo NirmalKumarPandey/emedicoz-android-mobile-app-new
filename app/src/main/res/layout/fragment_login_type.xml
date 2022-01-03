@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    tools:context=".login.fragment.LoginTypeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <!-- TODO: Update blank fragment layout -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/login_logo" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/welcome_to_emedicoz"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/welcome_text_size"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/sign_in_to_continue"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp12" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5" />
+
+        <TextView
+            android:id="@+id/dams_login_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="@drawable/bg_btn"
+            android:drawableStart="@mipmap/circle_logo_signin"
+            android:drawablePadding="@dimen/dp10"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp30"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp25"
+            android:paddingBottom="@dimen/dp10"
+            android:text="Sign in as DAMS Student"
+            android:textColor="@color/left_panel_header_text_color"
+            android:textSize="@dimen/sp13" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/email_login_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="@drawable/bg_btn"
+            android:drawableStart="@mipmap/white_email"
+            android:drawablePadding="@dimen/dp10"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp30"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp25"
+            android:paddingBottom="@dimen/dp10"
+            android:text="Sign in via Email"
+            android:textColor="@color/left_panel_header_text_color"
+            android:textSize="@dimen/sp13" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5" />
+
+        <TextView
+            android:id="@+id/terms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/dp2"
+            android:text="@string/terms_conditions"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp12" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Don't have an account?"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp12" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5" />
+
+        <TextView
+            android:id="@+id/register_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center"
+            android:background="@drawable/register_bg"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp40"
+            android:paddingEnd="@dimen/dp40"
+            android:paddingBottom="@dimen/dp5"
+            android:text="Register"
+            android:textAlignment="center"
+            android:textColor="#008dff"
+            android:textSize="@dimen/sp15" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--<ImageView-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:background="@drawable/blackline_or" />-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#FFC5C5C5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@drawable/bg_or_gray"
+                android:gravity="center"
+                android:padding="@dimen/dp3"
+                android:text="Or"
+                android:textColor="@color/left_panel_header_text_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#FFC5C5C5" />
+
+            <!--<ImageView-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:background="@drawable/blackline_or"-->
+            <!--android:rotation="180" />-->
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp30"
+            android:paddingRight="@dimen/dp30">
+
+            <ImageView
+                android:id="@+id/fbIV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp60"
+                android:layout_weight="1"
+                android:background="#00ffffff"
+                android:src="@mipmap/facebook" />
+
+            <ImageView
+                android:id="@+id/gpIV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp60"
+                android:layout_weight="1"
+                android:background="#00ffffff"
+                android:src="@mipmap/google" />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/damsIV"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#00ffffff"-->
+            <!--android:src="@drawable/dams" />-->
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5" />
+
+    </LinearLayout>
+
+</RelativeLayout>

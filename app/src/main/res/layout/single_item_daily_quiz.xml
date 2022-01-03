@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp60"
+    android:layout_margin="@dimen/dp5"
+    app:cardCornerRadius="@dimen/dp4"
+    app:cardElevation="@dimen/dp4">
+
+    <LinearLayout
+        android:id="@+id/dailyQuizBgColor"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:background="@color/blue"
+        android:paddingLeft="@dimen/dp5">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dailyQuizName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/dp5"
+                android:text="Daily Quiz Name"
+                android:textColor="@color/left_panel_header_text_color"
+                android:textSize="@dimen/sp16" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp5">
+
+                <ImageView
+                    android:layout_width="@dimen/dp22"
+                    android:layout_height="@dimen/dp20"
+                    android:paddingLeft="@dimen/dp5"
+                    android:src="@drawable/ic_action_quiz_calendar" />
+
+                <TextView
+                    android:id="@+id/dailyQuizDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp5"
+                    android:text="Daily Quiz Date"
+                    android:textColor="@color/left_panel_header_text_color"
+                    android:textSize="@dimen/sp13" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/statusIV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_weight="0.2"
+            android:src="@mipmap/play_daily_quiz" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

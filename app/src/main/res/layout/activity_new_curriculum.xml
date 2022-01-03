@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".courses.activity.NewCurriculumActivity">
+
+        <include layout="@layout/layout_common_toolbar" />
+
+        <RelativeLayout
+            android:id="@+id/rootNewCuri"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp175"
+            android:background="@color/black"
+            android:focusable="true"
+            android:keepScreenOn="true"
+            android:visibility="gone">
+
+            <include
+                layout="@layout/common_video_screen_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+
+        <!--    <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">-->
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/newcuribannerimageIV"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp175"
+                android:scaleType="fitXY"
+                android:src="@mipmap/helpbanner"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/durationTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/dp10"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp7"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp10">
+
+                    <TextView
+                        android:id="@+id/newcuricourseDescriptionTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp16"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/downloadIV"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/dp5"
+                        android:src="@mipmap/download_new_course"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/newcuridescriptionTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/newcuricourseDescriptionTV"
+                        android:alpha="0.8"
+                        android:padding="@dimen/dp2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/post_text_size" />
+
+                    <Button
+                        android:id="@+id/newcurireadMoreBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/normal_button_height"
+                        android:layout_below="@+id/newcuridescriptionTV"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:background="@drawable/bg_signup_btn"
+                        android:paddingLeft="@dimen/dp20"
+                        android:paddingRight="@dimen/dp20"
+                        android:text="@string/read_more"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp13"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/newcuricurriculumExpListLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp5"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <!--
+            </ScrollView>
+        -->
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/gototopTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_btn"
+        android:drawableRight="@mipmap/up"
+        android:drawablePadding="10dp"
+        android:padding="@dimen/dp5"
+        android:text="Go To Top"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"
+        android:visibility="gone" />
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@android:drawable/ic_dialog_email" />-->
+</RelativeLayout>

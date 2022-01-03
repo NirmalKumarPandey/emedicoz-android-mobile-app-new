@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/errorLL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:weightSum="4">
+
+    <ImageView
+        android:id="@+id/errorImageIV"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_weight="2"
+        android:src="@mipmap/medicos_icon" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dp10"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="@dimen/sub_heading_text_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/errorMessageTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:alpha="0.8"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:text=""
+        android:textSize="@dimen/heading_text_size"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/tryAgainBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/reg_round_blue_bg"
+            android:paddingLeft="@dimen/dp50"
+            android:paddingRight="@dimen/dp50"
+            android:text="@string/back"
+            android:textAllCaps="false"
+            android:textColor="@color/off_white"
+            android:textSize="@dimen/heading_text_size" />
+
+        <Button
+            android:id="@+id/enrollNow"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/reg_round_blue_bg"
+            android:paddingLeft="@dimen/dp50"
+            android:paddingRight="@dimen/dp50"
+            android:text="Enroll Now"
+            android:textAllCaps="false"
+            android:textColor="@color/off_white"
+            android:textSize="@dimen/heading_text_size"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout><!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="238dp"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_x="55dp"
+        android:layout_y="157dp" />
+
+</RelativeLayout>-->

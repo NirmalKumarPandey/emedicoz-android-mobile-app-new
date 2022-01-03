@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_quiz"
+    app:startDestination="@id/LiveQuizFragment">
+
+    <fragment
+        android:id="@+id/LiveQuizFragment"
+        android:name="com.emedicoz.app.gamification.view.LiveQuizFragment"
+        tools:layout="@layout/fragment_live_quiz">
+
+        <action
+            android:id="@+id/action_LiveQuizFragment_to_HostChallengeFragment"
+            app:destination="@id/HostChallengeFragment" />
+
+        <action
+            android:id="@+id/action_LiveQuizFragment_to_AcceptChallengeFragment"
+            app:destination="@id/AcceptChallengeFragment" />
+
+        <action
+            android:id="@+id/action_LiveQuizFragment_to_MyAttemptedFragment"
+            app:destination="@id/MyAttemptedFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/HostChallengeFragment"
+        android:name="com.emedicoz.app.gamification.view.HostChallengeFragment"
+        tools:layout="@layout/fragment_host_challenge">
+
+        <action
+            android:id="@+id/action_HostChallengeFragment_to_LiveQuizFragment"
+            app:destination="@id/LiveQuizFragment" />
+
+        <action
+            android:id="@+id/action_HostChallengeFragment_to_QuestionFragment"
+            app:destination="@id/QuestionFragment" />
+
+        <!--        <action-->
+        <!--            android:id="@+id/action_HostChallengeFragment_to_OneToOneChallengeFragment"-->
+        <!--            app:destination="@id/OneToOneChallengeFragment" />-->
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/QuestionFragment"
+        android:name="com.emedicoz.app.gamification.view.question.QuestionFragment"
+        tools:layout="@layout/question_fragment">
+
+        <action
+            android:id="@+id/action_QuestionFragment_to_HostChallengeFragment"
+            app:destination="@id/HostChallengeFragment" />
+
+        <action
+            android:id="@+id/action_QuestionFragment_to_DifficultyFragment"
+            app:destination="@id/DifficultyFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/DifficultyFragment"
+        android:name="com.emedicoz.app.gamification.view.difficulty.DifficultyFragment"
+        tools:layout="@layout/difficulty_fragment">
+
+        <action
+            android:id="@+id/action_DifficultyFragment_to_QuestionFragment"
+            app:destination="@id/QuestionFragment" />
+
+        <action
+            android:id="@+id/action_QuestionFragment_to_SubjectFragment"
+            app:destination="@id/SubjectFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/SubjectFragment"
+        android:name="com.emedicoz.app.gamification.view.subject.SubjectFragment"
+        tools:layout="@layout/subject_fragment">
+
+        <action
+            android:id="@+id/action_SubjectFragment_to_QuestionFragment"
+            app:destination="@id/QuestionFragment" />
+
+        <action
+            android:id="@+id/action_SubjectFragment_to_InviteFragment"
+            app:destination="@id/InviteFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/InviteFragment"
+        android:name="com.emedicoz.app.gamification.view.invite.InviteFragment"
+        tools:layout="@layout/invite_fragment">
+
+        <action
+            android:id="@+id/action_InviteFragment_to_SubjectFragment"
+            app:destination="@id/SubjectFragment" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/OneToOneChallengeFragment"
+        android:name="com.emedicoz.app.gamification.view.OneToOneChallengeFragment"
+        tools:layout="@layout/fragment_one_to_one_challenge">
+
+        <action
+            android:id="@+id/action_OneToOneChallengeFragment_to_HostChallengeFragment"
+            app:destination="@id/HostChallengeFragment" />
+
+        <action
+            android:id="@+id/action_OneToOneChallengeFragment_to_StartQuizFragment"
+            app:destination="@id/StartQuizFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/StartQuizFragment"
+        android:name="com.emedicoz.app.gamification.view.StartQuizFragment"
+        tools:layout="@layout/fragment_start_quiz">
+
+        <action
+            android:id="@+id/action_StartQuizFragment_to_OneToOneChallengeFragment"
+            app:destination="@id/OneToOneChallengeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/AcceptChallengeFragment"
+        android:name="com.emedicoz.app.gamification.view.AcceptChallengeFragment"
+        tools:layout="@layout/fragment_accept_challenge">
+
+        <action
+            android:id="@+id/action_AcceptChallengeFragment_to_LiveQuizFragment"
+            app:destination="@id/LiveQuizFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/MyAttemptedFragment"
+        android:name="com.emedicoz.app.gamification.view.MyAttemptedFragment"
+        tools:layout="@layout/fragment_my_attempted">
+
+        <action
+            android:id="@+id/action_MyAttemptedFragment_to_LiveQuizFragment"
+            app:destination="@id/LiveQuizFragment" />
+
+    </fragment>
+</navigation>

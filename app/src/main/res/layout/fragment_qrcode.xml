@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".courses.fragment.QRCodeFragment">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="@dimen/dp20"
+        android:layout_height="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp10"
+        android:src="@mipmap/back_arrow"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/imageFL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp50">
+
+        <com.emedicoz.app.customviews.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp60"
+            android:src="@mipmap/default_pic" />
+
+        <ImageView
+            android:id="@+id/profileImageText"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp60"
+            android:src="@mipmap/default_pic"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/userNameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp3"
+        android:text="User Name"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp20"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/damsidTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp3"
+        android:text="DAMS ID"
+        android:textAlignment="center"
+        android:textSize="@dimen/sp18" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:padding="@dimen/dp3"
+        android:text="Show this screen to Attendant"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp18" />
+
+
+    <ImageView
+        android:id="@+id/imageQR"
+        android:layout_width="@dimen/dp250"
+        android:layout_height="@dimen/dp250"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp20" />
+
+</LinearLayout>

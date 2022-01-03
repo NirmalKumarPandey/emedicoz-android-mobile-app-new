@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp10"
+        android:text="@string/logout"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp20"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp10"
+        android:text="@string/logout_confirmation_message"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp15" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20">
+
+        <TextView
+            android:id="@+id/dialogTextYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp150"
+            android:padding="@dimen/dp10"
+            android:text="@string/no_books_yes"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dialogTextNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_toRightOf="@id/dialogTextYes"
+            android:padding="@dimen/dp10"
+            android:text="@string/no_books_no"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</LinearLayout>

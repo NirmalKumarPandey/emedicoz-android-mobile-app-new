@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_dialogbox"
+    android:orientation="vertical"
+    android:padding="@dimen/dp10">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="Suspend Card !"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/sp17"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:lineSpacingExtra="@dimen/dp4"
+        android:text="Suspending this card will remove this card from your review schedule. Are you sure you want to suspend this card ?"
+        android:textAlignment="center"
+        android:textColor="@color/overlay"
+        android:textSize="@dimen/sp14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:gravity="center"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/SmallButtonRoundCornerBlue"
+            android:layout_weight="1"
+            android:text="Cancel" />
+
+        <androidx.legacy.widget.Space
+            android:layout_width="@dimen/dp20"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/SmallButtonRoundCornerBlue"
+            android:layout_weight="1"
+            android:text="Confirm" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".bookmark.ChildBookMarkFrag">
+
+    <TextView
+        android:id="@+id/textnocontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp70"
+        android:layout_marginRight="@dimen/dp15"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#3C3C3C"
+        android:textSize="@dimen/sp18"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imgnobookmarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp40"
+        android:src="@drawable/no_bookmarks"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerbookmark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#20000000"></androidx.recyclerview.widget.RecyclerView>
+
+</FrameLayout>

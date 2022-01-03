@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/dp5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_course_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp60"
+            android:background="@drawable/bg_top_round_border_blue"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lineSpacingExtra="-3dp"
+            android:maxLines="2"
+            android:paddingStart="@dimen/dp30"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp30"
+            android:paddingBottom="@dimen/dp10"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sp17"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dp40"
+            android:paddingTop="@dimen/dp20"
+            android:paddingEnd="@dimen/dp30"
+            android:paddingBottom="@dimen/dp30">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Package"
+                android:textColor="@color/colorGray4"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/bg_right_stroke_green">
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:gravity="start"
+                    android:textColor="@color/colorGray4"
+                    android:textSize="@dimen/sp14" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginBottom="@dimen/dp20"
+                android:background="@color/color_circle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp20"
+                android:gravity="start"
+                android:text="Q Bank + Test Series"
+                android:textColor="@color/colorGray4"
+                android:textSize="@dimen/sp17"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pay_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/sp22"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_cut_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textColor="@color/colorGray4"
+                        android:textSize="@dimen/sp21"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp40"
+                    android:background="@drawable/bg_round_corner_fill_red"
+                    android:paddingStart="@dimen/dp25"
+                    android:paddingEnd="@dimen/dp25"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp15" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentCV"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp70"
+    android:layout_marginStart="@dimen/dp10"
+    android:layout_marginTop="@dimen/dp3"
+    android:layout_marginEnd="@dimen/dp10"
+    android:layout_marginBottom="@dimen/dp3"
+    android:background="@color/left_panel_background_color"
+    android:elevation="@dimen/dp3"
+    app:cardCornerRadius="@dimen/dp20">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/left_panel_background_color"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/topicIV"
+                android:layout_width="@dimen/dp35"
+                android:layout_height="@dimen/dp35"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:src="@mipmap/courses_blue" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="@dimen/dp1"
+                android:layout_height="@dimen/dp60"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp5"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_toEndOf="@id/topicIV"
+                android:background="@color/colorGray2" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_toEndOf="@id/view"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/completedCountTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:id="@+id/newTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:layout_toEndOf="@id/nameTV"
+                        android:background="@drawable/bg_new_tag"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/dp5"
+                        android:paddingEnd="@dimen/dp5"
+                        android:singleLine="true"
+                        android:text="New"
+                        android:textColor="#81d4fa"
+                        android:textSize="@dimen/sp10"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:id="@+id/progressPercentage"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp5"
+                        android:progress="50"
+                        android:visibility="gone"
+                        android:theme="@style/ProgressBarTheme"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:indeterminateTintMode="src_atop">
+
+                    </ProgressBar>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/backRightIV"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp10"
+                app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginTop="@dimen/dp2"
+            android:background="@color/colorGray2" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

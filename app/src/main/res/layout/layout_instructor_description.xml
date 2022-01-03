@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginStart="@dimen/dp5"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/instructor_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:text="Instructor"
+        android:textColor="@color/black"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/instructor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructor_head"
+        android:text="Devender Gupta"
+        android:textColor="@color/sky_blue"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/instructor_designation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructor_name"
+        android:text="Head of Data Science, Pierien Data Inc."
+        android:textColor="@color/grey_2"
+        android:textSize="10sp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/instructor_profile_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/instructor_designation"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/dp20"
+        android:padding="@dimen/dp5"
+        android:src="@drawable/profile_image" />
+
+    <ImageView
+        android:id="@+id/rating_star"
+        android:layout_width="@dimen/dp25"
+        android:layout_height="@dimen/dp20"
+        android:layout_below="@+id/instructor_designation"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="@dimen/dp25"
+        android:layout_toEndOf="@id/instructor_profile_img"
+        android:background="@color/white"
+        android:src="@drawable/icon1" />
+
+    <TextView
+        android:id="@+id/rating_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/instructor_designation"
+        android:layout_marginTop="@dimen/dp25"
+        android:layout_toEndOf="@id/rating_star"
+        android:paddingLeft="@dimen/dp10"
+        android:text="4.8 Instructor Rating"
+        android:textColor="@color/grey_2"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/review_icon"
+        android:layout_width="@dimen/dp25"
+        android:layout_height="@dimen/dp20"
+        android:layout_below="@+id/rating_star"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_toEndOf="@id/instructor_profile_img"
+        android:background="@color/white"
+        android:src="@drawable/icon2" />
+
+    <TextView
+        android:id="@+id/review_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rating_details"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_toEndOf="@id/review_icon"
+        android:paddingLeft="@dimen/dp10"
+        android:textStyle="bold"
+        android:text="910, 089 Reviews"
+        android:textColor="@color/grey_2" />
+
+    <ImageView
+        android:id="@+id/student_icon"
+        android:layout_width="@dimen/dp25"
+        android:layout_height="@dimen/dp20"
+        android:layout_below="@+id/review_icon"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_toEndOf="@id/instructor_profile_img"
+        android:background="@color/white"
+        android:src="@drawable/icon3" />
+
+    <TextView
+        android:id="@+id/student_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/review_details"
+        android:layout_marginTop="@dimen/dp7"
+        android:layout_toEndOf="@id/student_icon"
+        android:paddingLeft="@dimen/dp10"
+        android:text="5,171,793 Students"
+        android:textColor="@color/grey_2"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/courses_icon"
+        android:layout_width="@dimen/dp25"
+        android:layout_height="@dimen/dp20"
+        android:layout_below="@+id/student_icon"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_toEndOf="@id/instructor_profile_img"
+        android:background="@color/white"
+        android:src="@drawable/icon4" />
+
+    <TextView
+        android:id="@+id/courses_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/student_details"
+        android:layout_marginTop="@dimen/dp7"
+        android:layout_toEndOf="@id/courses_icon"
+        android:paddingLeft="@dimen/dp10"
+        android:text="41 Courses"
+        android:textColor="@color/grey_2"
+        android:textStyle="bold" />
+
+    <com.borjabravo.readmoretextview.ReadMoreTextView
+        android:id="@+id/instructor_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructor_profile_img"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10"
+        android:clickable="true"
+        android:textSize="@dimen/sp12"
+        android:textColor="@color/black"
+        app:colorClickableText="@color/blue_2"
+        app:showTrimExpandedText="true"
+        app:trimCollapsedText="@string/show_more"
+        tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+        software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+        recently with desktop publishing software like Aldus"
+        app:trimExpandedText="@string/show_less"
+        app:trimLines="4" />
+
+
+    <View
+        android:id="@+id/divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/instructor_description"
+        android:layout_marginStart="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp5"
+        android:layout_marginBottom="@dimen/dp20"
+        android:background="?android:attr/listDivider" />
+
+
+</RelativeLayout>

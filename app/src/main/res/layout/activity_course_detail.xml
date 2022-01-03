@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".courseDetail.activity.CourseDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/helpView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/recorded_toolbar" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp10"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_course_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/dp6"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:layout_toStartOf="@+id/img_wishlist"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="DAMS Ultimate App Course" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_wishlist"
+                    android:layout_width="@dimen/dp32"
+                    android:layout_height="@dimen/dp32"
+                    android:layout_toStartOf="@+id/img_share"
+                    android:padding="@dimen/dp6"
+                    android:src="@drawable/wishlist_selected" />
+
+                <ImageView
+                    android:id="@+id/img_share"
+                    android:layout_width="@dimen/dp32"
+                    android:layout_height="@dimen/dp32"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/dp4"
+                    app:srcCompat="@drawable/ic_baseline_share_24"/>
+
+
+                <TextView
+                    android:id="@+id/tv_course_category"
+                    style="@style/CourseLabelTextStyle"
+                    android:layout_below="@id/tv_course_name"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:background="@drawable/background_yellow"
+                    android:padding="@dimen/dp1"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingEnd="@dimen/dp10"
+                    android:text="Best Seller"
+                    android:textColor="@color/stay_black"
+                    android:textSize="12sp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/view_extra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_course_category">
+
+                    <RatingBar
+                        android:id="@+id/course_rating"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp5"
+                        android:numStars="5"
+                        android:progressTint="@color/stay_skyBlue"
+                        android:rating="2.0"
+                        android:stepSize="1.0" />
+
+                    <TextView
+                        android:id="@+id/tv_course_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/course_rating"
+                        android:text="@string/_4_9"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_course_learner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_extra"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:padding="@dimen/dp1"
+                    android:textColor="@color/record_course_category_title"
+                    android:textSize="9sp"
+                    tools:ignore="SmallSp"
+                    tools:text="(46,670 ratings), 2280376 Students " />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/image_video_banner_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/image_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp220"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_auto_image_slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY" />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/image_video_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp220"
+                    android:visibility="gone"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="2dp"
+                    app:sliderIndicatorSelectedColor="@color/blue"
+                    app:sliderIndicatorUnselectedColor="@color/black"
+                    app:sliderScrollTimeInSec="1"
+                    app:sliderStartAutoCycle="true" />
+
+            </LinearLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/image_video_banner_lay"
+                android:layout_marginBottom="@dimen/dp10"
+                android:elevation="10dp"
+                app:tabIndicatorColor="@color/blue_lock"
+                app:tabIndicatorFullWidth="true"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextAppearance="@style/RecordedCustomTabText"
+                app:tabTextColor="@color/black" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tabsLayout"
+                android:minHeight="@dimen/dp200" />
+
+            <RelativeLayout
+                android:id="@+id/layout_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewPager"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/CourseSliderLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/CoursesSliderHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:layout_marginTop="@dimen/dp20">
+
+                        <TextView
+                            android:id="@+id/courseCategories"
+                            style="@style/RecordedCoursesCategoryName"
+                            android:layout_marginStart="0dp"
+                            android:text="Student Are Viewing" />
+
+                        <TextView
+                            android:id="@+id/showAllLink"
+                            style="@style/RecordedCoursesCategoryLink"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CoursesSliderView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/CoursesSliderHeader"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="20dp">
+
+                        <com.smarteist.autoimageslider.SliderView
+                            android:id="@+id/coursesSlider"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            app:sliderAnimationDuration="600"
+                            app:sliderAutoCycleDirection="back_and_forth"
+                            app:sliderAutoCycleEnabled="true"
+                            app:sliderIndicatorAnimationDuration="600"
+                            app:sliderIndicatorGravity="center_horizontal|bottom"
+                            app:sliderIndicatorMargin="15dp"
+                            app:sliderIndicatorOrientation="horizontal"
+                            app:sliderIndicatorPadding="3dp"
+                            app:sliderIndicatorRadius="2dp"
+                            app:sliderIndicatorSelectedColor="@color/red"
+                            app:sliderIndicatorUnselectedColor="@color/red"
+                            app:sliderScrollTimeInSec="1"
+                            app:sliderStartAutoCycle="true" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/AddToCartLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/CourseSliderLayout"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginBottom="@dimen/dp15"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/course_mrp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="₹ 0000"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/AddToCart"
+                        style="@style/RattingRedButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_btn_red"
+                        android:text="Add To Cart"
+                        android:textAllCaps="false"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/enroll_btn"
+                    style="@style/RattingRedButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/AddToCartLayout"
+                    android:layout_marginBottom="@dimen/dp30"
+                    android:background="@drawable/background_btn_red"
+                    android:text="@string/enroll_now"
+                    android:textAllCaps="false" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/layout_error_message" />
+
+</LinearLayout>

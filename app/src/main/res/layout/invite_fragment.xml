@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".gamification.view.invite.InviteFragment">
+
+    <include
+        android:id="@+id/headerLayout"
+        layout="@layout/header_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp100"
+        android:layout_marginTop="@dimen/dp16"
+        android:background="@drawable/ic_rectangle_1227"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout" />
+
+    <TextView
+        android:id="@+id/tvChallenge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginTop="39dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="@string/host_a_challenge"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout" />
+
+    <TextView
+        android:id="@+id/tvKnowMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@drawable/rectangle_1235"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp16"
+        android:paddingTop="@dimen/dp6"
+        android:paddingEnd="@dimen/sp16"
+        android:paddingBottom="@dimen/dp6"
+        android:text="@string/know_more"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChallenge" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="83sp"
+        android:layout_marginEnd="@dimen/sp16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic__59_layers" />
+
+
+    <TextView
+        android:id="@+id/tvInvitePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sp16"
+        android:layout_marginTop="@dimen/sp24"
+        android:fontFamily="@font/helvetica_neue_med"
+        android:text="@string/invite_player"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewLayout" />
+
+    <LinearLayout
+        android:id="@+id/joinLayout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp90"
+        android:layout_marginTop="@dimen/dp16"
+        android:background="@color/color_light_blue"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInvitePlayer">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/sp28"
+            android:layout_weight=".70"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp12"
+                android:fontFamily="@font/helvetica_neue_med"
+                android:gravity="center"
+                android:text="@string/joining_code"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp12" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sp10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_rectangle_btn"
+                    android:fontFamily="@font/helvetica_neue_med"
+                    android:gravity="center"
+                    android:text="ASQ4715"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/sp12" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/sp10"
+                    app:srcCompat="@drawable/ic_path_8945" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sp8"
+                android:fontFamily="@font/helvetica_neue_med"
+                android:text="Share this code to invite others to play challenge"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp8" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1sp"
+            android:layout_height="@dimen/dp70"
+            android:layout_gravity="center_vertical"
+            android:background="@color/toolbar_bg_color" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".30"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/qr_code" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_neue_med"
+                android:text="Scan to Pay"
+                android:textColor="@color/toolbar_bg_color"
+                android:textSize="@dimen/sp10" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/sp16"
+        android:layout_marginTop="@dimen/sp24"
+        android:fontFamily="@font/helvetica_neue_med"
+        android:text="@string/available_player"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joinLayout" />
+
+    <RelativeLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/sp24"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlayer">
+
+        <Button
+            android:layout_width="148dp"
+            android:layout_height="@dimen/dp30"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_rectangle_invite"
+            android:fontFamily="@font/helvetica_neue_med"
+            android:text="Invite First 50 Players"
+            android:textAllCaps="false"
+            android:textColor="@color/toolbar_bg_color"
+            android:textSize="@dimen/sp12" />
+
+        <Button
+            android:layout_width="148dp"
+            android:layout_height="@dimen/dp30"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_rectangle_invite"
+            android:fontFamily="@font/helvetica_neue_med"
+            android:text="Invite Bot"
+            android:textAllCaps="false"
+            android:textColor="@color/toolbar_bg_color"
+            android:textSize="@dimen/sp12" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/ic_rectangle_blank"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLayout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp4"
+            android:layout_marginStart="@dimen/dp4"
+
+            android:layout_marginTop="@dimen/dp4"
+            android:layout_marginEnd="@dimen/dp4"
+            android:layout_marginBottom="@dimen/dp4"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/adapter_invite" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp32"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="@dimen/dp16"
+        android:background="@drawable/ic_rectangle_btn"
+        android:fontFamily="@font/helvetica_neue_med"
+        android:paddingStart="44dp"
+        android:paddingTop="@dimen/sp8"
+        android:paddingEnd="44dp"
+        android:paddingBottom="@dimen/sp8"
+        android:text="@string/play_now"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

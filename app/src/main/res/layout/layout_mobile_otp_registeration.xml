@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/authToolbar"
+            layout="@layout/transparent_auth_toolbar" />
+
+        <ImageView
+            android:id="@+id/loginLogo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp300"
+            android:layout_marginStart="@dimen/dp100"
+            android:layout_marginTop="@dimen/dp30"
+            android:layout_marginEnd="@dimen/dp100"
+            android:src="@drawable/login_img" />
+
+        <LinearLayout
+            android:id="@+id/loginByEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginLogo"
+            android:layout_marginTop="@dimen/dp56"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp32"
+                android:text="@string/enter_your_email"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp32"
+                android:text="@string/we_will_send_you_otp"
+                android:textAlignment="center"
+                android:textColor="@color/gray_8e8e8e"
+                android:textSize="@dimen/sp12" />
+
+            <EditText
+                android:id="@+id/emailET"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginStart="@dimen/dp32"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp32"
+                android:background="@drawable/drawable_edit_text"
+                android:hint="@string/enter_email_id"
+                android:maxLines="1"
+                android:paddingStart="@dimen/dp15"
+                android:paddingEnd="@dimen/dp10"
+                android:singleLine="true" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/loginByMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginLogo"
+            android:layout_marginTop="@dimen/dp56"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp32"
+                android:text="@string/enter_your_mobile_number"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp20" />
+
+
+            <TextView
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp32"
+                android:text="@string/we_will_send_you_otp"
+                android:textAlignment="center"
+                android:textColor="@color/gray_8e8e8e"
+                android:textSize="@dimen/sp12"/>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/dp8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginStart="@dimen/dp32"
+                android:layout_marginEnd="@dimen/dp32"
+                android:background="@drawable/drawable_edit_text">
+
+                <com.rilixtech.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="@dimen/dp5"
+                    app:ccp_backgroundColor="@color/white"
+                    app:ccp_defaultNameCode="@string/country_india_code"
+                    app:ccp_dialogTextColor="@color/black"
+                    app:ccp_hideNameCode="true"
+                    app:ccp_textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/mobileET"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_toEndOf="@id/ccp"
+                    android:background="@null"
+                    android:hint="@string/enter_your_mobile_number"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:paddingStart="@dimen/dp5"
+                    android:paddingEnd="@dimen/dp5"
+                    android:textSize="@dimen/sp16" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnGetOtp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginStart="@dimen/dp32"
+            android:layout_marginTop="@dimen/dp50"
+            android:layout_marginEnd="@dimen/dp32"
+            android:background="@drawable/drawable_bg_btn_new"
+            android:text="@string/get_otp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/registerUsingEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp40"
+            android:text="Login / Register Using Email"
+            android:textColor="@color/sky_blue"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/registerUsingMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp40"
+            android:text="Login / Register Using Mobile"
+            android:textColor="@color/sky_blue"
+            android:textSize="@dimen/sp12"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/otp_reg_addimageLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp10"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingRight="@dimen/dp20"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/fbIV"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp60"
+                android:layout_marginEnd="@dimen/dp10"
+                android:background="#00ffffff"
+                android:src="@mipmap/facebook"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:id="@+id/gpIV"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp60"
+                android:layout_marginStart="@dimen/dp10"
+                android:background="#00ffffff"
+                android:src="@mipmap/google" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

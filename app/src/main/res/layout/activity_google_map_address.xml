@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="0dp"
+                android:id="@+id/googlemaplayout"
+                >
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".kotlin.GoogleMapAddress" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/googlemaplayout"
+                android:layout_marginTop="5dp"
+                android:id="@+id/orlayout"
+
+                android:paddingLeft="0dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Select Delivery Location "
+                    android:visibility="visible"
+                    android:id="@+id/fillyouraddress"
+                    android:layout_margin="@dimen/dp10"
+                    android:textSize="@dimen/menu_item_text_size"
+                    android:textColor="@color/black"
+                    />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/fillyouraddress"
+
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fullnamecard"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    card_view:cardBackgroundColor="@color/podcast_row_color"
+                    card_view:cardElevation="5dp"
+                    card_view:cardCornerRadius="1dp" >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/hinttext"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:layout_marginEnd="@dimen/dp10"
+                            android:layout_marginBottom="@dimen/dp10"
+                            android:drawableLeft="@mipmap/pick_address"
+                            android:drawablePadding="@dimen/dp10"
+                            android:gravity="left|center_vertical"
+                            android:text="Your Fetched Location is "
+                            android:textColor="@color/light_black"
+                            android:textSize="@dimen/menu_item_text_size"
+                            android:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/hinttext"
+                            android:orientation="horizontal"
+                            android:weightSum="1.9">
+
+                            <EditText
+                                android:id="@+id/fetchedaddress"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/hinttext"
+                                android:layout_weight="1.9"
+                                android:background="@drawable/bg_edit_text_no_border"
+                                android:hint="Delhi , Noida"
+                                android:inputType="text"
+                                android:padding="@dimen/dp10"
+                                android:textColor="@color/blue" />
+
+                            <TextView
+                                android:id="@+id/changelocation"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.4"
+                                android:accessibilityHeading="true"
+                                android:clickable="true"
+                                android:padding="5dp"
+                                android:text="Change"
+                                android:textColor="@color/blue"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/fullnamecard"
+
+                    android:layout_height="wrap_content"
+                    android:id="@+id/housenumbercard"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    card_view:cardBackgroundColor="@color/podcast_row_color"
+                    card_view:cardElevation="5dp"
+                    card_view:cardCornerRadius="1dp" >
+                    <EditText
+                        android:id="@+id/housenumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:padding="@dimen/dp10"
+                        android:layout_marginBottom="100dp"
+                        android:background="@drawable/bg_edit_text_no_border"
+                        android:hint="Enter House/Flat Number" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Select Delivery Location "
+                        android:visibility="invisible"
+                        android:layout_margin="@dimen/dp10"
+                        android:textSize="@dimen/menu_item_text_size"
+                        android:textColor="@color/black"
+                        />
+                </androidx.cardview.widget.CardView>
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/addressbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="@dimen/dp10"
+
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/blue_button_filled"
+        android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+        android:padding="10dp"
+        android:text="Confirm Location and Proceed"
+        android:textColor="@color/white1" />
+</RelativeLayout>
+

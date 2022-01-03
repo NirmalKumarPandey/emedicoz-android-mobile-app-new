@@ -1,0 +1,371 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nextBtn">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/circle_image_FL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp30">
+
+                <com.emedicoz.app.customviews.CircleImageView
+                    android:id="@+id/cirle_image"
+                    android:layout_width="@dimen/dp120"
+                    android:layout_height="@dimen/dp120"
+                    android:src="@mipmap/default_pic" />
+
+                <ImageView
+                    android:id="@+id/cirle_imageText"
+                    android:layout_width="@dimen/dp120"
+                    android:layout_height="@dimen/dp120"
+                    android:src="@mipmap/default_pic" />
+
+                <ImageView
+                    android:id="@+id/editimage"
+                    android:layout_width="@dimen/dp30"
+                    android:layout_height="27dp"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="@dimen/dp75"
+                    android:background="@drawable/circle_bg_white"
+                    android:padding="@dimen/dp5"
+                    android:src="@mipmap/camera_blue" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/circle_image_FL"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp30"
+                android:layout_marginRight="@dimen/dp20"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/nameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableStart="@mipmap/name"
+                        android:drawablePadding="@dimen/dp17"
+                        android:hint="@string/name"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/dp2"
+                        android:textSize="@dimen/sp12" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/emailET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableStart="@mipmap/email_edit_profile"
+                        android:drawablePadding="@dimen/dp17"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/dp2"
+                        android:textSize="@dimen/sp12" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/emailTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:drawableStart="@mipmap/email"
+                    android:drawablePadding="@dimen/dp17"
+                    android:gravity="center_vertical"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/dp4"
+                    android:textSize="@dimen/sp14"
+                    android:visibility="gone" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/phoneET"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableStart="@mipmap/mobile_edit_profile"
+                        android:drawablePadding="@dimen/dp17"
+                        android:focusable="false"
+                        android:hint="@string/phone_number"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/dp2"
+                        android:textSize="@dimen/sp12" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/phonenumberTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:drawableStart="@mipmap/phone"
+                        android:drawablePadding="@dimen/dp17"
+                        android:gravity="center_vertical"
+                        android:hint="Phone number"
+                        android:inputType="number"
+                        android:padding="@dimen/dp4"
+                        android:textSize="@dimen/sp14" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="@dimen/dp10"
+                        android:background="@drawable/bg_signup_btn"
+                        android:text="Update"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp13" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/damsidTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:drawableStart="@mipmap/token"
+                    android:drawablePadding="@dimen/dp17"
+                    android:gravity="center_vertical"
+                    android:hint="Dams Roll Number"
+                    android:padding="@dimen/dp4"
+                    android:textSize="@dimen/sp14"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/layout_stream"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp3"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp3"
+                            android:src="@mipmap/stream" />
+
+                        <Spinner
+                            android:id="@+id/streamSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp40"
+                            android:layout_marginLeft="@dimen/dp10" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/substreamTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/normal_button_padding_left_right"
+                        android:drawableStart="@mipmap/stream"
+                        android:drawablePadding="@dimen/dp17"
+                        android:gravity="center_vertical"
+                        android:hint="Select Sub Stream"
+                        android:padding="@dimen/dp4"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        android:id="@+id/specialisationTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:drawableStart="@mipmap/specialization"
+                        android:drawablePadding="@dimen/dp17"
+                        android:gravity="center_vertical"
+                        android:hint="Select Specialisation"
+                        android:padding="@dimen/dp4"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp2"
+                    android:layout_marginEnd="@dimen/dp3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/IntcoursesTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:drawableStart="@mipmap/exam_edit_profile"
+                        android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                        android:drawablePadding="@dimen/dp17"
+                        android:gravity="center_vertical"
+                        android:hint="Exam Preparation"
+                        android:paddingStart="@dimen/dp2"
+                        android:paddingTop="@dimen/dp10"
+                        android:paddingBottom="@dimen/dp10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp12" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp2"
+                        android:background="@color/black" />
+
+                    <TextView
+                        android:id="@+id/countryTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:drawableStart="@mipmap/country_edit_profile"
+                        android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                        android:drawablePadding="@dimen/dp24"
+                        android:gravity="center_vertical"
+                        android:hint="Select Country"
+                        android:paddingStart="@dimen/dp2"
+                        android:paddingTop="@dimen/dp10"
+                        android:paddingBottom="@dimen/dp10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp12" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp2"
+                        android:background="@color/black" />
+
+                    <TextView
+                        android:id="@+id/stateTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:drawableStart="@mipmap/state_edit_profile"
+                        android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                        android:drawablePadding="@dimen/dp24"
+                        android:gravity="center_vertical"
+                        android:hint="Select State"
+                        android:paddingStart="@dimen/dp2"
+                        android:paddingTop="@dimen/dp10"
+                        android:paddingBottom="@dimen/dp10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp12" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp2"
+                        android:background="@color/black" />
+
+                    <TextView
+                        android:id="@+id/cityTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:drawableStart="@mipmap/capital_edit_profile"
+                        android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                        android:drawablePadding="@dimen/dp24"
+                        android:gravity="center_vertical"
+                        android:hint="Select Capital"
+                        android:paddingStart="@dimen/dp2"
+                        android:paddingTop="@dimen/dp10"
+                        android:paddingBottom="@dimen/dp10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp12" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp2"
+                        android:background="@color/black" />
+
+                    <TextView
+                        android:id="@+id/collegeTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:drawableStart="@mipmap/university_edit_profile"
+                        android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                        android:drawablePadding="@dimen/dp24"
+                        android:gravity="center_vertical"
+                        android:hint="Select University"
+                        android:paddingStart="@dimen/dp2"
+                        android:paddingTop="@dimen/dp10"
+                        android:paddingBottom="@dimen/dp10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp12" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp2"
+                        android:background="@color/black" />
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/damsidCB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-4dp"
+                    android:layout_marginTop="@dimen/dp25"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingTop="@dimen/dp2"
+                    android:paddingBottom="@dimen/dp2"
+                    android:paddingEnd="@dimen/dp2"
+                    android:text="@string/are_you_a_dams_student"
+                    android:textSize="@dimen/sp13"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@drawable/bg_save_btn"
+        android:paddingLeft="@dimen/normal_button_padding_left_right"
+        android:paddingRight="@dimen/normal_button_padding_left_right"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp13" />
+</RelativeLayout>
+

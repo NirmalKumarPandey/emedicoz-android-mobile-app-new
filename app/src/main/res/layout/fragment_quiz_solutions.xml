@@ -1,0 +1,279 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greayrefcode_light"
+    tools:context="com.emedicoz.app.courses.fragment.Quiz">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--        <ProgressBar
+                    android:id="@+id/timer_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp5"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/dp2"
+                    android:background="@color/white"
+                    android:indeterminate="false"
+                    android:maxHeight="@dimen/dp15"
+                    android:minHeight="@dimen/dp7"
+                    android:scaleY="1.75" />-->
+
+        <!-- <androidx.cardview.widget.CardView
+             android:id="@+id/toolLayoutCV"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/timer_progress"
+             android:layout_marginBottom="@dimen/dp2"
+             android:layout_marginLeft="@dimen/dp7"
+             android:layout_marginRight="@dimen/dp7"
+             android:layout_marginTop="@dimen/dp1"
+             app:cardBackgroundColor="@color/greayrefcode_light"
+             app:cardElevation="@dimen/dp2">
+
+             <LinearLayout
+                 android:id="@+id/tool_layout"
+                 android:layout_width="match_parent"
+                 android:layout_height="60dp"
+                 android:elevation="2dp"
+                 android:orientation="horizontal"
+                 android:paddingBottom="@dimen/dp5"
+                 android:paddingLeft="@dimen/dp7"
+                 android:paddingRight="@dimen/dp7"
+                 android:paddingTop="@dimen/dp5"
+                 android:weightSum="3">
+
+                 <RelativeLayout
+                     android:id="@+id/resumeQuizLL"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:gravity="left">
+
+                     <ImageView
+                         android:id="@+id/playBtn"
+                         android:layout_width="@dimen/dp20"
+                         android:layout_height="match_parent"
+                         android:src="@mipmap/play_" />
+
+                     <TextView
+                         android:id="@+id/playTextTV"
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         android:layout_toRightOf="@+id/playBtn"
+                         android:gravity="center_vertical"
+                         android:paddingLeft="@dimen/dp7"
+                         android:paddingRight="@dimen/dp7"
+                         android:text="Resume"
+                         android:textAllCaps="true"
+                         android:textColor="@color/black"
+                         android:textSize="@dimen/sub_heading_text_size" />
+
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/timeRL"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:gravity="center">
+
+                     <ImageView
+                         android:id="@+id/timeimage"
+                         android:layout_width="@dimen/dp20"
+                         android:layout_height="match_parent"
+                         android:src="@mipmap/clock" />
+
+                     <TextView
+                         android:id="@+id/time_slot"
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         android:layout_centerVertical="true"
+                         android:layout_toRightOf="@id/timeimage"
+                         android:gravity="center_vertical"
+                         android:paddingLeft="@dimen/dp7"
+                         android:paddingRight="@dimen/dp7"
+                         android:text="08:45"
+                         android:textColor="@color/black"
+                         android:textSize="@dimen/sub_heading_text_size" />
+                 </RelativeLayout>
+
+
+                 <RelativeLayout
+                     android:id="@+id/finishQuizLL"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:gravity="right">
+
+                     <ImageView
+                         android:id="@+id/tickblue"
+                         android:layout_width="@dimen/dp20"
+                         android:layout_height="match_parent"
+                         android:src="@mipmap/tick" />
+
+                     <TextView
+                         android:id="@+id/title_score"
+                         android:layout_width="wrap_content"
+                         android:layout_height="match_parent"
+                         android:layout_toRightOf="@+id/tickblue"
+                         android:gravity="center_vertical"
+                         android:paddingLeft="@dimen/dp7"
+                         android:paddingRight="@dimen/dp7"
+                         android:text="FINISH"
+                         android:textAllCaps="true"
+                         android:textColor="@color/black"
+                         android:textSize="@dimen/sub_heading_text_size" />
+
+                 </RelativeLayout>
+
+             </LinearLayout>
+
+         </androidx.cardview.widget.CardView>-->
+
+        <!--<View
+            android:id="@+id/line_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolLayoutCV"
+            android:background="@color/greayrefcode_dark" />-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/controlLayoutCV"
+            android:layout_below="@+id/toolLayoutCV"
+            android:layout_alignParentStart="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp7"
+                android:paddingTop="@dimen/dp5"
+                android:paddingRight="@dimen/dp7"
+                android:paddingBottom="@dimen/dp5">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/questionQuizCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="@dimen/dp2">
+
+                    <com.emedicoz.app.customviews.TestSeriesOptionWebView
+                        android:id="@+id/questionQuizTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp5"
+                        android:text="" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/quizQuestionLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/questionQuizCV"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp5" />
+
+
+                <LinearLayout
+                    android:id="@+id/descriptionTVLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/quizQuestionLL"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/description"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sub_heading_text_size" />
+
+                    <com.emedicoz.app.customviews.TestSeriesOptionWebView
+                        android:id="@+id/descriptionTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp5"
+                        android:text="" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/controlLayoutCV"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dp5"
+            app:cardBackgroundColor="@color/greayrefcode_light"
+            app:cardElevation="@dimen/dp2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="@dimen/dp2"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp7"
+                android:paddingTop="@dimen/dp5"
+                android:paddingRight="@dimen/dp7"
+                android:paddingBottom="@dimen/dp5"
+                android:weightSum="3.4">
+
+                <Button
+                    android:id="@+id/prevQuizBT"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/bg_signup_btn"
+                    android:drawableLeft="@mipmap/back_white"
+                    android:drawablePadding="-8dp"
+                    android:gravity="center"
+                    android:text="@string/prev"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/post_text_size" />
+
+                <TextView
+                    android:id="@+id/quesCount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp7"
+                    android:paddingTop="@dimen/dp5"
+                    android:paddingRight="@dimen/dp7"
+                    android:paddingBottom="@dimen/dp5"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp20" />
+
+                <Button
+                    android:id="@+id/nextQuizBT"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/bg_signup_btn"
+                    android:drawableRight="@mipmap/back_white_right"
+                    android:drawablePadding="-15dp"
+                    android:gravity="center"
+                    android:text="@string/next"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/post_text_size" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</LinearLayout>

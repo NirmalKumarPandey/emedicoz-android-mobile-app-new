@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginTop="@dimen/dp10"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/upcomingClassTV"
+        style="@style/RecordedCoursesCategoryName"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_toStartOf="@id/showAllUpcomingClass"
+        android:text="Upcoming Class" />
+
+    <TextView
+        android:id="@+id/showAllUpcomingClass"
+        style="@style/RecordedCoursesCategoryLink"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/dp10" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inner_recyclerView_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upcomingClassTV" />
+
+</RelativeLayout>

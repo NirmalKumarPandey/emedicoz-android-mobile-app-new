@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp17"
+        android:layout_margin="@dimen/dp10"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:lineSpacingExtra="6.5sp"
+        android:text="@string/book_your_seat" />
+
+
+    <LinearLayout
+        android:id="@+id/f2fClassesLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/bg_registration_pref"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/f2fClassesIV"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="@dimen/dp100"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp15"
+            android:src="@mipmap/ftf_classes_default"/>
+
+        <TextView
+            android:id="@+id/f2fClassesTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp20"
+            android:textStyle="bold"
+            android:textColor="@color/stroke_reg_pref"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_marginBottom="@dimen/dp20"
+            android:text="@string/f_2_f_classes"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/vsatClassesLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/bg_registration_pref"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/vsatClassesIV"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="@dimen/dp100"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp15"
+            android:src="@mipmap/f_t_f_classes"/>
+
+        <TextView
+            android:id="@+id/vsatClassesTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp20"
+            android:textStyle="bold"
+            android:textColor="@color/stroke_reg_pref"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_marginBottom="@dimen/dp20"
+            android:text="@string/vsat_classes"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

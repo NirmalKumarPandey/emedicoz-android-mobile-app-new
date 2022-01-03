@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.activity.OnBoardingActivity">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/onBoardingViewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/wormDotsIndicator"/>
+
+    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+        android:id="@+id/wormDotsIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:dotsColor="@color/blue"
+        app:dotsStrokeColor="@color/gray_8e8e8e"
+        app:dotsCornerRadius="@dimen/dp4"
+        app:dotsSize="@dimen/dp10"
+        app:dotsSpacing="@dimen/dp8"
+        app:dotsStrokeWidth="@dimen/dp1"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/loginRegisterLL"
+        android:layout_marginBottom="@dimen/dp20" />
+
+    <LinearLayout
+        android:id="@+id/loginRegisterLL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp100"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnLoginReg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:text="@string/register_login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp12"
+            android:layout_marginStart="@dimen/dp32"
+            android:layout_marginEnd="@dimen/dp32"
+            android:background="@drawable/drawable_bg_btn_new"/>
+
+        <TextView
+            android:id="@+id/termCondTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/black"
+            android:text="@string/by_login_text"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp10"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

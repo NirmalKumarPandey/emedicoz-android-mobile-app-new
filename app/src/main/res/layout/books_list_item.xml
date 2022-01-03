@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentRv"
+    android:layout_width="173dp"
+    android:layout_height="340dp"
+    android:layout_margin="@dimen/dp5"
+    android:orientation="vertical">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="21dp"
+        android:layout_height="18dp"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/dp5"
+        android:src="@mipmap/heart_book_list_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dp5">
+
+        <RelativeLayout
+            android:id="@+id/bookRV"
+            android:layout_width="113dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp10"
+            android:gravity="center_horizontal">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/bookImg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@mipmap/book_list_img"
+                app:riv_corner_radius="@dimen/dp5" />
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="@dimen/dp14"
+                android:background="@mipmap/new_tag_bg"
+                android:scaleType="fitXY"
+                android:text="New"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+
+
+        </RelativeLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dp5"
+            app:cardCornerRadius="@dimen/dp5">
+
+            <RelativeLayout
+                android:id="@+id/rel_extra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bookRV"
+                android:background="#ffffff">
+
+                <TextView
+                    android:id="@+id/txtRateValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp2"
+                    android:text="4.9"
+                    android:textColor="#373737"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+                <RatingBar
+                    android:id="@+id/ratingRB"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dp5"
+                    android:layout_toEndOf="@+id/txtRateValue"
+                    android:numStars="1"
+                    android:rating="2.0"
+                    android:stepSize="1.0" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/bookNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:minLines="1"
+            android:text="DAMSDAMS Harrison..."
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/authoreNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:minLines="1"
+            android:text="By : Dr. Sumer Sethi"
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+
+        <RelativeLayout
+            android:id="@+id/priceRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/priceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp5"
+                android:text="119"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/mrpTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_toEndOf="@+id/priceTv"
+                android:text="119"
+                android:textSize="13sp"
+                tools:ignore="SmallSp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="@dimen/dp1"
+                android:layout_height="12dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/mrpTv"
+                android:background="@color/greayrefcode_dark" />
+
+            <TextView
+                android:id="@+id/parcentageTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp2"
+                android:layout_toEndOf="@+id/view"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="(28%off)"
+                android:textColor="#428852"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cartCV"
+                android:layout_width="31dp"
+                android:layout_height="@dimen/dp50"
+                app:cardCornerRadius="@dimen/dp5"
+                app:cardElevation="@dimen/dp5">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="#e8e8e8"
+                    android:gravity="center">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:padding="@dimen/dp5"
+                        android:src="@mipmap/shopping_cart_book" />
+                </RelativeLayout>
+                <!--app:srcCompat="@drawable/ic_baseline_shopping_cart_book_24"-->
+            </androidx.cardview.widget.CardView>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+                android:layout_toEndOf="@+id/cartCV"
+                android:background="@drawable/book_list_buynow_bg"
+                android:text="Buy Now"
+                android:textColor="#FFFFFF" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
+
+

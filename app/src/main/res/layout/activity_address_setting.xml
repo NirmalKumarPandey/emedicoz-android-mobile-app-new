@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--  <androidx.appcompat.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/dp56"
+          android:layout_alignParentTop="true"
+          android:background="@color/white"
+         >
+          &lt;!&ndash; android:background="@color/sky_blue"&ndash;&gt;
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+              <ImageView
+                  android:id="@+id/toolbarBackIV"
+                  android:layout_width="@dimen/dp20"
+                  android:layout_height="@dimen/dp20"
+                  android:layout_gravity="center_vertical"
+                  android:src="@mipmap/back_arrow" />
+
+              <TextView
+                  android:id="@+id/toolbarTitleTV"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_vertical"
+                  android:layout_marginStart="@dimen/dp20"
+                  android:text="My Addresses"
+                 android:textColor="@color/black"
+                  android:textSize="@dimen/sp20" />
+              &lt;!&ndash; android:textColor="@color/left_panel_header_text_color"&ndash;&gt;
+              &lt;!&ndash;  android:textStyle="bold"&ndash;&gt;
+
+          </LinearLayout>
+
+      </androidx.appcompat.widget.Toolbar>-->
+
+    <include
+        android:id="@+id/toolbarAddress"
+        layout="@layout/layout_common_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/googlebuttonlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="@dimen/dp5"
+                app:cardElevation="@dimen/dp2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:gravity="center">
+                    <!-- android:background="@drawable/bg_edit_text"-->
+
+
+                    <ImageView
+                        android:id="@+id/addressLocIV"
+                        android:layout_width="@dimen/dp18"
+                        android:layout_height="@dimen/dp18"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/pick_address" />
+
+                    <Button
+                        android:id="@+id/addressfromgoogle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:layout_toEndOf="@id/addressLocIV"
+                        android:background="@color/transparent"
+                        android:text="Auto Fetch From Google"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+                    <!--    android:drawablePadding="@dimen/dp5"-->
+                    <!--   android:drawableLeft="@mipmap/pick_address"-->
+                    <!-- android:drawablePadding="@dimen/dp20"-->
+                    <!--  android:layout_marginLeft="@dimen/dp10"-->
+
+
+                    <ImageView
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:layout_toEndOf="@id/addressfromgoogle"
+                        android:src="@drawable/google_tab">
+
+
+                    </ImageView>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/orlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/googlebuttonlayout"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:weightSum="0.5">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.22">
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:background="@color/black"
+
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.06"
+                        android:gravity="center"
+                        android:paddingBottom="0dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text=" OR "
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/menu_item_text_size"
+                            android:visibility="visible" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.22">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.2dp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/dp10"
+                            android:background="@color/black"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/fillyouraddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/orlayout"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:gravity="left"
+                android:text=" Fill Your Address Detail "
+                android:textColor="@color/black"
+                android:textSize="@dimen/menu_item_text_size"
+                android:visibility="visible"/>
+            <!-- android:textColor="@color/gray_8ba6c1"-->
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/fillyouraddress"
+                android:orientation="vertical"
+                android:padding="@dimen/dp20">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Full Name"
+                    app:hintTextColor="@color/address_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/fillyouraddress"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:background="@color/white"
+                        android:drawablePadding="@dimen/dp10" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/light_gray"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:paddingBottom="@dimen/dp30"
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/ic_baseline_phone_24"/>
+
+                    </LinearLayout>
+
+
+
+                    <com.rilixtech.CountryCodePicker
+                        android:id="@+id/fragment_signup_next_ccp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        app:ccp_arrowSize="@dimen/dp25"
+                        app:ccp_defaultNameCode="IN"
+                        app:ccp_hideNameCode="true" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:layout_marginBottom="12dp"
+                        android:hint="Enter Phone Number"
+                        app:hintTextColor="@color/address_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/phonenumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:drawablePadding="@dimen/dp10"
+                            android:inputType="number"
+                            android:background="@color/white"
+                            android:maxLength="10" />
+                        <!-- android:drawableLeft="@drawable/ic_baseline_phone_24"-->
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/light_gray"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:hint="Enter Pincode"
+                        app:hintTextColor="@color/address_text_color">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/pincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/fullNameTv"
+                            android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                            android:background="@color/white"
+                            android:drawablePadding="@dimen/dp10" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <ImageView
+                        android:id="@+id/searchPin"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:src="@mipmap/search" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/light_gray"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Enter House Number / Flat No / Floor"
+                    app:hintTextColor="@color/address_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/houseno"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/fullNameTv"
+                        android:drawableLeft="@drawable/ic_baseline_house_24"
+                        android:background="@color/white"
+                        android:drawablePadding="@dimen/dp10" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/light_gray"/>
+
+
+                <LinearLayout
+                    android:id="@+id/citystatelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/housenocard"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/state"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:entries="@array/feedTypeArray"
+                            android:padding="@dimen/dp10"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            android:visibility="gone" />
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:hint="State"
+                            app:hintTextColor="@color/address_text_color">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/statebox"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_below="@+id/fullNameTv"
+                                android:background="@color/white"
+                                android:drawableLeft="@drawable/ic_baseline_location_city_24"
+                                android:textColor="@color/primary_text_color_selector"
+                                android:drawablePadding="@dimen/dp10"
+                                android:focusable="false" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp1"
+                            android:background="@color/light_gray"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <Spinner
+                            android:id="@+id/city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:entries="@array/feedTypeArray"
+                            android:padding="@dimen/dp10"
+                            android:spinnerMode="dropdown"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            android:visibility="gone" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:hint="City"
+                            app:hintTextColor="@color/address_text_color">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/citybox"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@color/white"
+                                android:drawableLeft="@drawable/ic_baseline_location_city_24"
+                                android:drawablePadding="@dimen/dp10"
+                                android:textColor="@color/primary_text_color_selector"
+                                android:focusable="false" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp1"
+                            android:background="@color/light_gray"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/latlonglayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/citystatelayout"
+                    android:layout_margin="@dimen/dp10"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:padding="5dp"
+                            card_view:cardBackgroundColor="@color/podcast_row_color"
+                            card_view:cardCornerRadius="1dp"
+                            card_view:cardElevation="5dp">
+
+                            <EditText
+                                android:id="@+id/latbox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_edit_text_no_border"
+                                android:hint=" Latitude"
+                                android:inputType="numberDecimal"
+                                android:padding="@dimen/dp10" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:padding="5dp"
+                            card_view:cardBackgroundColor="@color/podcast_row_color"
+                            card_view:cardCornerRadius="1dp"
+                            card_view:cardElevation="5dp">
+
+                            <EditText
+                                android:id="@+id/longbox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_edit_text_no_border"
+                                android:hint="Longitude"
+                                android:inputType="numberDecimal"
+                                android:padding="@dimen/dp10" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <Spinner
+                    android:id="@+id/country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/feedTypeArray"
+                    android:padding="@dimen/dp10"
+                    android:spinnerMode="dropdown"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    android:visibility="gone" />
+
+                <!-- <TextView
+                     android:id="@+id/countrybox"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:drawableLeft="@drawable/ic_baseline_flag_24"
+                     android:drawablePadding="@dimen/dp10"
+                     android:focusable="false"
+                     android:clickable="false"
+                     android:hint="Country"
+                     android:inputType="text"
+                     android:paddingTop="@dimen/dp10"
+                     android:paddingBottom="@dimen/dp10"
+                     android:textColor="@color/black" />-->
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Country"
+                    app:hintTextColor="@color/address_text_color">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/countrybox"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/fullNameTv"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/ic_baseline_flag_24"
+                        android:drawablePadding="@dimen/dp10"
+                        android:background="@color/white"
+                        android:focusable="false"
+                        android:inputType="text"
+                        android:textColor="@color/primary_text_color_selector"
+                        app:hintTextColor="@color/black"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/light_gray"/>
+
+                <CheckBox
+                    android:id="@+id/checkedTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/countrycard"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:checked="true"
+                    android:padding="@dimen/dp10"
+                    android:text="Set This as my default address"
+                    android:textColorHint="@color/black"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/addressbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkedTextView"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:background="@drawable/blue_button_filled"
+                    android:gravity="center|center_vertical"
+                    android:padding="10dp"
+                    android:text="Save Address"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white1" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

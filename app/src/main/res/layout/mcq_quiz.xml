@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mcqlayout_LL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:minHeight="@dimen/dp30"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp5"
+    android:paddingTop="@dimen/dp7"
+    android:paddingRight="@dimen/dp5"
+    android:paddingBottom="@dimen/dp7">
+
+    <TextView
+        android:id="@+id/optionIconTV"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:layout_marginTop="@dimen/dp5"
+        android:background="@drawable/circle_bg"
+        android:gravity="center"
+        android:padding="@dimen/dp3"
+        android:text="A"
+        android:textSize="@dimen/sub_heading_text_size" />
+
+    <com.emedicoz.app.customviews.TestSeriesOptionWebView
+        android:id="@+id/optionTextTV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp7"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/dp3" />
+
+    <LinearLayout
+        android:id="@+id/correctLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/correctIV"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp7"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout>

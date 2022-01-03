@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp16"
+    android:layout_marginEnd="@dimen/dp16"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lytRedeem">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_redeem_offers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        tools:listitem="@layout/big_offer_item_view"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never" >
+    </androidx.recyclerview.widget.RecyclerView>
+</androidx.constraintlayout.widget.ConstraintLayout>

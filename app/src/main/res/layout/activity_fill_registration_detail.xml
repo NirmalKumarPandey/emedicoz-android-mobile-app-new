@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_common_toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60">
+
+        <TextView
+            android:id="@+id/courseTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp5"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_reg_tab_selected"
+            android:padding="@dimen/dp8"
+            android:text="@string/course_reg"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/reg_tab_text_color"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/studentTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp5"
+            android:layout_weight="1"
+            android:padding="@dimen/dp8"
+            android:text="@string/student_reg"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/reg_tab_text_color"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/paymentTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp5"
+            android:layout_weight="1"
+            android:padding="@dimen/dp8"
+            android:text="@string/payment_reg"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/reg_tab_text_color"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp2"
+        android:background="@color/reg_screen_divider_color"/>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp10"/>
+
+</LinearLayout>

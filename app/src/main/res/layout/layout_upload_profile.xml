@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="262dp"
+        android:layout_height="155dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dp30"
+        android:background="@color/progress_grey">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/uploadPicIV"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_action_profile_pic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_profile_picture"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/sp12"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_below="@id/uploadPicIV"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp18"
+        android:layout_marginBottom="@dimen/dp30"
+        android:background="@drawable/drawable_bg_btn_new"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp12" />
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lytHelpSupportHeader"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <RelativeLayout
+            android:id="@+id/lytHelpDesk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imgBackPressHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp15"
+                android:layout_marginTop="37dp"
+                android:layout_marginBottom="@dimen/dp16"
+                app:srcCompat="@drawable/ic_arrowback" />
+
+            <TextView
+                android:id="@+id/toolbartitleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp17"
+                android:layout_toEndOf="@+id/imgBackPressHelp"
+                android:fontFamily="@font/helvetica_neue_med"
+                android:letterSpacing="0.04"
+                android:text="@string/help_and_supports"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/lytSearchView"
+            android:layout_marginTop="@dimen/dp24"
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            android:background="@drawable/bg_transparent_view_grey_corner"
+            android:layout_below="@+id/lytHelpDesk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <EditText
+                android:id="@+id/helpSearchFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12"
+                android:layout_marginTop="@dimen/dp11"
+                android:layout_marginEnd="@dimen/dp12"
+                android:layout_marginBottom="@dimen/dp8"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="Search for your queries"
+                android:imeOptions="actionSearch"
+                android:maxLength="40"
+                android:maxLines="1"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp10" />
+
+
+            <ImageView
+                android:layout_marginEnd="@dimen/dp12"
+                android:id="@+id/img_help_search_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_round_search_24"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/img_help_clear_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp12"
+                android:src="@mipmap/cross_"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

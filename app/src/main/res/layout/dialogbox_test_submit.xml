@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_dialogbox"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/submitTest1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rectangle_white_grey_gradient"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:text="Submit Test"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp17"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:orientation="vertical"
+        android:padding="@dimen/dp10">
+
+        <TextView
+            android:id="@+id/tv_submit_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10"
+            android:text="Do you want to submit the test ?"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/notDisplayed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGray2" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/dp1"
+                    android:layout_height="@dimen/dp30"
+                    android:background="@color/colorGray2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Attempted"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp13"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="@dimen/dp1"
+                    android:layout_height="@dimen/dp30"
+                    android:background="@color/colorGray2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Unattempted"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp13"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="@dimen/dp1"
+                    android:layout_height="@dimen/dp30"
+                    android:background="@color/colorGray2" />
+
+                <TextView
+                    android:id="@+id/marked1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Marked"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp13"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/markedView1"
+                    android:layout_width="@dimen/dp1"
+                    android:layout_height="@dimen/dp30"
+                    android:background="@color/colorGray2" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGray2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <View
+                    android:layout_width="@dimen/dp1"
+                    android:layout_height="@dimen/dp30"
+                    android:background="@color/colorGray2" />
+
+                <TextView
+                    android:id="@+id/answeredTV"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Answered"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp13" />
+
+                <View
+                    android:layout_width="@dimen/dp1"
+                    android:layout_height="@dimen/dp30"
+                    android:background="@color/colorGray2" />
+
+                <TextView
+                    android:id="@+id/unansweredTV"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Unanswered"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp13" />
+
+                <View
+                    android:layout_width="@dimen/dp1"
+                    android:layout_height="@dimen/dp30"
+                    android:background="@color/colorGray2" />
+
+                <TextView
+                    android:id="@+id/markedTV"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Marked"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp13" />
+
+                <View
+                    android:id="@+id/markedView2"
+                    android:layout_width="@dimen/dp1"
+                    android:layout_height="@dimen/dp30"
+                    android:background="@color/colorGray2" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGray2" />
+
+
+            <TextView
+                android:id="@+id/tv_unattempt_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:gravity="center"
+                android:text="You have 300 unattempted questions"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp15"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGray2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp15"
+            android:gravity="center"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="@dimen/dp150"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginLeft="@dimen/dp10"
+                android:background="@drawable/bg_round_corner_fill_red"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="@dimen/dp150"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@drawable/bg_round_corner_fill_green"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

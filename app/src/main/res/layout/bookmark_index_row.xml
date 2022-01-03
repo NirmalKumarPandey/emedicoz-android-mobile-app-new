@@ -1,0 +1,60 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/upperPanelFeed"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp5"
+    app:cardElevation="@dimen/dp2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp7"
+        android:paddingBottom="@dimen/dp7">
+
+        <ImageView
+            android:id="@+id/profilepicIVText"
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+            android:src="@mipmap/play"
+            android:tint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/feed_time_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/small_text_size" />
+
+        <TextView
+            android:id="@+id/feed_tittle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2.5"
+            android:maxLines="1"
+            android:paddingStart="@dimen/dp7"
+            android:text="Topic 11"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small_text_size" />
+
+        <ImageView
+            android:id="@+id/del_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/delete_red"
+            android:tint="@color/colorPrimary"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+

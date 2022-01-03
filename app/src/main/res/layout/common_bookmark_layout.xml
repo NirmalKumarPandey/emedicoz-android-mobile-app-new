@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/commonBookmarkLL"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp50"
+    android:layout_marginTop="@dimen/dp5"
+    android:layout_marginLeft="@dimen/dp5"
+    android:layout_marginRight="@dimen/dp5"
+    android:visibility="visible"
+    android:background="@drawable/bg_capsule_stroke_blue">
+
+    <ImageView
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dp10"
+        android:src="@mipmap/ic_common_bookmark"/>
+
+    <TextView
+        android:id="@+id/commonBookmarkTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/savedNotes"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp12"
+        android:padding="@dimen/dp5"
+        android:textStyle="bold"/>
+
+</LinearLayout>

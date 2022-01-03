@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailCourse"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="@color/greayrefcode_light"
+
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp2"
+        android:elevation="@dimen/dp3"
+        app:cardCornerRadius="@dimen/dp20">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp10">
+
+            <RelativeLayout
+                android:id="@+id/layout_tags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_course_category"
+                    style="@style/CourseLabelTextStyle"
+                    android:layout_marginStart="@dimen/dp7"
+                    android:layout_marginEnd="@dimen/dp1"
+                    android:background="@drawable/background_grey"
+                    android:padding="@dimen/dp1"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingEnd="@dimen/dp10"
+                    android:text=""
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_course_fee_type"
+                    style="@style/CourseLabelTextStyle"
+                    android:layout_marginStart="@dimen/dp1"
+                    android:layout_toEndOf="@+id/tv_course_category"
+                    android:background="@drawable/background_red"
+                    android:padding="@dimen/dp1"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingEnd="@dimen/dp10"
+                    android:text="@string/paid" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_wishlist"
+                    android:layout_width="@dimen/dp22"
+                    android:layout_height="@dimen/dp22"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/dp3"
+                    android:src="@drawable/wishlist_selected" />
+            </RelativeLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/course_image"
+                style="@style/RecordedCoursesShapeAbleImageSize"
+                android:layout_below="@+id/layout_tags"
+                app:shapeAppearanceOverlay="@style/RoundImageView"
+                tools:src="@tools:sample/avatars" />
+
+
+            <TextView
+                android:id="@+id/tv_course_name"
+                style="@style/CourseHeaderTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_tags"
+                android:layout_marginStart="@dimen/dp7"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp7"
+                android:layout_toStartOf="@+id/course_price"
+                android:layout_toEndOf="@+id/course_image"
+                android:gravity="bottom"
+                android:textAlignment="gravity"
+                tools:text="djwhdjwhjsajhdjabdhbdhbdhjwgjhdgwjhgdhwdbhjhdbbchsjd" />
+
+
+            <RatingBar
+                android:id="@+id/course_rating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_course_name"
+                android:layout_margin="@dimen/dp5"
+                android:layout_toEndOf="@+id/course_image"
+                android:progressTint="@color/stay_skyBlue"
+                android:numStars="5"
+                android:rating="2.3"
+                android:stepSize="1.0" />
+
+            <Button
+                android:id="@+id/enroll_btn"
+                style="@style/RattingRedButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_course_name"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_btn_red"
+                android:text="@string/enroll" />
+
+
+            <TextView
+                android:id="@+id/course_price"
+                style="@style/CourseHeaderTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/enroll_btn"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp12"
+                android:gravity="bottom"
+                android:text="@string/_600000"
+                android:textAlignment="gravity" />
+
+            <TextView
+                android:id="@+id/course_enrolled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/course_rating"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_toEndOf="@+id/course_image"
+                android:text="@string/_113_enrolled"
+                android:textSize="9sp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/tv_course_rating"
+                style="@style/RatingCourseTextStyle"
+                android:layout_below="@id/tv_course_name"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_toEndOf="@+id/course_rating"
+                android:text="@string/_4_9" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

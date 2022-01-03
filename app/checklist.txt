@@ -1,0 +1,24 @@
+eMedicoz checklist:
+Check these points before proceeding with release build
+
+1. API.java: Ensure these two URL's point to production.
+     String BASE_URL = "http://d85g0bvcnm0si.cloudfront.net/";
+     String BASE_URL_DOMAIN = "d85g0bvcnm0si.cloudfront";
+
+2. AndroidManifest.xml, StorageProvider.java, eMedicozStorage.java
+
+    Authorities must have the value as,
+    com.emedicoz.app.Utils.OfflineData.StoreProvider
+
+    com.emedicoz.app.Model.offlineData: DONOT ever change this class file
+                                        DONOT ever change the package of StoreProvider.java & offlineData.java
+
+3. build.gradle (app)
+    VERSION_CODE and VERSION_NAME must be increased by 1 from previous version.
+
+4. Build variant should be selected as *release*, As this will manages the
+    a. emulator check
+    b. screenshot functionality
+
+5. Check Amazon s3 bucket URL and prefix, terms URL and privacy URL in Const.java
+6. Check REGISTRATION_URL_VSAT, REGISTRATION_URL_FTF.

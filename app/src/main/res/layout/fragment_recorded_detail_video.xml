@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/dp200"
+    android:layout_margin="@dimen/dp10"
+    android:layout_marginTop="@dimen/dp20"
+    tools:context=".recordedCourses.fragment.CourseDetailVideoFragment">
+
+    <TextView
+        android:id="@+id/tv_curriculum_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/RecordedCourseDetailText"
+        android:layout_marginStart="@dimen/dp15"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/dp10"
+        android:text="@string/curriculum_header" />
+
+    <TextView
+        android:id="@+id/curriculum_header_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        style="@style/RecordedCourseDetailText"
+        android:layout_marginEnd="@dimen/dp15"
+        android:layout_toEndOf="@+id/tv_curriculum_header"
+        android:textAlignment="textEnd"
+        android:textStyle="bold" />
+
+    <ExpandableListView
+        android:id="@+id/curriculumExpandList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_curriculum_header"
+        android:divider="@null"
+        android:groupIndicator="@null"
+        android:nestedScrollingEnabled="true"
+        tools:listitem="@layout/course_detail_row_item_module" />
+
+
+</RelativeLayout>

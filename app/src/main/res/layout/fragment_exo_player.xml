@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/anyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/lay_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/player_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/page_background"
+            android:focusable="true"
+            android:keepScreenOn="true"
+            android:padding="0dp"
+            app:auto_show="false"
+            app:controller_layout_id="@layout/exo_player_control_view"
+            app:fastforward_increment="10000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:repeat_toggle_modes="none"
+            app:resize_mode="fill"
+            app:rewind_increment="10000"
+            app:surface_type="surface_view"
+            app:use_controller="true" />
+
+        <TextView
+            android:id="@+id/durationTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/dp3"
+            android:layout_marginBottom="@dimen/dp3"
+            android:text="Duration"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/floatingText_video_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp12"
+            android:layout_marginRight="@dimen/dp5"
+            android:background="@color/transparent"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:gravity="center_horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:minWidth="@dimen/dp150"
+            android:paddingTop="@dimen/dp12"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/floatingColorText"
+            android:textSize="@dimen/sp11"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:indeterminateDrawable="@drawable/circular_progress_bar" />
+
+        <RelativeLayout
+            android:id="@+id/layout_retry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/transparent_background"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/dp12">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/error_loading_the_video"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp13" />
+
+                <Button
+                    android:id="@+id/retry_button"
+                    style="@style/DemoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:background="@drawable/bg_retry_bg"
+                    android:paddingLeft="@dimen/dp20"
+                    android:paddingRight="@dimen/dp20"
+                    android:text="@string/retry"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp13" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_video_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_below="@+id/lay_player"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:padding="@dimen/dp5"
+            android:paddingStart="@dimen/dp5"
+            android:paddingEnd="@dimen/dp5"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp15"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/light_grey" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/no_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="@string/internet_error_message"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp15"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_time_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/transparent"
+        android:text=""
+        android:textColor="@color/red"
+        android:textSize="@dimen/sp13" />
+
+
+</RelativeLayout>

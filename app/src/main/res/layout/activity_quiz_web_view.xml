@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar0"
+        layout="@layout/main_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/tabanim_appbar0"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/actionBarSize">-->
+
+    <!--<androidx.appcompat.widget.Toolbar-->
+    <!--android:id="@+id/tabanim_toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="?attr/actionBarSize"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--app:layout_scrollFlags="scroll|enterAlways"-->
+    <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textAppName"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center"-->
+    <!--android:paddingLeft="@dimen/dp32"-->
+    <!--android:paddingRight="@dimen/dp32"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="@dimen/sub_heading_text_size" />-->
+    <!---->
+    <!--</RelativeLayout>-->
+
+    <ImageView
+        android:id="@+id/imgGIF"
+        android:layout_width="@dimen/dp250"
+        android:layout_height="@dimen/dp250"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/progress_bar_emedicoz3"
+        android:visibility="visible" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar0"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/layout_error_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar0" />
+</RelativeLayout>

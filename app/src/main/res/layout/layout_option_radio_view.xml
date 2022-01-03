@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textOptionRadio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp8"
+        android:text="Option Layout True False"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp16" />
+
+    <RadioGroup
+        android:id="@+id/myRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:checkedButton="@+id/sound"
+        android:padding="@dimen/dp8">
+
+
+        <RadioButton
+            android:id="@+id/trueRB"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:background="@drawable/radio_button_background"
+            android:text="True"
+            android:textSize="@dimen/sp18" />
+
+        <RadioButton
+            android:id="@+id/falseRB"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/radio_button_background"
+            android:text="False"
+            android:textSize="@dimen/sp18" />
+
+    </RadioGroup>
+
+</LinearLayout>

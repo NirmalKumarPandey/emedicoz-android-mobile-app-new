@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_quiz_grey"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/titleExamPrep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="@dimen/dp5"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp3"
+        android:textColor="@color/black"
+        android:textSize="@dimen/post_text_size" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/examPrepLayerRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleExamPrep"
+        android:background="@color/light_quiz_grey"
+        android:overScrollMode="never" />
+
+</RelativeLayout>

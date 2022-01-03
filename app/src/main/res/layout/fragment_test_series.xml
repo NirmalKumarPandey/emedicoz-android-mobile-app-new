@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedSV"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scaleType="centerCrop">
+
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/dams_logo_bg"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp10"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5">
+
+                <TextView
+                    android:id="@+id/tv_question"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/layout_button"
+                    android:background="@color/transparent"
+                    android:nestedScrollingEnabled="true"
+                    android:padding="@dimen/dp5"
+                    android:scrollbars="none"
+                    android:text=""
+                    android:textColor="@color/question_text_color"
+                    android:textSize="@dimen/sp17" />
+
+                <LinearLayout
+                    android:id="@+id/layout_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_bookmark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp5"
+                        android:src="@mipmap/bookmark_test" />
+
+                    <ImageView
+                        android:id="@+id/img_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp5"
+                        android:src="@mipmap/share" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imgQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp200"
+                android:layout_margin="@dimen/dp10"
+                android:visibility="gone" />
+
+            <!-- viewpager to show images -->
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/viewPagerRL"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp200">
+            <androidx.viewpager.widget.ViewPager
+                android:layout_margin="@dimen/dp10"
+                android:id="@+id/viewPagerMain"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_alignParentBottom="true"
+                android:layout_alignBottom="@+id/viewPagerMain"
+                android:id="@+id/tab_layout"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <WebView
+                android:id="@+id/table_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/mcqoptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginBottom="@dimen/dp5"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp5"
+                android:paddingRight="@dimen/dp5" />
+
+            <LinearLayout
+                android:id="@+id/LLmatchinquestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginBottom="@dimen/dp5"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp5"
+                android:paddingRight="@dimen/dp5"
+                android:visibility="gone">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp5"
+                    app:cardCornerRadius="@dimen/dp4"
+                    app:cardElevation="@dimen/dp4">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvmatchinquestion2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvmatchinquestion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trueFalseRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/fibOptionsRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/writeAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp5"
+                    android:text="Write Your Answer Here:-"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp18"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/fibOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/writeAnswer"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp5"
+                    android:paddingRight="@dimen/dp5" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/percentageBottomLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/percentageTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="44%"
+                    android:textSize="6sp"></TextView>
+
+                <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
+                    android:id="@+id/circularProgress"
+                    android:layout_width="@dimen/dp40"
+                    android:layout_height="@dimen/dp40"
+                    app:direction="counterclockwise"
+                    app:drawDot="false"
+                    app:progressColor="#66bb6a"
+                    app:progressStrokeWidth="@dimen/dp8"
+                    app:textColor="@color/transparent"
+                    app:textSize="0sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/percentageTextTV"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp30"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="3sp"
+               android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp20"
+                android:background="@drawable/percentage_exp_bg"
+                android:layout_marginEnd="@dimen/dp15"
+                android:textColor="@color/percentage_text_color"
+                android:textSize="@dimen/sp12"
+                android:textStyle="normal"
+                android:layout_marginStart="@dimen/dp20"
+                tools:text="44% Got it right " />
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_test_reference" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp10">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/ll_bottom"
+                    android:layout_alignParentTop="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/explanationLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp10"
+                            android:background="@drawable/bg_explanation"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/dp2"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/dp5"
+                                    android:layout_weight="1"
+                                    android:background="@color/blue" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:paddingTop="@dimen/dp5"
+                                    android:paddingBottom="@dimen/dp5"
+                                    android:text="Explanation"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/sp16"
+                                    android:textStyle="bold" />
+
+
+                                <View
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/dp2"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="@dimen/dp5"
+                                    android:layout_weight="1"
+                                    android:background="@color/blue" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/explanationTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:paddingStart="@dimen/dp10"
+                                android:paddingTop="@dimen/dp5"
+                                android:paddingEnd="@dimen/dp5"
+                                android:paddingBottom="@dimen/dp5"
+                                android:text="Explanation:"
+                                android:textSize="@dimen/sp15" />
+
+                            <ImageView
+                                android:id="@+id/imgExplanation"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp200"
+                                android:layout_marginStart="@dimen/dp10"
+                                android:layout_marginEnd="@dimen/dp10"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/checkBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginLeft="@dimen/dp10"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:background="@drawable/bg_mcq_unselected">
+
+                                <ImageView
+                                    android:id="@+id/imgGuess"
+                                    android:layout_width="@dimen/dp15"
+                                    android:layout_height="@dimen/dp15"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/dp10"
+                                    android:src="@mipmap/guessing_answer" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="35dp"
+                                    android:layout_toEndOf="@id/imgGuess"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp5"
+                                    android:text="Guessing Answer"
+                                    android:textColor="@color/black" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/mark_for_review"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:layout_marginEnd="@dimen/dp10"
+                                android:background="@drawable/bg_mcq_unselected">
+
+                                <ImageView
+                                    android:id="@+id/imgMark"
+                                    android:layout_width="@dimen/dp15"
+                                    android:layout_height="@dimen/dp15"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/dp10"
+                                    android:src="@mipmap/guessing_answer" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="35dp"
+                                    android:layout_toEndOf="@id/imgMark"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp5"
+                                    android:text="Mark For Review"
+                                    android:textColor="@color/black" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/unmark_for_review"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:layout_marginEnd="@dimen/dp10"
+                                android:background="@drawable/bg_unmark_review"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:id="@+id/imgUnMark"
+                                    android:layout_width="@dimen/dp15"
+                                    android:layout_height="@dimen/dp15"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/dp10"
+                                    android:src="@mipmap/guessing_answer_active" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="35dp"
+                                    android:layout_toEndOf="@id/imgUnMark"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp5"
+                                    android:text="Unmark For Review"
+                                    android:textColor="@color/black" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tv_uid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/unmark_for_review"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:gravity="center"
+                            android:text="eMedicocoz QUID 297666"
+                            android:textSize="@dimen/post_text_size" />
+
+                        <TextView
+                            android:id="@+id/tv_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_uid"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:gravity="center|start"
+                            android:text="surya singh@gmail.com"
+                            android:textSize="@dimen/post_text_size" />
+
+                        <TextView
+                            android:id="@+id/tv_report_error"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_email"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:drawableLeft="@mipmap/error_test"
+                            android:drawablePadding="@dimen/dp5"
+                            android:gravity="center|start"
+                            android:padding="@dimen/dp5"
+                            android:text="Report Error"
+                            android:textColor="#f3333a"
+                            android:textSize="@dimen/post_text_size" />
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

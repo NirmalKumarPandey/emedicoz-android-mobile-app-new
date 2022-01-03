@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/app_bar_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search"
+        android:visible="false"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/ic_baseline_notifications_24"
+        android:title="@string/notifications"
+        app:actionLayout="@layout/notification_count"
+        app:showAsAction="always"/>
+
+
+    <item
+        android:id="@+id/savedNotes"
+        android:icon="@drawable/white_bookmark_icon"
+        android:title="@string/my_bookmarks"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/myCart"
+        android:icon="@drawable/ic_cart"
+        android:title="@string/my_cart"
+        app:showAsAction="always"
+        app:actionLayout="@layout/cart_count"/>
+
+
+    <item
+        android:id="@+id/iv_course_drawer"
+        android:icon="@mipmap/right_view"
+        android:title="@string/my_cart"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+</menu>

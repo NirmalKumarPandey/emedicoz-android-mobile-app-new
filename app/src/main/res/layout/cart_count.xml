@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_cart_count"
+    android:layout_width="@dimen/dp35"
+    android:layout_height="@dimen/dp35">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="@dimen/dp35"
+        android:layout_height="@dimen/dp35"
+        app:srcCompat="@drawable/ic_cart"
+        android:scaleType="center"/>
+
+    <TextView
+        android:id="@+id/tv_cartCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="0"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/toolbar_bg_color"
+        android:textSize="@dimen/dp12"
+        android:textStyle="bold"/>
+    //android:background="@drawable/round_bg"
+</RelativeLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentCV"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="@dimen/dp4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp10"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/dp10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/topicIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp35"
+                        android:layout_marginStart="@dimen/dp3"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:src="@mipmap/courses_blue" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Preclinicals"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/post_text_size" />
+
+                        <TextView
+                            android:id="@+id/tv_studied_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/title"
+                            android:layout_marginTop="@dimen/dp7"
+                            android:maxLines="1"
+                            android:textSize="@dimen/sp11" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_start_review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/capsule_selector_button_fill_blue"
+                        android:paddingStart="@dimen/dp10"
+                        android:paddingEnd="@dimen/dp10"
+                        android:text="@string/start_review"
+                        android:textAllCaps="false"
+                        android:textColor="@color/left_panel_header_text_color"
+                        android:textSize="@dimen/sp12" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_arrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:orientation="horizontal"
+                    android:paddingStart="@dimen/dp1">
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp25"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:rotation="90"
+                        android:src="@mipmap/back_right" />
+
+                    <TextView
+                        android:id="@+id/tv_count_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp15"
+                        android:layout_marginTop="@dimen/dp7"
+                        android:layout_toEndOf="@+id/iv_arrow"
+                        android:maxLines="1"
+                        android:text="59 Left"
+                        android:textSize="@dimen/sp11" />
+
+                    <TextView
+                        android:id="@+id/tv_recview_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/dp7"
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp13"
+                        android:textStyle="bold|italic" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_review_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp10"
+            android:background="@drawable/bg_round_corner_fill_orange_light"
+            android:overScrollMode="never"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

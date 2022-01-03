@@ -1,0 +1,1040 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/greayrefcode_light"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/calender_date"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp30"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:visibility="visible"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/previous_date"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp28"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.2"
+                android:background="@drawable/round_blue_bg"
+                android:paddingTop="@dimen/dp8"
+                android:paddingBottom="@dimen/dp8"
+                android:src="@mipmap/backward_date_arrow" />
+
+            <TextView
+                android:id="@+id/date_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp28"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+                android:layout_weight="0.6"
+                android:background="@drawable/round_blue_bg"
+                android:gravity="center"
+                android:padding="@dimen/dp5"
+                android:text="17 October 2020"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/next_date"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp28"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.2"
+                android:background="@drawable/round_blue_bg"
+                android:paddingTop="@dimen/dp8"
+                android:paddingBottom="@dimen/dp8"
+                android:src="@mipmap/forward_date_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/greayrefcode_light"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp15"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/blue"
+                app:cardElevation="@dimen/dp2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/testSeriesName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp5"
+                        android:text="Test Name"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp11"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/totalQues"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp5"
+                        android:text="Total Question"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp11"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/totalTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dp5"
+                        android:text="Total Time"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp11"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp15"
+                android:layout_marginBottom="@dimen/dp10">
+
+                <RelativeLayout
+                    android:id="@+id/layout_rank_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:layout_marginBottom="@dimen/dp10"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dp4"
+                        app:cardElevation="@dimen/dp2">
+
+                        <LinearLayout
+                            android:id="@+id/noUserYetSecond"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="No User Yet"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp13" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cardDetail2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <com.emedicoz.app.customviews.CircleImageView
+                                    android:id="@+id/imgSecondRanker"
+                                    android:layout_width="@dimen/dp30"
+                                    android:layout_height="@dimen/dp30"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:src="@mipmap/default_pic" />
+
+                                <ImageView
+                                    android:id="@+id/imgSecondRankerText"
+                                    android:layout_width="@dimen/dp30"
+                                    android:layout_height="@dimen/dp30"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:src="@mipmap/default_pic"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/secondRankerName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:maxLines="1"
+                                    android:paddingStart="@dimen/dp5"
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/sp12"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/secondRankerScore"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/sp12"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/secondRankerTotal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/sp10"
+                                    android:textStyle="bold" />
+
+                                <RelativeLayout
+                                    android:id="@+id/secondRankerDetailRL"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/secondRankerDetail"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginTop="@dimen/dp10"
+                                        android:text="Detail"
+                                        android:textAlignment="center"
+                                        android:textSize="@dimen/sp10"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/dropdownSecond"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/dp10"
+                                        android:layout_marginTop="@dimen/dp10"
+                                        android:layout_toEndOf="@id/secondRankerDetail"
+                                        android:src="@mipmap/result_show_more_down" />
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/secondLL"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp60"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:paddingStart="@dimen/dp5"
+                                        android:text="Right"
+                                        android:textSize="@dimen/sp10" />
+
+                                    <TextView
+                                        android:id="@+id/secondRankerRight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:paddingEnd="@dimen/dp5"
+                                        android:text="Right"
+                                        android:textColor="@color/correct"
+                                        android:textSize="@dimen/sp10" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:paddingStart="@dimen/dp5"
+                                        android:text="Wrong"
+                                        android:textSize="@dimen/sp10" />
+
+                                    <TextView
+                                        android:id="@+id/secondRankerWrong"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:paddingEnd="@dimen/dp5"
+                                        android:text="Right"
+                                        android:textColor="@color/incorrect"
+                                        android:textSize="@dimen/sp10" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:paddingStart="@dimen/dp5"
+                                        android:text="Skipped"
+                                        android:textSize="@dimen/sp10" />
+
+                                    <TextView
+                                        android:id="@+id/secondRankerSkipped"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:paddingEnd="@dimen/dp5"
+                                        android:text="Right"
+                                        android:textColor="@color/skipped"
+                                        android:textSize="@dimen/sp10" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/timeTakenSecond"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:paddingStart="@dimen/dp5"
+                                        android:text="Time"
+                                        android:textSize="@dimen/sp10" />
+
+                                    <TextView
+                                        android:id="@+id/secondRankerTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:paddingEnd="@dimen/dp5"
+                                        android:text="Right"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/sp10" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:id="@+id/second"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:elevation="5dp"
+                        android:src="@mipmap/sec_rank" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_rank_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:visibility="visible"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dp4"
+                        app:cardElevation="@dimen/dp2">
+
+                        <LinearLayout
+                            android:id="@+id/noUserYetFirst"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="No User Yet"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp13" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cardDetail1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <com.emedicoz.app.customviews.CircleImageView
+                                    android:id="@+id/imgFirstRanker"
+                                    android:layout_width="@dimen/dp30"
+                                    android:layout_height="@dimen/dp30"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:src="@mipmap/default_pic" />
+
+                                <ImageView
+                                    android:id="@+id/imgFirstRankerText"
+                                    android:layout_width="@dimen/dp30"
+                                    android:layout_height="@dimen/dp30"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:src="@mipmap/default_pic"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/firstRankerName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:maxLines="1"
+                                    android:paddingStart="@dimen/dp5"
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/sp13"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/firstRankerScore"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/sp13"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/firstRankerTotal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/sp10"
+                                    android:textStyle="bold" />
+
+                                <RelativeLayout
+                                    android:id="@+id/firstRankerDetailRL"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/firstRankerDetail"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginTop="@dimen/dp10"
+                                        android:text="Detail"
+                                        android:textAlignment="center"
+                                        android:textSize="@dimen/sp10"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/dropdownFirst"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/dp10"
+                                        android:layout_marginTop="@dimen/dp10"
+                                        android:layout_toEndOf="@id/firstRankerDetail"
+                                        android:src="@mipmap/result_show_more_down" />
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/firstLL"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp60"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:paddingStart="@dimen/dp5"
+                                        android:text="Right"
+                                        android:textSize="@dimen/sp10" />
+
+                                    <TextView
+                                        android:id="@+id/firstRankerRight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:paddingEnd="@dimen/dp5"
+                                        android:text="Right"
+                                        android:textColor="@color/correct"
+                                        android:textSize="@dimen/sp10" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:paddingStart="@dimen/dp5"
+                                        android:text="Wrong"
+                                        android:textSize="@dimen/sp10" />
+
+                                    <TextView
+                                        android:id="@+id/firstRankerWrong"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:paddingEnd="@dimen/dp5"
+                                        android:text="Right"
+                                        android:textColor="@color/incorrect"
+                                        android:textSize="@dimen/sp10" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:paddingStart="@dimen/dp5"
+                                        android:text="Skipped"
+                                        android:textSize="@dimen/sp10" />
+
+                                    <TextView
+                                        android:id="@+id/firstRankerSkipped"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:paddingEnd="@dimen/dp5"
+                                        android:text="Right"
+                                        android:textColor="@color/skipped"
+                                        android:textSize="@dimen/sp10" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/timeTakenFirst"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:paddingStart="@dimen/dp5"
+                                        android:text="Time"
+                                        android:textSize="@dimen/sp10" />
+
+                                    <TextView
+                                        android:id="@+id/firstRankerTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:paddingEnd="@dimen/dp5"
+                                        android:text="Right"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/sp10" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:id="@+id/first"
+                        android:layout_width="@dimen/dp25"
+                        android:layout_height="@dimen/dp25"
+                        android:layout_alignParentEnd="true"
+                        android:elevation="5dp"
+                        android:src="@mipmap/first_rank" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_rank_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:layout_marginBottom="@dimen/dp10"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/dp4"
+                        app:cardElevation="@dimen/dp2">
+
+                        <LinearLayout
+                            android:id="@+id/noUserYetThird"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:text="No User Yet"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/sp13" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cardDetail3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <com.emedicoz.app.customviews.CircleImageView
+                                    android:id="@+id/imgThirdRanker"
+                                    android:layout_width="@dimen/dp30"
+                                    android:layout_height="@dimen/dp30"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:src="@mipmap/default_pic" />
+
+                                <ImageView
+                                    android:id="@+id/imgThirdRankerText"
+                                    android:layout_width="@dimen/dp30"
+                                    android:layout_height="@dimen/dp30"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:src="@mipmap/default_pic"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/thirdRankerName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:maxLines="1"
+                                    android:paddingStart="@dimen/dp5"
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/sp13"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/thirdRankerScore"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/sp13"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/thirdRankerTotal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/sp10"
+                                    android:textStyle="bold" />
+
+                                <RelativeLayout
+                                    android:id="@+id/thirdRankerDetailRL"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/thirdRankerDetail"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginTop="@dimen/dp10"
+                                        android:text="Detail"
+                                        android:textAlignment="center"
+                                        android:textSize="@dimen/sp10"
+                                        android:textStyle="bold" />
+
+                                    <ImageView
+                                        android:id="@+id/dropdownThird"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/dp10"
+                                        android:layout_marginTop="@dimen/dp10"
+                                        android:layout_toEndOf="@id/thirdRankerDetail"
+                                        android:src="@mipmap/result_show_more_down" />
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/thirdLL"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp60"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:paddingStart="@dimen/dp5"
+                                        android:text="Right"
+                                        android:textSize="@dimen/sp10" />
+
+                                    <TextView
+                                        android:id="@+id/thirdRankerRight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:paddingEnd="@dimen/dp5"
+                                        android:text="Right"
+                                        android:textColor="@color/correct"
+                                        android:textSize="@dimen/sp10" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:paddingStart="@dimen/dp5"
+                                        android:text="Wrong"
+                                        android:textSize="@dimen/sp10" />
+
+                                    <TextView
+                                        android:id="@+id/thirdRankerWrong"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:paddingEnd="@dimen/dp5"
+                                        android:text="Right"
+                                        android:textColor="@color/incorrect"
+                                        android:textSize="@dimen/sp10" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:paddingStart="@dimen/dp5"
+                                        android:text="Skipped"
+                                        android:textSize="@dimen/sp10" />
+
+                                    <TextView
+                                        android:id="@+id/thirdRankerSkipped"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:paddingEnd="@dimen/dp5"
+                                        android:text="Right"
+                                        android:textColor="@color/skipped"
+                                        android:textSize="@dimen/sp10" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/timeTakenThird"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:paddingStart="@dimen/dp5"
+                                        android:text="Time"
+                                        android:textSize="@dimen/sp10" />
+
+                                    <TextView
+                                        android:id="@+id/thirdRankerTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:paddingEnd="@dimen/dp5"
+                                        android:text="Right"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/sp10" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:id="@+id/third"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:elevation="5dp"
+                        android:src="@mipmap/third_rank" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/layout_title_header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp30"
+                android:layout_marginStart="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp3"
+                android:layout_marginEnd="@dimen/dp15"
+                android:layout_marginBottom="@dimen/dp5"
+                app:cardBackgroundColor="@color/blue"
+                app:cardCornerRadius="@dimen/dp4"
+                app:cardElevation="@dimen/dp4">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="Rank"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp13" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:layout_weight="0.5"
+                            android:text="Name"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp13" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="Time"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp13" />
+
+
+                    <LinearLayout
+                        android:id="@+id/showMore"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:text="Right"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp13" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/recycleLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="vertical">
+
+                <com.emedicoz.app.customviews.NonScrollRecyclerView
+                    android:id="@+id/rankRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/expandList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dp15"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/blue"
+                    app:cardElevation="@dimen/dp2">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dp5"
+                            android:text="Expand List"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp13"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/dp15"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/blue"
+                    app:cardElevation="@dimen/dp2">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dp5"
+                            android:text="Shrink List"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp13"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_data_found"
+            android:textColor="@color/black"
+            android:textSize="@dimen/heading_text_size"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

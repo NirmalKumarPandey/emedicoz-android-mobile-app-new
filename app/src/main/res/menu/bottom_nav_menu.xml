@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/recordedFragment"
+        android:enabled="true"
+        android:icon="@mipmap/rec_course"
+        android:menuCategory="secondary"
+        android:title="@string/course"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/liveCoursesFragment"
+        android:icon="@drawable/live_course"
+        android:menuCategory="secondary"
+        android:title="@string/course"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/videoFragment"
+        android:icon="@drawable/ic_videocam_black_24dp"
+        android:menuCategory="secondary"
+        android:title="@string/video"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/studyFragment"
+        android:icon="@drawable/ic_menu_book_black_24dp"
+        android:menuCategory="secondary"
+        android:title="@string/study"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/feedsFragment"
+        android:icon="@drawable/ic_baseline_home_black_24"
+        android:menuCategory="secondary"
+        android:title="@string/interact"
+        app:showAsAction="ifRoom" />
+
+</menu>

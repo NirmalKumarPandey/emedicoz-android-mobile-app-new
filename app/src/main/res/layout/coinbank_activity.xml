@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <include
+        android:id="@+id/coin_header"
+        layout="@layout/coin_header"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coin_header"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_marginStart="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:fontFamily="@font/helvetica_neue_medium"
+                    android:padding="2dp"
+                    android:text="Coin In Bank"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14"
+                    tools:ignore="SpUsage">
+
+                </TextView>
+
+                <RelativeLayout
+                    android:id="@+id/lytCoinCounter"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_coincollect">
+                    </ImageView>
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:textAlignment="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_neue_medium"
+                        android:text="500"
+                        android:textSize="@dimen/dp20"
+                        android:textColor="#ffdb4d"
+                        tools:ignore="SpUsage">
+                    </TextView>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/imgBannerEarnCoin"
+                    android:layout_marginTop="@dimen/dp24"
+                    android:layout_below="@+id/lytCoinCounter"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/earnpointimg"
+                    android:contentDescription="TODO">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/txtTransactionDetails"
+                    android:layout_marginTop="26dp"
+                    android:layout_below="@+id/imgBannerEarnCoin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_neue_medium"
+                    android:text="Coins Transaction Details"
+                    android:textSize="@dimen/dp12"
+                    android:textColor="@color/toolbar_bg_color"
+                    tools:ignore="SpUsage">
+                </TextView>
+                <View
+                    android:id="@+id/viewCoinBank"
+                    android:layout_marginTop="@dimen/dp16"
+                    android:layout_below="@+id/txtTransactionDetails"
+                    android:background="#9e9e9e"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1dp">
+                </View>
+                <RelativeLayout
+                    android:id="@+id/lytTransactionDetails"
+                    android:layout_marginTop="@dimen/dp17"
+                    android:layout_below="@+id/viewCoinBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_neue_medium"
+                        android:text="Transaction Details"
+                        android:textSize="@dimen/dp12"
+                        android:textColor="@color/black"
+                        tools:ignore="SpUsage">
+                    </TextView>
+                    <ImageView
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:layout_toStartOf="@+id/txtCoinEarning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/coin_earnbank">
+                    </ImageView>
+                    <TextView
+                        android:id="@+id/txtCoinEarning"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_neue_medium"
+                        android:text="1000"
+                        android:textSize="@dimen/dp12"
+                        android:textColor="@color/black"
+                        tools:ignore="SpUsage">
+                    </TextView>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/transactionRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp10">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

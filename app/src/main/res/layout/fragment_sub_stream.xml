@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp16">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nextBtn">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/headerLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp16"
+                android:layout_marginRight="@dimen/dp16"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/mainstreamTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/dp20"
+                    android:paddingBottom="@dimen/normal_button_padding_left_right"
+                    android:text="Medical"
+                    android:textSize="@dimen/small_text_size" />
+
+                <TextView
+                    android:id="@+id/substreamTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/reg_round_blue_bg"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp20"
+                    android:paddingTop="@dimen/dp10"
+                    android:paddingRight="@dimen/dp20"
+                    android:paddingBottom="9dp"
+                    android:text="Sub-Streams"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sub_heading_text_size"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/substreamRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerLL"
+                android:layout_marginTop="@dimen/dp10">
+
+                <LinearLayout
+                    android:id="@+id/substreamoptionLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/tv1"
+                    android:layout_marginLeft="@dimen/dp16"
+                    android:layout_marginRight="@dimen/dp16"
+                    android:orientation="vertical"></LinearLayout>
+            </RelativeLayout>
+            <!-- <RelativeLayout
+                 android:id="@+id/specializationRL"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/headerLL"
+                 android:layout_marginTop="10dp">
+
+                 <TextView
+                     android:id="@+id/tv1"
+                     android:layout_width="match_parent"
+                     android:layout_height="60dp"
+                     android:alpha="0.8"
+                     android:background="@color/greayrefcode_dark"
+                     android:gravity="center_vertical"
+                     android:paddingLeft="20dp"
+                     android:text="Specialization"
+                     android:textAllCaps="true"
+                     android:textColor="@color/black"
+                     android:textSize="25sp"
+                     android:textStyle="bold" />
+
+                 <LinearLayout
+                     android:id="@+id/specializationoptionLL"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@id/tv1"
+                     android:orientation="vertical"></LinearLayout>
+             </RelativeLayout>-->
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10"
+        android:background="@drawable/bg_signup_btn"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp15" />
+</RelativeLayout>

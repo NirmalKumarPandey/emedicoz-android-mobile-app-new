@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp2"
+        android:layout_marginBottom="@dimen/dp2">
+
+        <LinearLayout
+            android:id="@+id/parentLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/curriculumTextTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_weight="0.9"
+                android:padding="@dimen/dp5"
+                android:paddingBottom="@dimen/dp5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp13"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgArrow"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp25"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/dp5"
+                android:layout_weight="0.1"
+                android:src="@mipmap/ic_crs_down_arrow" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/mainCurriculumLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/parentLL"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="@dimen/dp70"
+                android:layout_height="@dimen/dp3"
+                android:background="@color/colorPrimary"
+                android:visibility="gone" />
+
+            <!--    <com.emedicoz.app.CustomViews.NonScrollExpandableListView
+                    android:id="@+id/curriculumExpListLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/curriculumTextTV"
+                    android:layout_marginTop="@dimen/dp7" />-->
+
+
+            <com.emedicoz.app.customviews.NonScrollRecyclerView
+                android:id="@+id/curriculumExpListLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

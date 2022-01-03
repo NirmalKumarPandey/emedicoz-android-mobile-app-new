@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/selectFeeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/dp5"
+        android:text="@string/select_fee"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp15"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginEnd="@dimen/dp10"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioRegistrationFee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:gravity="start"
+            android:padding="@dimen/dp5"
+            android:text="@string/registration_fee"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/sp14" />
+
+        <RadioButton
+            android:id="@+id/radioCourseFee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:gravity="start"
+            android:padding="@dimen/dp5"
+            android:text="@string/course_fee"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/sp14" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp2"
+        android:background="@color/reg_screen_divider_color"
+        android:layout_marginTop="@dimen/dp15"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp15"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:text="@string/two_year_classroom_course"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/dp10"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/reg_screen_divider_color"
+        android:layout_marginTop="@dimen/dp5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/dp5"
+            android:text="@string/registration_fee"
+            android:textSize="@dimen/sp14"
+            android:textColor="@color/light_gray"
+            android:gravity="start"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/dp5"
+            android:text="@string/registration_fee"
+            android:textSize="@dimen/sp14"
+            android:textColor="@color/light_black"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/gst"
+            android:textSize="@dimen/sp14"
+            android:padding="@dimen/dp5"
+            android:textColor="@color/light_gray"
+            android:gravity="start"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/gst"
+            android:padding="@dimen/dp5"
+            android:textSize="@dimen/sp14"
+            android:textColor="@color/light_black"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/reg_screen_divider_color"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/total_payable_amount"
+            android:textSize="@dimen/sp14"
+            android:padding="@dimen/dp5"
+            android:textColor="@color/light_black"
+            android:gravity="start"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/total_payable_amount"
+            android:textSize="@dimen/sp14"
+            android:padding="@dimen/dp5"
+            android:textColor="@color/light_black"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp3"
+        android:background="@color/reg_screen_divider_color"
+        android:layout_marginTop="@dimen/dp10"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_marginStart="@dimen/dp5"
+            android:button="@drawable/checkbox_selector"/>
+        <TextView
+            android:id="@+id/paytmTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp16"
+            android:layout_marginStart="@dimen/dp5"
+            android:text="@string/paytm"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/termCondId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp16"
+            android:text="@string/i_have_read_terms_and_conditions"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp20">
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp40"
+            android:layout_weight="0.8"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_reg_prev_btn"
+            android:elevation="@dimen/dp4"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp5"
+            android:text="@string/previous"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp40"
+            android:layout_weight="1.4"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_btn"
+            android:elevation="@dimen/dp4"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp5"
+            android:text="@string/proceed_to_pay"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp40"
+            android:layout_weight="0.8"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_reg_cncel_btn"
+            android:elevation="@dimen/dp4"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp5"
+            android:text="@string/cancel"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/important_notes"
+        android:textSize="@dimen/sp18"
+        android:padding="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp5"
+        android:textColor="@color/black"/>
+
+
+
+</LinearLayout>

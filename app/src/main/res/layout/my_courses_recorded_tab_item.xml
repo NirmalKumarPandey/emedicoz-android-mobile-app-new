@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp2"
+        android:elevation="@dimen/dp3"
+        app:cardCornerRadius="@dimen/dp20">
+
+        <RelativeLayout
+            android:id="@+id/detailCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/record_course_list"
+            android:padding="@dimen/dp10">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/course_image"
+                style="@style/RecordedCoursesShapeAbleImageSize"
+                android:layout_centerVertical="true"
+                app:shapeAppearanceOverlay="@style/RoundImageView"
+                tools:src="@tools:sample/avatars" />
+
+
+            <RelativeLayout
+                android:id="@+id/toplayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_toEndOf="@+id/course_image">
+
+                <TextView
+                    android:id="@+id/tv_course_name"
+                    style="@style/CourseHeaderTextStyle"
+                    android:layout_width="150dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/dp7"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:layout_toLeftOf="@+id/Course_Expiry"
+                    android:lines="2"
+                    android:text="NEIMSYSYAUG"
+                    android:textAlignment="gravity" />
+
+                <Button
+                    android:id="@+id/renew_btn"
+                    style="@style/RenewButtonStyle"
+                    android:layout_width="@dimen/dp55"
+                    android:layout_height="@dimen/dp24"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/dp25"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/renew_btn_background"
+                    android:text="@string/renew" />
+
+                <TextView
+                    android:id="@+id/Course_Expiry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/renew_btn"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="@dimen/dp25"
+                    android:text="@string/course_Expiry"
+                    android:textSize="11sp" />
+
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/seek_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toplayout"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp25"
+                android:layout_toEndOf="@+id/course_image"
+                android:importantForAutofill="auto"
+                android:progressTint="@color/sky_blue"
+                android:progress="40" />
+
+            <TextView
+                android:id="@+id/course_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seek_bar"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@id/course_image"
+                android:text="40% Complete"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
+
+
+
+

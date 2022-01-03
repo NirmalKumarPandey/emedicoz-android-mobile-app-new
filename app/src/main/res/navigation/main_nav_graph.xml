@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/recordedFragment">
+
+    <fragment
+        android:id="@+id/recordedFragment"
+        android:name="com.emedicoz.app.courses.fragment.RecordedFragment"
+        tools:layout="@layout/fragment_recorded" />
+
+    <fragment
+        android:id="@+id/liveCoursesFragment"
+        android:name="com.emedicoz.app.liveCourses.fragments.LiveCoursesFragment"
+        android:label="@string/live_courses"
+        tools:layout="@layout/live_courses_fragment" />
+
+    <!--<fragment
+        android:id="@+id/NewsAndArticleFragment"
+        android:name="com.emedicoz.app.newsandarticle.fragment.NewsAndArticleFragment"
+        android:label="@string/newsand_articls"
+        tools:layout="@layout/fragment_news_and_article" />-->
+
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.emedicoz.app.video.ui.video.VideoFragment"
+        android:label="@string/video"
+        tools:layout="@layout/video_fragment" />
+
+    <fragment
+        android:id="@+id/studyFragment"
+        android:name="com.emedicoz.app.courses.fragment.StudyFragment"
+        android:label="@string/study"
+        tools:layout="@layout/fragment_study" />
+
+    <fragment
+        android:id="@+id/feedsFragment"
+        android:name="com.emedicoz.app.feeds.fragment.FeedsFragment"
+        android:label="@string/interact" />
+
+    <fragment
+        android:id="@+id/dailyChallengeDashboard"
+        android:name="com.emedicoz.app.dailychallenge.DailyChallengeDashboard"
+        android:label="@string/daily_challenge" />
+
+    <fragment
+        android:id="@+id/podcastFragment"
+        android:name="com.emedicoz.app.PodcastNewKotlin"
+        android:label="@string/podcast" />
+
+    <fragment
+        android:id="@+id/myCourseTabFragment"
+        android:name="com.emedicoz.app.mycourses.MyCourseTabFragment"
+        android:label="@string/my_courses" />
+
+    <fragment
+        android:id="@+id/myScorecardFragment"
+        android:name="com.emedicoz.app.courses.fragment.MyScorecardFragment"
+        android:label="@string/leaderboard"
+        tools:layout="@layout/fragment_my_scorecard" />
+
+    <fragment
+        android:id="@+id/savedNotesFragment"
+        android:name="com.emedicoz.app.feeds.fragment.SavedNotesFragment"
+        android:label="@string/my_bookmarks" />
+
+    <fragment
+        android:id="@+id/myCartFragment"
+        android:name="com.emedicoz.app.cart.MyCartFragment"
+        android:label="@string/my_cart"
+        tools:layout="@layout/fragment_my_cart" />
+
+<!--    <fragment-->
+<!--        android:id="@+id/commonFragment"-->
+<!--        android:name="com.emedicoz.app.feeds.fragment.CommonFragment"-->
+<!--        android:label="@string/notifications" />-->
+
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.emedicoz.app.notifications.NotificationFragment"
+        android:label="@string/notifications"
+        tools:layout="@layout/fragment_notification" />
+    <action
+        android:id="@+id/action_global_notificationFragment"
+        app:destination="@id/notificationFragment" />
+
+<!--    <fragment-->
+<!--        android:id="@+id/referralSignUp"-->
+<!--        android:name="com.emedicoz.app.referralcode.ReferralSignUp"-->
+<!--        android:label="@string/referral_signup" />-->
+<!--    <action-->
+<!--        android:id="@+id/action_global_referralSignUp"-->
+<!--        app:destination="@id/referralSignUp" />-->
+<!--    <fragment-->
+<!--        android:id="@+id/referEarnNowFragment"-->
+<!--        android:name="com.emedicoz.app.referralcode.ReferEarnNowFragment"-->
+<!--        android:label="@string/refer_earn_now" />-->
+<!--    <action-->
+<!--        android:id="@+id/action_global_referEarnNowFragment"-->
+<!--        app:destination="@id/referEarnNowFragment" />-->
+
+
+    <dialog
+        android:id="@+id/testInstructionDialog"
+        android:name="com.emedicoz.app.dialog.TestInstructionDialog"
+        android:label="fragment_test_instruction_dialog"
+        tools:layout="@layout/fragment_test_instruction_dialog" />
+    <fragment
+        android:id="@+id/testSeriesFragmentNew"
+        android:name="com.emedicoz.app.testmodule.fragment.TestSeriesFragmentNew"
+        android:label="fragment_test_series_two"
+        tools:layout="@layout/fragment_test_series_two" />
+
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.emedicoz.app.feeds.fragment.ChangePasswordFragment"
+        android:label="@string/change_password"
+        tools:layout="@layout/fragment_changepassword" />
+
+
+    <dialog
+        android:id="@+id/feedbackDialog"
+        android:name="com.emedicoz.app.dialog.FeedbackDialog"
+        android:label="FeedbackDialog">
+
+<!--        <argument-->
+<!--            android:name="rating"-->
+<!--            app:argType="float"-->
+<!--            android:defaultValue="" />-->
+    </dialog>
+
+    <action
+        android:id="@+id/action_global_myCartFragment"
+        app:destination="@id/myCartFragment" />
+
+    <dialog
+        android:id="@+id/updateRatingDialog"
+        android:name="com.emedicoz.app.dialog.UpdateRatingDialog"
+        android:label="UpdateRatingDialog" />
+
+    <dialog
+        android:id="@+id/ratingFragmentDialog"
+        android:name="com.emedicoz.app.dialog.RatingFragmentDialog"
+        android:label="RatingFragmentDialog" />
+
+    <fragment
+        android:id="@+id/commonFragForList"
+        android:name="com.emedicoz.app.courses.fragment.CommonFragForList"
+        android:label="CommonFragForList" />
+
+
+</navigation>

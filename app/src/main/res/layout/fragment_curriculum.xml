@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:context="com.emedicoz.app.courses.fragment.Curriculum">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeSingleCurriculum"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--        <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.longtailvideo.jwplayer.JWPlayerView
+                        android:id="@+id/playerViewCuri"
+                        android:layout_width="match_parent"
+                        android:layout_height="260dp"
+                        jwp:jw_autostart="true" />-->
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                layout="@layout/layout_course_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </androidx.core.widget.NestedScrollView>
+
+        <!--        </LinearLayout>-->
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/errorTV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:minHeight="@dimen/dp60"
+        android:textSize="@dimen/post_text_size"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp20"
+        android:text="Follow Your Experts"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp25" />
+
+    <TextView
+        android:id="@+id/subtitlefollowTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp5"
+        android:alpha=".7"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp15" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp20"
+        android:layout_weight="1"
+        android:background="@drawable/bg_card_bottom_corner"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/followexpertRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp2"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp2"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="false" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bottomCard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="@dimen/dp3">
+
+            <RelativeLayout
+                android:id="@+id/finishbtnRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/dp7"
+                    android:gravity="center"
+                    android:padding="@dimen/dp2"
+                    android:text="Finish"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/heading_text_size" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/errorTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/feeds_single_row_CV"
+            android:gravity="center"
+            android:minHeight="@dimen/dp60"
+            android:textSize="@dimen/post_text_size"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

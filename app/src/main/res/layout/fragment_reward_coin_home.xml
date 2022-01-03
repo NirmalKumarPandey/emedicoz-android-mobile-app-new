@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".reward.fragment.RewardCoinHomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/lytMultipleCoin"
+                layout="@layout/my_coin_multiple_selection"></include>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginTop="34dp"
+                android:layout_marginBottom="@dimen/dp16"
+                android:fontFamily="@font/helvetica_neue_medium"
+                android:padding="2dp"
+                android:textSize="@dimen/dp14"
+                android:text="Big Offers"
+                android:textColor="@color/black"/>
+            <include
+                android:id="@+id/lytBigOffer"
+                layout="@layout/big_offers">
+            </include>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginEnd="@dimen/dp16"
+                android:background="#bdbdbd" />
+
+            <TextView
+                android:textSize="@dimen/dp14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginTop="34dp"
+                android:layout_marginBottom="@dimen/dp16"
+                android:fontFamily="@font/helvetica_neue_medium"
+                android:padding="2dp"
+                android:text="@string/use_save"
+                android:textColor="@color/black" />
+            <include
+                android:id="@+id/lytUseSave"
+                layout="@layout/use_save">
+            </include>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginEnd="@dimen/dp16"
+                android:background="#bdbdbd" />
+            <TextView
+                android:textSize="@dimen/dp14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginTop="34dp"
+                android:fontFamily="@font/helvetica_neue_medium"
+                android:padding="2dp"
+                android:text="Redeem Offers"
+                android:textColor="@color/black" />
+
+            <include layout="@layout/redeem_offers"
+                android:id="@+id/lytRedeem">
+            </include>
+            <RelativeLayout
+                android:id="@+id/lytViewAll"
+                android:layout_marginBottom="@dimen/dp16"
+                android:layout_marginStart="@dimen/dp16"
+                android:layout_marginEnd="@dimen/dp16"
+                android:background="@drawable/bg_view_white_border_grey"
+                android:layout_marginTop="@dimen/dp16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp8"
+                    android:textSize="@dimen/dp12"
+                    android:fontFamily="@font/helvetica_neue_medium"
+                    android:textColor="@color/toolbar_bg_color"
+                    android:text="@string/viewAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:backgroundTint="@color/white"
+                    app:srcCompat="@drawable/arrownext">
+
+
+                </ImageButton>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context=".feeds.activity.NewProfileActivity">
+
+    <include
+        android:id="@+id/toolBarProfile"
+        layout="@layout/layout_common_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/rootLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="horizontal">
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05" />
+
+                <com.emedicoz.app.customviews.CircleImageView
+                    android:id="@+id/userProfileImage"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp100"
+                    android:layout_weight="0.55"
+                    android:src="@mipmap/default_pic" />
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp8"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/userNameProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/dp15"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp15"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp5"
+                        app:cardCornerRadius="@dimen/dp4"
+                        app:cardElevation="@dimen/dp4">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:paddingStart="@dimen/dp5"
+                                    android:text="Reward Points"
+                                    android:textAlignment="center"
+                                    android:textSize="@dimen/sp12" />
+
+                                <TextView
+                                    android:id="@+id/rewardPointsProfile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp2"
+                                    android:layout_marginBottom="@dimen/dp5"
+                                    android:paddingStart="@dimen/dp5"
+                                    android:text="0 Points"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/sp10" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.2"
+                                android:paddingTop="@dimen/dp5"
+                                android:src="@mipmap/profile_reward_point" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/editTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/dp8"
+                    android:layout_marginEnd="@dimen/dp5"
+                    android:layout_weight="0.35"
+                    android:background="@drawable/score_bg"
+                    android:drawableEnd="@mipmap/profile_edit"
+                    android:drawablePadding="@dimen/dp5"
+                    android:padding="@dimen/dp5"
+                    android:text="Edit"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/blue_dark"
+                    android:textSize="@dimen/sp12" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtStream"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp20"
+                        android:paddingTop="@dimen/dp2"
+                        android:paddingRight="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp2"
+                        android:text="Stream"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:id="@+id/change_steam"
+                        android:layout_width="@dimen/dp25"
+                        android:layout_height="@dimen/dp22"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:layout_toEndOf="@id/txtStream"
+                        android:drawableEnd="@mipmap/profile_edit"
+                        android:drawablePadding="@dimen/dp2"
+                        android:padding="@dimen/dp5"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/blue_dark"
+                        android:textSize="@dimen/sp12"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/streamProfileTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtStream"
+                        android:paddingStart="@dimen/dp20"
+                        android:paddingTop="@dimen/dp2"
+                        android:paddingRight="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp11"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp20"
+                        android:paddingTop="@dimen/dp2"
+                        android:paddingRight="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp2"
+                        android:text="Exam Preparation"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:id="@+id/examPrepProfileTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp20"
+                        android:paddingTop="@dimen/dp2"
+                        android:paddingRight="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp11"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp20"
+                        android:paddingTop="@dimen/dp2"
+                        android:paddingRight="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp2"
+                        android:text="Specialization"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:id="@+id/specializationProfileTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp20"
+                        android:paddingTop="@dimen/dp2"
+                        android:paddingRight="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp13"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp20"
+                        android:paddingTop="@dimen/dp2"
+                        android:paddingRight="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp2"
+                        android:text="Sub Stream"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:id="@+id/subStreamProfileTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp20"
+                        android:paddingTop="@dimen/dp2"
+                        android:paddingRight="@dimen/dp5"
+                        android:paddingBottom="@dimen/dp2"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp13"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:padding="5dp"
+                android:text="Profile Completeness"
+                android:textSize="@dimen/sp18"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:layout_marginStart="@dimen/dp5"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp5"
+                android:background="#C8C8C8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.07" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_weight="0.9"
+                    app:cardBackgroundColor="@color/blue"
+                    app:cardCornerRadius="@dimen/dp10"
+                    app:cardElevation="@dimen/dp10">
+
+                    <LinearLayout
+                        android:id="@+id/followerLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.25"
+                            android:src="@mipmap/profile_followers" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.05" />
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/followersCountTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/dp2"
+                                android:text="00"
+                                android:textColor="@color/left_panel_header_text_color"
+                                android:textSize="@dimen/sp12"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Followers"
+                                android:textColor="@color/left_panel_header_text_color"
+                                android:textSize="@dimen/sp10" />
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.05" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.15"
+                            android:padding="@dimen/dp5"
+                            android:src="@mipmap/back_white_right" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.07" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_weight="0.9"
+                    app:cardBackgroundColor="@color/blue"
+                    app:cardCornerRadius="@dimen/dp10"
+                    app:cardElevation="@dimen/dp10">
+
+                    <LinearLayout
+                        android:id="@+id/followingLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.25"
+                            android:src="@mipmap/profile_following" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.05" />
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/followingCountTV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/dp2"
+                                android:text="00"
+                                android:textColor="@color/left_panel_header_text_color"
+                                android:textSize="@dimen/sp12"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Following"
+                                android:textColor="@color/left_panel_header_text_color"
+                                android:textSize="@dimen/sp10" />
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.05" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.15"
+                            android:padding="@dimen/dp5"
+                            android:src="@mipmap/back_white_right" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.05" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp5"
+                android:text="Study Material"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myCoursesProfileCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:elevation="@dimen/dp3"
+                app:cardBackgroundColor="@color/left_panel_background_color"
+                app:cardCornerRadius="@dimen/dp20">
+
+                <LinearLayout
+                    android:id="@+id/myCoursesProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/score_bg"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/profile_my_course" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:gravity=""
+                        android:padding="@dimen/dp8"
+                        android:text="My Courses"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp3"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/back_right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myPostProfileCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:elevation="@dimen/dp3"
+                app:cardBackgroundColor="@color/left_panel_background_color"
+                app:cardCornerRadius="@dimen/dp20">
+
+                <LinearLayout
+                    android:id="@+id/myPostProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/score_bg"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/profile_my_post" />
+
+                    <TextView
+                        android:id="@+id/postTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:gravity=""
+                        android:padding="@dimen/dp8"
+                        android:text="My Post"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp3"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/back_right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myNotificationSetting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:elevation="@dimen/dp3"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/left_panel_background_color"
+                app:cardCornerRadius="@dimen/dp20">
+
+                <LinearLayout
+                    android:id="@+id/myNotifiSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/score_bg"
+                        android:padding="@dimen/dp8"
+                        app:srcCompat="@drawable/ic_path_8959" />
+
+                    <TextView
+                        android:id="@+id/tvNotification"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:gravity=""
+                        android:padding="@dimen/dp8"
+                        android:text="@string/notification_setting"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp3"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/back_right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myVideosProfileCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:elevation="@dimen/dp3"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/left_panel_background_color"
+                app:cardCornerRadius="@dimen/dp20">
+
+                <LinearLayout
+                    android:id="@+id/myVideosProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/profile_my_video" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:drawableEnd="@mipmap/back_right"
+                        android:padding="@dimen/dp8"
+                        android:text="My Videos"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp12" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp3"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/back_right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myTestSeriesProfileCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:elevation="@dimen/dp3"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/left_panel_background_color"
+                app:cardCornerRadius="@dimen/dp20">
+
+                <LinearLayout
+                    android:id="@+id/myTestSeriesProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/profile_my_test_series" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:drawableEnd="@mipmap/back_right"
+                        android:padding="@dimen/dp8"
+                        android:text="My Test Series"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp12" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp3"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/back_right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myBookmarkProfileCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:elevation="@dimen/dp3"
+                app:cardBackgroundColor="@color/left_panel_background_color"
+                app:cardCornerRadius="@dimen/dp20">
+
+                <LinearLayout
+                    android:id="@+id/myBookmarkProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/score_bg"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/profile_bookmark" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:gravity=""
+                        android:padding="@dimen/dp8"
+                        android:text="My Bookmarks"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp3"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/back_right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myAddress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                app:cardBackgroundColor="@color/left_panel_background_color"
+                app:cardCornerRadius="@dimen/dp20"
+                app:cardElevation="@dimen/dp4">
+
+                <LinearLayout
+                    android:id="@+id/myAddressProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/score_bg"
+                        android:padding="@dimen/dp8"
+                        app:srcCompat="@drawable/ic_home_layers"
+                        app:tint="@color/toolbar_bg_color" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:gravity=""
+                        android:padding="@dimen/dp8"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="My Addresses"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp3"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/back_right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myOrdersProfileCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:elevation="@dimen/dp3"
+                app:cardBackgroundColor="@color/left_panel_background_color"
+                app:cardCornerRadius="@dimen/dp20">
+
+                <LinearLayout
+                    android:id="@+id/myOrdersProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/score_bg"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/profile_my_order" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:gravity=""
+                        android:padding="@dimen/dp8"
+                        android:text="My Orders"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp3"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/back_right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myRewardsProfileCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:elevation="@dimen/dp3"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/left_panel_background_color"
+                app:cardCornerRadius="@dimen/dp20">
+
+                <LinearLayout
+                    android:id="@+id/myRewardsProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/score_bg"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/side_pannel_invite_and_earn"
+                        app:tint="@color/toolbar_bg_color" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:gravity=""
+                        android:padding="@dimen/dp8"
+                        android:text="My Rewards"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp3"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/back_right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myDownloadsProfileCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:elevation="@dimen/dp3"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/left_panel_background_color"
+                app:cardCornerRadius="@dimen/dp20">
+
+                <LinearLayout
+                    android:id="@+id/myDownloadsProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/score_bg"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/profile_downloads" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:gravity=""
+                        android:padding="@dimen/dp8"
+                        android:text="My Downloads"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp3"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/back_right" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/gamificationCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:elevation="@dimen/dp3"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/left_panel_background_color"
+                app:cardCornerRadius="@dimen/dp20">
+
+                <LinearLayout
+                    android:id="@+id/gamificationLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/score_bg"
+                        android:padding="@dimen/dp8"
+                        app:srcCompat="@drawable/ic_icon_open_account_logout" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:padding="@dimen/dp8"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="Gamification"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp3"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/back_right" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/logoutCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp5"
+                android:elevation="@dimen/dp3"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/left_panel_background_color"
+                app:cardCornerRadius="@dimen/dp20">
+
+                <LinearLayout
+                    android:id="@+id/logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/score_bg"
+                        android:padding="@dimen/dp8"
+                        app:srcCompat="@drawable/ic_logout_black_24dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:padding="@dimen/dp8"
+                        android:text="@string/logout"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp3"
+                        android:layout_marginTop="@dimen/dp3"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/dp8"
+                        android:src="@mipmap/back_right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+    <ProgressBar android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_bar_profile"
+        android:visibility="gone"/>
+
+</RelativeLayout>

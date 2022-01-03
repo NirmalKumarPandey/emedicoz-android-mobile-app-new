@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/login_page_bg_color">
+
+    </solid>
+    <!--<stroke-->
+    <!--android:width="2dp"-->
+    <!--android:color="@color/greayrefcode_dark"></stroke>-->
+    <corners
+        android:topLeftRadius="@dimen/dp30"
+        android:topRightRadius="@dimen/dp30">
+
+    </corners>
+</shape>

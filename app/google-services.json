@@ -1,0 +1,167 @@
+{
+  "project_info": {
+    "project_number": "890804880179",
+    "firebase_url": "https://damss-app.firebaseio.com",
+    "project_id": "damss-app",
+    "storage_bucket": "damss-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890804880179:android:c1c65575bcdb323d",
+        "android_client_info": {
+          "package_name": "com.emedicoz.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890804880179-p2t0j74ijdeite6a87aeii1sq7d9ehqh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emedicoz.app",
+            "certificate_hash": "bf5c42f0fb095ecc54bc5eb58f41c9e2c07d503f"
+          }
+        },
+        {
+          "client_id": "890804880179-esmt5hvatptmbold97uob52omnno55ut.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emedicoz.app",
+            "certificate_hash": "a7e1d31f5543450e95e0e5b85c245874090182bf"
+          }
+        },
+        {
+          "client_id": "890804880179-bqaf40m11d79qbkolfmu0j0jg8lvgm6v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emedicoz.app",
+            "certificate_hash": "7d9b438918b5561781f3e01571522b602490fa82"
+          }
+        },
+        {
+          "client_id": "890804880179-iaijesdshtmij9mo705j1hokl6l143ph.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emedicoz.app",
+            "certificate_hash": "8590232166f90ff1b69e840d0b175c4557bf2a1d"
+          }
+        },
+        {
+          "client_id": "890804880179-nivb67776tv3n2pdfjopsqjvp5g13tog.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emedicoz.app",
+            "certificate_hash": "52a8db8ee0ab4beb333e3a6a56f7224faf653a0d"
+          }
+        },
+        {
+          "client_id": "890804880179-frrptg8ca3pbateg4s38njqsfdehldtt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emedicoz.app",
+            "certificate_hash": "d2eac33bf131d8d5122b47553960f66711b6046c"
+          }
+        },
+        {
+          "client_id": "890804880179-93tbu07fi8iqua63gqm97g3v5dusr7fi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emedicoz.app",
+            "certificate_hash": "ca5a9b4723be1071775222251a964bf0407ed4b2"
+          }
+        },
+        {
+          "client_id": "890804880179-ige277t6ej5he9jr0tlu0k242nrat4ms.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emedicoz.app",
+            "certificate_hash": "21dd8213b852743d52d04bf18ce70639c9401baa"
+          }
+        },
+        {
+          "client_id": "890804880179-a834uhi297p7cvhlndgtjccmf9njce40.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emedicoz.app",
+            "certificate_hash": "f37d10edcf58ebba8e3c049387aef4d00703b766"
+          }
+        },
+        {
+          "client_id": "890804880179-2sb2meqqhha9hi259csce5a044bofuv3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emedicoz.app",
+            "certificate_hash": "088354fb7c2fee2da9a0eaa161615b3118e23909"
+          }
+        },
+        {
+          "client_id": "890804880179-uu6pu3uua0an1d6djslga6ci5ca77ipu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emedicoz.app",
+            "certificate_hash": "4a51a93890171661b97d6a5d8f1fc70cf0349a5b"
+          }
+        },
+        {
+          "client_id": "890804880179-b2bb05b2sn923ngp296cktbjdh52kt0l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emedicoz.app",
+            "certificate_hash": "37b05f46b0784add98c5ac96bcc36028789ad1d3"
+          }
+        },
+        {
+          "client_id": "890804880179-afahvgvikml7gl6rtmf7gl84j9dffvmu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emedicoz.app",
+            "certificate_hash": "a88459cc28515bd7d9af9244143639c119d8ce8b"
+          }
+        },
+        {
+          "client_id": "890804880179-2oi7ai7m3dcbiefg4r2k5mrmfrn1227g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emedicoz.app",
+            "certificate_hash": "141f1f93d34bdd02f7dd225bad372a180a0294de"
+          }
+        },
+        {
+          "client_id": "890804880179-glkm5o67r6i1vjs4u2o041h97ucl1b7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-L5YQcdbFMwNZiUw-YIF95POcYFg24yk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890804880179-glkm5o67r6i1vjs4u2o041h97ucl1b7f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "890804880179-f8q7umfo3f05j3rd34naln37tvq9g4f7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.emedicoz.app",
+                "app_store_id": "1263112084"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

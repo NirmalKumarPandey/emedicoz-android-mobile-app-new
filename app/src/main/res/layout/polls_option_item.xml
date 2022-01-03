@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/dp17"
+    android:layout_marginRight="@dimen/dp17"
+    android:layout_marginBottom="@dimen/dp20">
+
+    <TextView
+        android:id="@+id/optionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Abraham Lincoln"
+        android:textColor="@color/polls_option_text_default"
+        android:textSize="@dimen/dp14"
+        android:fontFamily="@font/helvetica_neue_medium"
+        android:padding="@dimen/dp12"
+        android:maxLines="4"
+        android:background="@drawable/polls_option_default_background"/>
+
+    <TextView
+        android:id="@+id/optionComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:text="@string/polls_option_comment"
+        android:textSize="@dimen/dp14"
+        android:textColor="@color/polls_option_comment"
+        android:fontFamily="@font/helvetica_neue_medium"/>
+
+</LinearLayout>

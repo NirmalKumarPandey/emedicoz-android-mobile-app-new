@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp50"
+        android:layout_marginRight="@dimen/dp20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp35"
+                android:alpha="0.9"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp30"
+                android:paddingRight="@dimen/dp30"
+                android:text="@string/mobileverification_verificationmessage"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp17" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.rilixtech.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="@dimen/dp5"
+                    app:ccp_defaultNameCode="@string/country_india_code"
+                    app:ccp_hideNameCode="true" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/mobileET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/phone"
+                        android:drawablePadding="7dp"
+                        android:inputType="number"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:textSize="@dimen/sp14" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/verifyBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp40"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp35"
+                android:background="@drawable/bg_signup_btn"
+                android:elevation="4dp"
+                android:paddingLeft="@dimen/normal_button_padding_left_right"
+                android:paddingRight="@dimen/normal_button_padding_left_right"
+                android:text="@string/verfiy"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

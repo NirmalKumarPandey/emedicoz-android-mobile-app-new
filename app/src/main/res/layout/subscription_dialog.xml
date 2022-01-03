@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/titleDialog"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_gravity="start"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="@string/CPR_subscription"
+        android:textColor="@color/white"
+        android:textSize="@dimen/heading_text_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleDialog"
+        android:orientation="vertical"
+        android:padding="@dimen/dp10">
+
+
+        <com.emedicoz.app.customviews.NonScrollRecyclerView
+            android:id="@+id/recyclerSubscription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp3">
+
+        </com.emedicoz.app.customviews.NonScrollRecyclerView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10">
+
+
+            <Button
+                android:id="@+id/subscribeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp40"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/bg_signup_btn"
+                android:padding="@dimen/dp5"
+                android:text="@string/subscribe"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/cancleBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp40"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/bg_signup_btn"
+                android:padding="@dimen/dp5"
+                android:text="@string/cancel"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

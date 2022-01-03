@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvMyAttempted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginTop="@dimen/sp24"
+        android:fontFamily="@font/helvetica_neue_med"
+        android:text="Attempted"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp16"
+        android:background="@drawable/ic_rectangle_1094"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMyAttempted">
+
+        <LinearLayout
+            android:id="@+id/parentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="@dimen/dp70"
+                android:layout_height="64dp"
+                android:layout_marginStart="@dimen/sp10"
+                android:layout_weight="1"
+                android:background="@drawable/ic_rectangle_fill"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/helvetica_neue_med"
+                    android:paddingTop="@dimen/dp4"
+                    android:text="Topic"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp8"
+                    app:drawableTopCompat="@drawable/ic_topic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sp8"
+                    android:fontFamily="@font/helvetica_neue_med"
+                    android:text="Anotmy"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp12" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="@dimen/dp70"
+                android:layout_height="64dp"
+                android:layout_marginStart="@dimen/sp10"
+                android:layout_weight="1"
+                android:background="@drawable/ic_rectangle_fill"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp5"
+                    android:fontFamily="@font/helvetica_neue_med"
+                    android:text="Date Played on"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp8"
+                    app:drawableTopCompat="@drawable/ic_callender" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sp8"
+                    android:fontFamily="@font/helvetica_neue_med"
+                    android:text="4-10-2021"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/dp70"
+                android:layout_height="64dp"
+                android:layout_marginStart="@dimen/sp10"
+                android:layout_weight="1"
+                android:background="@drawable/ic_rectangle_fill"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp5"
+                    android:fontFamily="@font/helvetica_neue_med"
+                    android:text="Topic"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp8"
+                    app:drawableTopCompat="@drawable/ic_score" />
+
+                <TextView
+                    android:id="@+id/tvScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sp8"
+                    android:fontFamily="@font/helvetica_neue_med"
+                    android:text="30"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/dp70"
+                android:layout_height="64dp"
+                android:layout_marginStart="@dimen/sp10"
+                android:layout_marginEnd="@dimen/sp10"
+                android:layout_weight="1"
+                android:background="@drawable/ic_rectangle_fill"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp4"
+                    android:fontFamily="@font/helvetica_neue_med"
+                    android:text="Your Rank"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp8"
+                    app:drawableTopCompat="@drawable/ic_rank" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sp8"
+                    android:fontFamily="@font/helvetica_neue_med"
+                    android:text="12"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/parentLayout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/sp10"
+            android:layout_marginEnd="@dimen/sp8"
+            android:layout_marginBottom="@dimen/dp16"
+            android:fontFamily="@font/helvetica_neue_med"
+            android:paddingTop="@dimen/dp2"
+            android:paddingBottom="@dimen/dp2"
+            android:text="@string/view_summary"
+            android:textColor="@color/toolbar_bg_color"
+            android:textSize="@dimen/sp12" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

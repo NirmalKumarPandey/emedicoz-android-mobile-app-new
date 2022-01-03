@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="156dp"
+        android:layout_marginStart="@dimen/sp8"
+        android:layout_marginTop="@dimen/sp8"
+        android:layout_marginEnd="@dimen/sp8"
+        android:layout_marginBottom="@dimen/sp8"
+        android:background="@drawable/ic_rectangle_quiz_blank"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp4"
+            android:layout_marginTop="@dimen/dp12"
+            android:layout_marginEnd="@dimen/dp4"
+            android:fontFamily="@font/helvetica_neue_med"
+            android:singleLine="true"
+            android:text="@string/i_want_to_challenge"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp10" />
+
+        <LinearLayout
+            android:layout_width="@dimen/dp65"
+            android:layout_height="@dimen/dp60"
+            android:layout_marginStart="@dimen/sp10"
+            android:layout_marginTop="@dimen/dimen_18sp"
+            android:layout_marginEnd="@dimen/sp10"
+            android:background="@drawable/ic_rectangle_1095"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_watch" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:fontFamily="@font/helvetica_neue_med"
+                    android:text="10"
+                    android:textColor="@color/toolbar_bg_color"
+                    android:textSize="@dimen/sp8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:fontFamily="@font/helvetica_neue_med"
+                    android:text="Upcoming"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp8" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/sp24"
+            android:layout_marginStart="@dimen/sp10"
+            android:layout_marginTop="@dimen/dp12"
+            android:layout_marginEnd="@dimen/sp10"
+            android:layout_marginBottom="@dimen/dp12"
+            android:background="@drawable/ic_rectangle_btn"
+            android:fontFamily="@font/helvetica_neue_med"
+            android:text="Host a Challenge"
+            android:textAllCaps="false"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/sp10" />
+
+
+    </LinearLayout>
+</RelativeLayout>

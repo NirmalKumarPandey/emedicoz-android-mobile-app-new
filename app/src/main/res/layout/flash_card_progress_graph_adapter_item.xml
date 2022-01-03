@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_overlay"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp12" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp5"
+        android:layout_margin="@dimen/dp10"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+
+        <ProgressBar
+            android:id="@+id/progerssbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:progressDrawable="@drawable/custom_vertical_progress" />
+
+    </RelativeLayout>
+
+    <com.emedicoz.app.customviews.CircularTextView
+        android:id="@+id/ctv_number"
+        android:layout_width="@dimen/dp25"
+        android:layout_height="@dimen/dp25"
+        android:gravity="center"
+        android:text="234"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp10" />
+
+</LinearLayout>

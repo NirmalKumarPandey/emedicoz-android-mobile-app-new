@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tilesLL"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp40"
+    android:layout_below="@id/upperPanelFeed"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/allPostTV"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp2"
+        android:layout_weight="1"
+        android:background="@drawable/dvl_tab_background_selected"
+        android:gravity="center"
+        android:text="All Post"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/sp12" />
+
+    <TextView
+        android:id="@+id/facultyPostTV"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp2"
+        android:layout_weight="1"
+        android:background="@drawable/dvl_tab_background_unselected"
+        android:gravity="center"
+        android:text="Faculty Post"
+        android:textAlignment="center"
+        android:textColor="@color/left_panel_header_text_color"
+        android:textSize="@dimen/sp12" />
+
+    <TextView
+        android:id="@+id/followingTV"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp2"
+        android:layout_weight="1"
+        android:background="@drawable/dvl_tab_background_unselected"
+        android:gravity="center"
+        android:text="Following"
+        android:textAlignment="center"
+        android:textColor="@color/left_panel_header_text_color"
+        android:textSize="@dimen/sp12" />
+
+</LinearLayout>
